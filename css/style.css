@@ -7,14 +7,6 @@ body {
     background-color: #F2F2F2;
 }
 
-.name {
-	/*font-size: 50px;*/
-	font-weight: normal;
-    font-family: 'Chelsea Market', Georgia, serif;
-	/*line-height: 100%;*/
-
-}
-
 h2 {
 	font-family: 'Chelsea Market', Georgia, serif;
 	margin-top: 0px;
@@ -28,6 +20,22 @@ em,p {
 	margin: 0px;
 }
 
+a:link {
+	text-decoration: none;
+	color:inherit;
+}
+a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	text-decoration: underline;
+	color: inherit;
+}
+a:active {
+	text-decoration: none;
+	color: inherit;
+}
 
 /*BACKGROUND IMAGE TEST*/
 .backgroundImage {
@@ -41,6 +49,22 @@ em,p {
 	/*overflow: auto;*/
 }
 
+.name {
+	/*font-size: 50px;*/
+	font-weight: normal;
+    font-family: 'Chelsea Market', Georgia, serif;
+	/*line-height: 100%;*/
+}
+
+.up {
+
+	font-size: 10px;
+	color: grey;
+	text-align: right;
+	padding-right: 40px;
+	padding-bottom: 20px;
+}
+
 .introduction {
 	padding-top: 100px;
 	padding-bottom: 120px;
@@ -51,8 +75,10 @@ em,p {
 .preintro {
 	color:#424242;
 	font-style: italic;	
+	padding-bottom: 10px;
 	
 }
+
 .intro {
 	padding-top: 40px; 
 	padding-bottom: 20px;
