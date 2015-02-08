@@ -1,0 +1,176 @@
+
+body {
+	font-family: Arial;
+	text-align: left;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2;
+}
+
+.name {
+	/*font-size: 50px;*/
+	font-weight: normal;
+    font-family: 'Chelsea Market', Georgia, serif;
+	/*line-height: 100%;*/
+
+}
+
+h2 {
+	font-family: 'Chelsea Market', Georgia, serif;
+	margin-top: 0px;
+}
+
+h1,h3,h4 {
+	margin: 0px;
+}
+
+em,p {
+	margin: 0px;
+}
+
+
+/*BACKGROUND IMAGE TEST*/
+.backgroundImage {
+	/*background-image: url(https://33.media.tumblr.com/32c9d187b34b2200a072c155d50759cb/tumblr_mt7j8um6Ca1qf7dj9o1_1280.jpg);*/
+	background-image: url(../images/gallery/bb_evo.png); 
+	/*background-image: url(../images/gallery/bb_evo.png);*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/*overflow: auto;*/
+}
+
+.introduction {
+	padding-top: 100px;
+	padding-bottom: 120px;
+	background-color: black;
+
+}
+
+.preintro {
+	color:#424242;
+	font-style: italic;	
+	
+}
+.intro {
+	padding-top: 40px; 
+	padding-bottom: 20px;
+	text-align: center;
+	color: white;
+	opacity: 1;
+    filter: alpha(opacity=1); /* For IE8 and earlier */
+}
+
+.logosInside {
+	padding-top: 10px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.logosSpan {
+	padding-left: 10px;
+}
+
+.menu {
+	font-weight: normal;
+	font-size: 20px;
+	font-family: Arial;
+	color: orange;
+	text-align: center;
+	/*background-color: #084B8A;*/
+	/*line-height: 140%;*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 0px;
+	word-wrap: break-word;
+}
+
+.mainBox {
+	background-color: white;
+	padding-top: 20px;
+	margin-top: 20px;
+	border-radius: 25px;
+}
+
+.educationDetails {
+	background-color: white;
+}
+
+.researchDetails {
+	background-color: #F8FBEF;
+}
+
+.publicationDetails {
+	background-color: #E0F2F7;
+}
+
+.teachingDetails {
+	background-color: #D8CEF6;
+}
+
+.eduHead {
+	padding-bottom: 20px;
+	padding-left: 40px;
+	text-align: left;
+}
+
+.textBoxes {
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.eduDate {
+	font-size: 12px;
+	text-align: left;
+	margin-bottom: 0px;
+}
+
+.eduDegree {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+.eduOrg {
+	font-size: 14px;
+	color: grey;
+}
+
+/*PUBLICATIONS*/
+
+.pType {
+	font-weight: bold;
+	font-size: 14px;
+	font-style: italic;	
+	padding-left: 40px;
+}
+.pp {
+	margin: 0px;
+}
+
+.paperTitle {
+	font-size: 16px;
+	font-weight: bold;
+	color:#0B2161;
+}
+
+.computerDetails {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+/* IMAGES */
+
+.logos {
+	height: 30px;
+	width: 30px;
+}
+
+.logoGS {
+	height: 30px;
+}
