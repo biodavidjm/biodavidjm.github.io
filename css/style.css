@@ -21,19 +21,19 @@ em,p {
 }
 
 a:link {
-	text-decoration: none;
+	text-decoration: underline;
 	color:inherit;
 }
 a:visited {
-	text-decoration: none;
-	color: inherit;
-}
-a:hover {
 	text-decoration: underline;
 	color: inherit;
 }
-a:active {
+a:hover {
 	text-decoration: none;
+	color: lightblue;
+}
+a:active {
+	text-decoration: underline;
 	color: inherit;
 }
 
@@ -110,6 +110,24 @@ a:active {
 	padding-bottom: 20px;
 	margin-bottom: 0px;
 	word-wrap: break-word;
+}
+
+.menu a:link {
+	text-decoration: none;
+	color:inherit;
+}
+
+.menu a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+.menu a:hover {
+	text-decoration: underline;
+	color: inherit;
+}
+.menu a:active {
+	text-decoration: underline;
+	color: inherit;
 }
 
 .mainBox {
