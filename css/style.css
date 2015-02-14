@@ -66,7 +66,7 @@ a:active {
 }
 
 .introduction {
-	padding-top: 100px;
+	padding-top: 80px;
 	padding-bottom: 120px;
 	background-color: black;
 
@@ -78,6 +78,12 @@ a:active {
 	padding-bottom: 10px;
 	
 }
+
+.me {
+	text-align: center;
+
+}
+
 
 .intro {
 	padding-top: 40px; 
@@ -96,6 +102,9 @@ a:active {
 
 .logosSpan {
 	padding-left: 10px;
+}
+.logosSpan a:hover {
+	opacity: 0.3;
 }
 
 .menu {
@@ -121,10 +130,12 @@ a:active {
 	text-decoration: none;
 	color: inherit;
 }
+
 .menu a:hover {
 	text-decoration: underline;
 	color: inherit;
 }
+
 .menu a:active {
 	text-decoration: underline;
 	color: inherit;
@@ -209,6 +220,14 @@ a:active {
 
 
 /* IMAGES */
+
+.myself {
+	border: 2px white solid;
+    border-radius: 30px;
+	height: 100px;
+	width: 100px;
+}
+
 
 .logos {
 	height: 30px;
