@@ -12,7 +12,7 @@ h2 {
 	margin-top: 0px;
 }
 
-h1,h3,h4 {
+h1,h3,h4,h5{
 	margin: 0px;
 }
 
@@ -66,8 +66,8 @@ a:active {
 }
 
 .header {
-	padding-top: 80px;
-	padding-bottom: 120px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	background-color: black;
 
 }
@@ -79,13 +79,13 @@ a:active {
 .preintro {
 	color:#424242;
 	font-style: italic;	
-	padding-bottom: 8px;
+	padding-bottom: 5px;
 	
 }
 
 .intro {
-	padding-top: 40px; 
-	padding-bottom: 20px;
+	padding-top: 10px; 
+	padding-bottom: 10px;
 	text-align: center;
 	color: white;
 	opacity: 1;
@@ -93,8 +93,8 @@ a:active {
 }
 
 .logosInside {
-	padding-top: 20px;
-	padding-bottom: 30px;
+	padding-top: 5px;
+	padding-bottom: 10px;
 	text-align: center;
 }
 
@@ -105,14 +105,20 @@ a:active {
 	opacity: 0.3;
 }
 
+.frontshow {
+	text-align: center;
+	background-color: grey;
+	padding: 10px;
+}
+
 .menu {
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 14px;
 	font-family: Arial;
-	color: orange;
+	color: grey;
 	text-align: center;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
 	margin-bottom: 0px;
 	word-wrap: break-word;
 }
@@ -137,11 +143,17 @@ a:active {
 	color: inherit;
 }
 
+
+
 .mainBox {
 	background-color: white;
 	padding-top: 20px;
 	margin-top: 20px;
 	border-radius: 25px;
+}
+
+.galleryDetails {
+	background-color: grey;
 }
 
 .educationDetails {
@@ -220,8 +232,8 @@ a:active {
 .myself {
 	border: 2px white solid;
     border-radius: 30px;
-	height: 80px;
-	width: 80px;
+	height: 60px;
+	width: 60px;
 }
 
 
