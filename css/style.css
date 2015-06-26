@@ -37,6 +37,28 @@ a:active {
 	color: inherit;
 }
 
+.why {
+	text-align: center;
+	padding: 10px 0px 5px 0px;
+}
+
+.why a:link {
+	text-decoration: underline;
+	color:#A4A4A4;
+}
+.why a:visited {
+	text-decoration: underline;
+	color: #A4A4A4;
+}
+.why a:hover {
+	text-decoration: none;
+	color: lightblue;
+}
+.why a:active {
+	text-decoration: underline;
+	color: #A4A4A4;
+}
+
 /*BACKGROUND IMAGE TEST*/
 .backgroundImage {
 	/*background-image: url(https://33.media.tumblr.com/32c9d187b34b2200a072c155d50759cb/tumblr_mt7j8um6Ca1qf7dj9o1_1280.jpg);*/
