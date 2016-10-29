@@ -1,0 +1,46 @@
+<html><head><title>HMM Results</title></head>
+
+<body bgcolor="#ffffff" link="#ff00ff" text="#000000" vlink="#777700">
+
+<pre>
+
+hmmsearch - search a sequence database with a profile HMM
+HMMER 2.3.2 (Oct 2003)
+Copyright (C) 1992-2003 HHMI/Washington University School of Medicine
+Freely distributed under the GNU General Public License (GPL)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                   07groupEcm.hmm [ecm33group07]
+Sequence database:          /home/davidjm/biodatabase/ncbi/pdbaa
+per-sequence score cutoff:  &gt;= 20.0
+per-domain score cutoff:    [none]
+per-sequence Eval cutoff:   &lt;= 10        
+per-domain Eval cutoff:     [none]
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query HMM:   ecm33group07
+Accession:   [none]
+Description: [none]
+  [HMM has been calibrated; E-values are empirical estimates]
+
+<form method="post" action="http://dove.embl-heidelberg.de/cgi/getseq" enctype="application/x-www-form-urlencoded">
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font></h4>
+<li><h3>Scores for complete sequences</h3> (score includes all domains):
+Sequence Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><font color="#ff0000"><input name="210331.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4">
+</font></form><hr><form method="post" action="http://www.bork.embl-heidelberg.de/NAIL/pruGetNRMexico.pl" target="bottom" enctype="application/x-www-form-urlencoded">
+<font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></form></h4>
+</li><li><h3>Parsed for domains:</h3>
+Sequence Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></h4>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><h4><font color="#ff0000"><input name="210331.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4"></font></h4></form><hr>
+
+
+</li></form></pre>
+</body></html>

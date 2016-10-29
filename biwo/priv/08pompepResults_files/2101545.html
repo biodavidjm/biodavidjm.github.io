@@ -1,0 +1,80 @@
+<html><head><title>HMM Results</title></head>
+
+<body bgcolor="#ffffff" link="#ff00ff" text="#000000" vlink="#777700">
+
+<pre>
+
+hmmsearch - search a sequence database with a profile HMM
+HMMER 2.3.2 (Oct 2003)
+Copyright (C) 1992-2003 HHMI/Washington University School of Medicine
+Freely distributed under the GNU General Public License (GPL)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                   08groupecm.hmm [ecm33group08]
+Sequence database:          /home/davidjm/biodatabase/pompep
+per-sequence score cutoff:  [none]
+per-domain score cutoff:    [none]
+per-sequence Eval cutoff:   &lt;= 10        
+per-domain Eval cutoff:     [none]
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query HMM:   ecm33group08
+Accession:   [none]
+Description: [none]
+  [HMM has been calibrated; E-values are empirical estimates]
+
+<form method="post" action="http://dove.embl-heidelberg.de/cgi/getseq" enctype="application/x-www-form-urlencoded">
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font></h4>
+<li><h3>Scores for complete sequences</h3> (score includes all domains):
+Link Sequence   Description                               Score    E-value  N 
+---- --------   -----------                               -----    ------- ---
+SPCC1223.12c  |meu10||involved in cell wall biosynthe   602.6     2e-178    CHECKED="checked"&gt;
+SPAC1705.03c  ||SPAC23H4.19|involved in cell wall bio   587.6   6.6e-174    CHECKED="checked"&gt;
+SPAC2F3.10    |||GARP complex |Schizosaccharomyces po  -274.9        0.9   1
+SPBC19C7.03   |cyr1|git2|adenylate cyclase activity|S  -275.3       0.93   1
+SPAC4A8.12c   |sds22||protein phosphatase regulatory   -281.7        1.6   1
+SPCC162.08c   |nup211||coiled-coil |Schizosaccharomyc  -286.0        2.3   1
+SPAC22H10.10  |alp21|sto1|LRR domain|Schizosaccharomy  -286.0        2.3   1
+SPAC13G6.01c  |rad8|SPAC5H10.14c|zinc finger protein|  -286.4        2.4   1
+SPCC1739.11c  |cdc11||SIN component|Schizosaccharomyc  -286.9        2.5   1
+SPCC757.12    |||glycosyl hydrolase family 13|Schizos  -288.8        2.9   1
+SPBC25B2.11   |pof2||F-box protein|Schizosaccharomyce  -289.3          3   1
+SPAC20G8.06   |||CCR4-Not complex |Schizosaccharomyce  -293.6        4.4   1
+SPBC3B9.03    |||signal recognition particle, alpha s  -299.7        7.3   1
+SPAC23D3.13c  |||conserved protein|Schizosaccharomyce  -300.7          8   1
+SPAC14C4.13   |rad17||RFC related checkpoint protein|  -301.2        8.4   1
+SPAC11E3.13c  |||GPI anchored protein |Schizosaccharo  -302.1          9   1
+SPAC20H4.10   |ufd2||ubiquitin-protein ligase |Schizo  -302.7        9.5   1
+SPCC188.07    |||sequence orphan|Schizosaccharomyces   -303.2        9.9   1
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><font color="#ff0000"><input name="2101545.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4">
+</font></form><hr><form method="post" action="http://www.bork.embl-heidelberg.de/NAIL/pruGetNRMexico.pl" target="bottom" enctype="application/x-www-form-urlencoded">
+<font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></form></h4>
+</li><li><h3>Parsed for domains:</h3>
+Links Sequence    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+----- --------    ------- ----- -----    ----- -----      -----  -------
+SPCC1223.12c    1/1       2   416 .]     1   453 []   602.6   2e-17 CHECKED="checked"&gt;
+SPAC1705.03c    1/1       1   420 [.     1   453 []   587.6 6.6e-17 CHECKED="checked"&gt;
+SPAC2F3.10      1/1     167   521 ..     1   453 []  -274.9      0.9
+SPBC19C7.03     1/1     672  1034 ..     1   453 []  -275.3     0.93
+SPAC4A8.12c     1/1      56   331 ..     1   453 []  -281.7      1.6
+SPCC162.08c     1/1     566   887 ..     1   453 []  -286.0      2.3
+SPAC22H10.10    1/1      72   444 ..     1   453 []  -286.0      2.3
+SPAC13G6.01c    1/1      21   301 ..     1   453 []  -286.4      2.4
+SPCC1739.11c    1/1     613   874 ..     1   453 []  -286.9      2.5
+SPCC757.12      1/1     254   624 ..     1   453 []  -288.8      2.9
+SPBC25B2.11     1/1      80   367 ..     1   453 []  -289.3        3
+SPAC20G8.06     1/1    1108  1379 ..     1   453 []  -293.6      4.4
+SPBC3B9.03      1/1     186   472 ..     1   453 []  -299.7      7.3
+SPAC23D3.13c    1/1     128   437 ..     1   453 []  -300.7        8
+SPAC14C4.13     1/1     163   464 ..     1   453 []  -301.2      8.4
+SPAC11E3.13c    1/1     100   507 ..     1   453 []  -302.1        9
+SPAC20H4.10     1/1     151   466 ..     1   453 []  -302.7      9.5
+SPCC188.07      1/1     346   686 ..     1   453 []  -303.2      9.9
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></h4>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><h4><font color="#ff0000"><input name="2101545.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4"></font></h4></form><hr>
+
+
+</li></form></pre>
+</body></html>

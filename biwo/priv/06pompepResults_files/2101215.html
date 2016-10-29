@@ -1,0 +1,58 @@
+<html><head><title>HMM Results</title></head>
+
+<body bgcolor="#ffffff" link="#ff00ff" text="#000000" vlink="#777700">
+
+<pre>
+
+knoppix@ttyp0[06Groupecm33]$ hmmsearch 306groupecm.hmm /mnt/hda4/
+BIOINFORMATICA/_biorelatores/biodb_relatores/pompep
+hmmsearch - search a sequence database with a profile HMM
+<a href="http://hmmer.wustl.edu/">HMMER 2.1.1</a> (Dec 1998)
+Copyright (C) 1992-1998 Washington University School of Medicine
+HMMER is freely distributed under the GNU General Public License (GPL).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                 306groupecm.hmm [3ecm33group06]
+Sequence database:        /mnt/hda4/BIOINFORMATICA/_biorelatores/
+biodb_relatores/pompep
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query HMM: 3ecm33group06||
+  [HMM has been calibrated; E-values are empirical estimates]
+
+<form method="post" action="http://dove.embl-heidelberg.de/cgi/getseq" enctype="application/x-www-form-urlencoded">
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font></h4>
+<li><h3>Scores for complete sequences</h3> (score includes all domains):
+Link Sequence    Description                              Score    E-value  N
+---- --------    -----------                              -----    ------- ---
+SPCC1223.12c   |meu10||involved in cell wall biosynth   313.8    1.7e-91    CHECKED="checked"&gt;
+SPAC1705.03c   ||SPAC23H4.19|involved in cell wall bi   115.9    6.2e-32    CHECKED="checked"&gt;
+SPBC354.13     |rga6||GTPase activating protein|Schiz   -98.9        2.9   1
+SPBC19C7.03    |cyr1|git2|adenylate cyclase activity|  -102.2        4.7   1
+SPBC25B2.11    |pof2||F-box protein|Schizosaccharomyc  -103.5        5.7   1
+SPCC364.05     |vps3||CNH domain|Schizosaccharomyces   -104.8          7   1
+SPCC1739.11c   |cdc11||SIN component|Schizosaccharomy  -105.4        7.6   1
+SPAC1F3.06c    |spo15||coiled-coil |Schizosaccharomyc  -106.2        8.7   1
+        [no more scores below E threshold]
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><font color="#ff0000"><input name="2101215.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4">
+</font></form><hr><form method="post" action="http://www.bork.embl-heidelberg.de/NAIL/pruGetNRMexico.pl" target="bottom" enctype="application/x-www-form-urlencoded">
+<font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></form></h4>
+</li><li><h3>Parsed for domains:</h3>
+Links Sequence     Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+----- --------     ------- ----- -----    ----- -----      -----  -------
+SPCC1223.12c     1/1     199   353 ..     1   159 []   313.8  1.7e-9 CHECKED="checked"&gt;
+SPAC1705.03c     1/1     196   349 ..     1   159 []   115.9  6.2e-3 CHECKED="checked"&gt;
+SPBC354.13       1/1      12   143 ..     1   159 []   -98.9      2.9
+SPBC19C7.03      1/1     453   605 ..     1   159 []  -102.2      4.7
+SPBC25B2.11      1/1     278   428 ..     1   159 []  -103.5      5.7
+SPCC364.05       1/1     262   377 ..     1   159 []  -104.8        7
+SPCC1739.11c     1/1     646   758 ..     1   159 []  -105.4      7.6
+SPAC1F3.06c      1/1     864   968 ..     1   159 []  -106.2      8.7
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></h4>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><h4><font color="#ff0000"><input name="2101215.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4"></font></h4></form><hr>
+
+
+</li></form></pre>
+</body></html>

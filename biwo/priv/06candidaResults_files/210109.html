@@ -1,0 +1,104 @@
+<html><head><title>HMM Results</title></head>
+
+<body bgcolor="#ffffff" link="#ff00ff" text="#000000" vlink="#777700">
+
+<pre>
+
+hmmsearch - search a sequence database with a profile HMM
+HMMER 2.3.2 (Oct 2003)
+Copyright (C) 1992-2003 HHMI/Washington University School of Medicine
+Freely distributed under the GNU General Public License (GPL)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                   306groupecm.hmm [3ecm33group06]
+Sequence database:          /home/davidjm/biodatabase/candidadb/CALBI_prot.txt
+per-sequence score cutoff:  [none]
+per-domain score cutoff:    [none]
+per-sequence Eval cutoff:   &lt;= 10        
+per-domain Eval cutoff:     [none]
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query HMM:   3ecm33group06
+Accession:   [none]
+Description: [none]
+  [HMM has been calibrated; E-values are empirical estimates]
+
+<form method="post" action="http://dove.embl-heidelberg.de/cgi/getseq" enctype="application/x-www-form-urlencoded">
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font></h4>
+<li><h3>Scores for complete sequences</h3> (score includes all domains):
+Sequence Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+Candida  albicans|CA2181|CaECM331 Involved in cell wa   340.2    2.3e-99    CHECKED="checked"&gt;
+Candida  albicans|CA0513|IPF13972 unknown function      310.1    2.7e-90    CHECKED="checked"&gt;
+Candida  albicans|CA3115|CaECM33.3 cell wall biogenes   292.7    4.7e-85    CHECKED="checked"&gt;
+Candida  albicans|CA0175|CaNPL4 nuclear protein local   -94.1        1.7   1
+Candida  albicans|CA5196|IPF2338 unknown function       -95.1          2   1
+Candida  albicans|CA3521|CaIFA15 unknown function       -96.1        2.3   1
+Candida  albicans|CA1981|IPF9470 similar to Saccharom   -97.2        2.7   1
+Candida  albicans|CA5424|IPF1598 unknown function       -99.6        3.9   1
+Candida  albicans|CA3633|CaIFA19 unknown function       -99.6        3.9   1
+Candida  albicans|CA4293|CaIFA8 Unknown function        -99.9        4.1   1
+Candida  albicans|CA0003|IPF19484 putative zinc amino  -101.8        5.5   1
+Candida  albicans|CA3355|IPF11277 unknown function     -101.9        5.6   1
+Candida  albicans|CA0296|CaIFA11 Unknown function      -101.9        5.6   1
+Candida  albicans|CA2884|IPF7201 similar to Saccharom  -102.3        5.9   1
+Candida  albicans|CA2236|CaIFA23 unknown function      -102.4          6   1
+Candida  albicans|CA2172|IPF15377 probable membrane p  -102.6        6.2   1
+Candida  albicans|CA3506|CaIFA5 unknown function       -102.9        6.5   1
+Candida  albicans|CA0961|IPF18822 unknown function     -103.2        6.8   1
+Candida  albicans|CA1819|IPF16549 Unknown function     -103.9        7.6   1
+Candida  albicans|CA3634|CaIFA25 unknown function      -104.2        7.9   1
+Candida  albicans|CA1578|CaNUM11 nuclear migration pr  -104.2        7.9   1
+Candida  albicans|CA6067|CaDYN1 dynein heavy chain, c  -104.5        8.3   1
+Candida  albicans|CA0335|CaIFA2 unknown function       -104.7        8.5   1
+Candida  albicans|CA2356|IPF12282 unknown function     -104.8        8.6   1
+Candida  albicans|CA3721|IPF6186 unknown function      -104.8        8.7   1
+Candida  albicans|CA5842|CaLEU1 3-isopropylmalate deh  -104.8        8.7   1
+Candida  albicans|CA5999|IPF668 unknown function       -104.9        8.8   1
+Candida  albicans|CA4419|CaIFA6 Unknown function       -105.1        9.1   1
+Candida  albicans|CA5916|IPF19818 similar to Saccharo  -105.7        9.9   1
+Candida  albicans|CA0075|CaIFA24.3 unknown function,   -105.7        9.9   1
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><font color="#ff0000"><input name="210109.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4">
+</font></form><hr><form method="post" action="http://www.bork.embl-heidelberg.de/NAIL/pruGetNRMexico.pl" target="bottom" enctype="application/x-www-form-urlencoded">
+<font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></form></h4>
+</li><li><h3>Parsed for domains:</h3>
+Sequence Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+Candida    1/1     199   355 ..     1   159 []   340.2  2.3e-9 CHECKED="checked"&gt;
+Candida    1/1     218   375 ..     1   159 []   310.1  2.7e-9 CHECKED="checked"&gt;
+Candida    1/1     194   350 ..     1   159 []   292.7  4.7e-8 CHECKED="checked"&gt;
+Candida    1/1      83   205 ..     1   159 []   -94.1      1.7
+Candida    1/1     383   497 ..     1   159 []   -95.1        2
+Candida    1/1     208   341 ..     1   159 []   -96.1      2.3
+Candida    1/1     261   374 ..     1   159 []   -97.2      2.7
+Candida    1/1     238   382 ..     1   159 []   -99.6      3.9
+Candida    1/1     212   343 ..     1   159 []   -99.6      3.9
+Candida    1/1     211   362 ..     1   159 []   -99.9      4.1
+Candida    1/1     256   383 ..     1   159 []  -101.8      5.5
+Candida    1/1     555   695 ..     1   159 []  -101.9      5.6
+Candida    1/1     421   565 ..     1   159 []  -101.9      5.6
+Candida    1/1    1186  1327 ..     1   159 []  -102.3      5.9
+Candida    1/1     552   675 ..     1   159 []  -102.4        6
+Candida    1/1     922  1030 ..     1   159 []  -102.6      6.2
+Candida    1/1     251   402 ..     1   159 []  -102.9      6.5
+Candida    1/1     398   520 ..     1   159 []  -103.2      6.8
+Candida    1/1     445   577 ..     1   159 []  -103.9      7.6
+Candida    1/1     210   351 ..     1   159 []  -104.2      7.9
+Candida    1/1     654   784 ..     1   159 []  -104.2      7.9
+Candida    1/1     736   879 ..     1   159 []  -104.5      8.3
+Candida    1/1     108   268 ..     1   159 []  -104.7      8.5
+Candida    1/1     859   978 ..     1   159 []  -104.8      8.6
+Candida    1/1     244   376 ..     1   159 []  -104.8      8.7
+Candida    1/1     489   633 ..     1   159 []  -104.8      8.7
+Candida    1/1      22   155 ..     1   159 []  -104.9      8.8
+Candida    1/1     478   610 ..     1   159 []  -105.1      9.1
+Candida    1/1     900  1044 ..     1   159 []  -105.7      9.9
+Candida    1/1     278   422 ..     1   159 []  -105.7      9.9
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></h4>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><h4><font color="#ff0000"><input name="210109.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4"></font></h4></form><hr>
+
+
+</li></form></pre>
+</body></html>

@@ -1,0 +1,608 @@
+<html>
+
+<head>
+
+<title>Integrantes</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script language="JavaScript">
+
+<!--
+
+
+
+
+
+window.resizeTo(screen.availWidth,screen.availHeight);
+
+moveTo(0,0);
+
+window.focus();
+
+
+
+function openWindow(Obra) {
+
+	var ancho = ((screen.width - 790) /2)-5
+
+	var alto = ((screen.height - 430) /2)-30
+
+	var parametros = 'resizable=yes,width=790,height=430,top='+alto+',left='+ancho
+
+	Url = Obra;
+
+	var neu = window.open(Url,'prolec',parametros)
+
+	neu.focus();
+
+}
+
+
+
+var current = 0
+
+var x = 0
+
+var speed = 50
+
+var speed2 = 10000
+
+
+
+function initArray(n) {
+
+  this.length = n;
+
+  for (var i =1; i <= n; i++) {
+
+    this[i] = ' '
+
+  }
+
+}
+
+
+
+typ = new initArray(1)
+
+typ[0]="[ Laboratorios de Investigación en Apoptosis agrupados por temática común de trabajo "
+
+
+
+function typewrite() {
+
+var m = typ[current]
+
+
+
+window.status = m.substring(0, x++) + "]"
+
+
+
+if (x == m.length + 1) {
+
+x = 0
+
+current++
+
+
+
+if (current > typ.length - 1) {
+
+current = 0
+
+}
+
+
+
+setTimeout("typewrite()", speed2)
+
+}
+
+
+
+else {
+
+setTimeout("typewrite()", speed)
+
+}
+
+}
+
+
+
+typewrite()
+
+//-->
+
+</script>
+
+
+
+<script language="JavaScript">
+
+<!--
+
+function MM_swapImgRestore() { //v3.0
+
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+
+}
+
+
+
+function MM_preloadImages() { //v3.0
+
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+
+}
+
+
+
+function MM_findObj(n, d) { //v4.0
+
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+
+}
+
+
+
+function MM_swapImage() { //v3.0
+
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+
+}
+
+//-->
+
+</script>
+
+<style type="text/css">
+A {
+
+	TEXT-DECORATION: none
+
+}
+
+A:hover {
+
+	COLOR: #ed074d; TEXT-DECORATION: underline
+
+}
+
+SELECT {
+
+	BACKGROUND: #fce4d9; COLOR: #8f3670; FONT-FAMILY: Verdana; FONT-SIZE: 12px
+
+}
+
+INPUT {
+
+	BACKGROUND: #fce4d9; COLOR: #8f3670; FONT-FAMILY: Verdana; FONT-SIZE: 12px
+
+}
+
+.headerlink {
+
+	COLOR: #3366cc; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; TEXT-DECORATION: none
+
+}
+
+.sublinks {
+
+	COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; TEXT-DECORATION: none
+
+}
+
+.seperator {
+
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; TEXT-DECORATION: none
+
+}
+
+.sponsor {
+
+	COLOR: orange; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; TEXT-DECORATION: none
+
+}
+
+.links {
+
+	COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; MARGIN-LEFT: 20px; TEXT-DECORATION: none
+
+}
+
+.a {
+
+	COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; MARGIN-LEFT: 20px; TEXT-DECORATION: none
+
+}
+
+.navform {
+
+	COLOR: #f8c8b3; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+
+}
+
+.globalcom {
+
+	COLOR: #8f3670; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+
+}
+
+.globalcomlink {
+
+	COLOR: #8f3670; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: underline
+
+}
+
+.date {
+
+	COLOR: #ff9900; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; TEXT-DECORATION: none
+
+}
+
+.pestana {
+
+	COLOR: #8f3670; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px
+
+}
+
+.pestanaon {
+
+	COLOR: #f8c8b3; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px; TEXT-DECORATION: none
+
+}
+
+.line {
+
+	COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 12px
+
+}
+
+  
+
+ 
+
+body {
+	background-color: #CCCCCC;
+}
+.Estilo34 {color: #FFFFFF}
+</style>
+
+</head>
+
+
+
+<body text="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" onLoad="MM_preloadImages('probando/bp_02-on.gif','probando/bp_03-on.gif','probando/bp_04-on.gif','probando/bp_o05-on.gif')" marginheight="0">
+
+<div align="center">
+
+  <table border="0" bgcolor="#009999" cellspacing="0" cellpadding="0" width="762">
+
+    <tr> 
+
+      <td align="left" bgcolor="#009999" width="176"><a href="index.htm"><img src="probando/aporedprob02.jpg" width="142" height="62" border="0"></a><a name="subir"></a></td>
+
+      <td align="center" bgcolor="#009999"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="550" height="62">
+
+          <param name=movie value="aporedbrillo.swf">
+
+          <param name=quality value=high>
+
+          <embed src="aporedbrillo.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="550" height="62">
+
+          </embed> 
+
+        </object></td>
+
+    </tr>
+
+  </table>
+
+  <table width="762" border="0" cellspacing="0" cellpadding="0" bgcolor="#009999">
+
+    <tr> 
+
+      <td height="28" valign="top" align="left" bgcolor="#009999"><img src="Imagenes/lineintegrantes.gif" width="741" height="32"></td>
+
+    </tr>
+
+  </table>
+
+  <table border="0" cellspacing="0" cellpadding="0" bgcolor="#009999">
+
+    <tr> 
+
+      <td><a href="integrantes.htm"><img name="Image3" border="0" width="153" height="25" src="probando/bp_01-on.gif"></a></td>
+
+      <td valign="top"><a href="divulgacion.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','probando/bp_02-on.gif',1)"><img name="Image4" border="0" src="probando/bp_02-off.gif" width="153" height="25"></a></td>
+
+      <td valign="top"><a href="investigacion.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','probando/bp_03-on.gif',1)"><img name="Image5" border="0" src="probando/bp_03-off.gif" width="153" height="25"></a></td>
+
+      <td valign="top"><a href="eventos.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','probando/bp_04-on.gif',1)"><img name="Image6" border="0" src="probando/bp_04-off.gif" width="153" height="25"></a></td>
+
+      <td valign="top" bgcolor="#009999"><a href="enlaces.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','probando/bp_o05-on.gif',1)"><img name="Image7" border="0" src="probando/bp_05-off.gif" width="150" height="25"></a></td>
+
+    </tr>
+
+  </table>
+
+  <table width="762" border="0" cellspacing="0" cellpadding="0" dwcopytype="CopyTableRow">
+
+    <tr> 
+
+      <td height="31" width="381" valign="top" bgcolor="#000000"><img src="Imagenes/bscw.jpg" width="117" height="24"></td>
+
+      <td valign="middle" width="381" bgcolor="#000000"> 
+
+        <div align="right"><img src="Imagenes/mapa.gif" width="42" height="25" usemap="#Map" border="0"></div>
+
+      </td>
+
+    </tr>
+
+  </table>
+
+  <table width="763" border="0" cellspacing="0" cellpadding="0" height="367" bgcolor="#000000">
+
+    <tr> 
+
+      <td height="27" valign="top" bgcolor="#000000" colspan="17">        <blockquote> 
+
+          <p><font face="Tw Cen MT, Arial Narrow, Arial" color="#FFFFFF"><b><font color="#00CCFF">
+            <font size="4">            &Aacute;reas de Investigaci&oacute;n de los grupos 
+
+            de la APORED</font></font>          </b></font>
+      </blockquote></td>
+
+      <td width="1"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td valign="top" width="27" rowspan="5">&nbsp;</td>
+
+      <td colspan="3" valign="top" rowspan="5"><img src="Imagenes/nih3t3prodigosin.jpg" width="141" height="110"></td>
+
+      <td valign="middle" align="center" colspan="2" rowspan="2"><b><font face="Tw Cen MT, Arial Narrow, Arial" size="4">&gt;&gt; 
+
+        <font color="#FF66CC"><a href="gruposcancer.htm"><font color="#FFFFFF">C&aacute;ncer</font></a></font></font></b></td>
+
+      <td valign="top" colspan="6" height="19">&nbsp;</td>
+
+      <td valign="top" colspan="3" rowspan="4"><img src="Imagenes/sisnerv.jpg" width="252" height="95"></td>
+
+      <td valign="top" colspan="2" rowspan="4">&nbsp;</td>
+
+      <td></td>
+
+    </tr>
+
+    <tr> 
+
+      <td valign="top" colspan="4" rowspan="2">&nbsp;</td>
+
+      <td valign="top" colspan="2" rowspan="3">&nbsp;</td>
+
+      <td height="9"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td height="64" valign="top" colspan="2">&nbsp;</td>
+
+      <td></td>
+
+    </tr>
+
+    <tr> 
+
+      <td width="65" valign="top" rowspan="4">&nbsp;</td>
+
+      <td valign="bottom" align="left" colspan="3" rowspan="4"><img src="Imagenes/dapi-02bis.jpg" width="80" height="69"></td>
+
+      <td valign="top" colspan="2" rowspan="4">&nbsp;</td>
+
+      <td height="3"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td valign="middle" align="center" colspan="4" rowspan="2"><b><font face="Tw Cen MT, Arial Narrow, Arial" size="4">&gt;&gt; 
+
+        <font color="#FF33CC"><a href="gruposnerdes.htm"><font color="#FFFFFF">Sist. 
+
+        Nervioso y Desarrollo</font></a></font></font></b></td>
+
+      <td valign="top" colspan="3" rowspan="3">&nbsp;</td>
+
+      <td height="23"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td valign="top" colspan="2" rowspan="3">&nbsp;</td>
+
+      <td valign="top" colspan="2" rowspan="2">&nbsp;</td>
+
+      <td height="5"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td valign="top" colspan="3" rowspan="3">&nbsp;</td>
+
+      <td width="83" height="45" valign="top">&nbsp;</td>
+
+      <td></td>
+
+    </tr>
+
+    <tr> 
+
+      <td colspan="5" height="39" valign="middle" align="center"><b><font face="Tw Cen MT, Arial Narrow, Arial" size="4">&gt;&gt; 
+
+        <font color="#FF6699"><a href="grupossinmuno.htm"><font color="#FFFFFF">Sist. 
+
+        Inmunol&oacute;gico</font></a></font></font></b></td>
+
+      <td valign="top" colspan="3" rowspan="4">&nbsp;</td>
+
+      <td colspan="3" rowspan="5" valign="top"><img src="Imagenes/tunel-01bis.jpg" width="108" height="109"></td>
+
+      <td width="48" rowspan="7" valign="top">&nbsp;</td>
+
+      <td></td>
+
+    </tr>
+
+    <tr> 
+
+      <td valign="top" colspan="3" rowspan="6">&nbsp;</td>
+
+      <td valign="top" colspan="4" rowspan="2">&nbsp;</td>
+
+      <td height="19"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td width="33" rowspan="2" valign="top">&nbsp;</td>
+
+      <td colspan="2" rowspan="2" valign="middle" align="center"><b><font face="Tw Cen MT, Arial Narrow, Arial" size="4">&gt;&gt; 
+
+        </font><font face="Tw Cen MT, Arial Narrow, Arial" size="4" color="#FF6699"><a href="gruposotros.htm"><font color="#FFFFFF">Otros 
+
+        Sistemas</font></a></font></b></td>
+
+      <td height="21"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td rowspan="4" valign="bottom" width="100" align="right"><img src="Imagenes/fasL-01.jpg" width="63" height="48" alt="Comentario"></td>
+
+      <td valign="top" colspan="3" rowspan="3">&nbsp;</td>
+
+      <td height="20"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td valign="top" colspan="2" rowspan="2">&nbsp;</td>
+
+      <td valign="top" colspan="4" rowspan="3">&nbsp;</td>
+
+      <td height="10"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td valign="top" colspan="3" rowspan="2">&nbsp;</td>
+
+      <td height="19"></td>
+
+    </tr>
+
+    <tr> 
+
+      <td colspan="5" valign="middle" height="43" align="left"><b><font face="Tw Cen MT, Arial Narrow, Arial" size="3" color="#CCCCCC">&gt;&gt; 
+
+        <font color="#FF66CC"><a href="grupostodos.htm"><font color="#CCCCCC">Todos 
+
+        los grupos</font></a></font></font></b></td>
+
+      <td></td>
+
+    </tr>
+
+    <tr>
+
+      <td height="1"></td>
+
+      <td width="17"></td>
+
+      <td width="24"></td>
+
+      <td></td>
+
+      <td></td>
+
+      <td width="38"></td>
+
+      <td width="26"></td>
+
+      <td width="16"></td>
+
+      <td width="63"></td>
+
+      <td width="13"></td>
+
+      <td></td>
+
+      <td width="33"></td>
+
+      <td width="151"></td>
+
+      <td></td>
+
+      <td width="24"></td>
+
+      <td width="1"></td>
+
+      <td></td>
+
+      <td></td>
+
+    </tr>
+  </table>
+
+  <table width="762" height="38" border="0" cellpadding="0" cellspacing="0" bgcolor="#006666">
+    <tr>
+      <td><div align="right"><font size="2" face="Tw Cen MT, Arial Narrow, Arial"><b><a href="index.htm" class="Estilo34">APORED - Red Espa&ntilde;ola de Apoptosis (Muerte Celular Programada)</a></b></font></div></td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>
+
+    <map name="Map"> 
+
+      <area shape="rect" coords="1,1,54,30" href="#" alt="Ir al mapa de situaci&oacute;n web" title="Ir al mapa de situaci&oacute;n web">
+
+    </map>
+
+  </p>
+
+</div>
+</body>
+
+</html>
+

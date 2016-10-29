@@ -1,0 +1,50 @@
+<html><head><title>HMM Results</title></head>
+
+<body bgcolor="#ffffff" link="#ff00ff" text="#000000" vlink="#777700">
+
+<pre>
+
+knoppix@ttyp0[07GroupEcm]$ hmmsearch 07groupEcm.hmm /mnt/hda4/BIOINFORMATICA/
+_biorelatores/biodb_relatores/A_fumigatus.GeneDB.pep
+hmmsearch - search a sequence database with a profile HMM
+<a href="http://hmmer.wustl.edu/">HMMER 2.1.1</a> (Dec 1998)
+Copyright (C) 1992-1998 Washington University School of Medicine
+HMMER is freely distributed under the GNU General Public License (GPL).
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                 07groupEcm.hmm [ecm33group07]
+Sequence database:        /mnt/hda4/BIOINFORMATICA/_biorelatores/
+biodb_relatores/A_fumigatus.GeneDB.pep
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query HMM: ecm33group07||
+  [HMM has been calibrated; E-values are empirical estimates]
+
+<form method="post" action="http://dove.embl-heidelberg.de/cgi/getseq" enctype="application/x-www-form-urlencoded">
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font></h4>
+<li><h3>Scores for complete sequences</h3> (score includes all domains):
+Link Sequence   Description                               Score    E-value  N
+---- --------   -----------                               -----    ------- ---
+AfA8D5.001c   |||hypothetical protein|Aspergillus fum  -170.7        3.5   1
+AfA10A1.020c  |||hypothetical protein, conserved|Aspe  -174.9        5.4   1
+afa35g10.12C  |||transport protein, putative|Aspergil  -178.0        7.5   1
+AfA33H4.080   |||nuclear segregation protein, putativ  -180.3        9.6   1
+        [no more scores below E threshold]
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected sequences" type="submit">     <input type="reset"></font>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><font color="#ff0000"><input name="210711.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4">
+</font></form><hr><form method="post" action="http://www.bork.embl-heidelberg.de/NAIL/pruGetNRMexico.pl" target="bottom" enctype="application/x-www-form-urlencoded">
+<font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></form></h4>
+</li><li><h3>Parsed for domains:</h3>
+Links Sequence    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+----- --------    ------- ----- -----    ----- -----      -----  -------
+AfA8D5.001c     1/1     871  1128 ..     1   296 []  -170.7      3.5
+AfA10A1.020c    1/1     205   427 ..     1   296 []  -174.9      5.4
+afa35g10.12C    1/1     816  1017 ..     1   296 []  -178.0      7.5
+AfA33H4.080     1/1      20   219 ..     1   296 []  -180.3      9.6
+
+<h4><font color="#ff0000"><input name="select" value="Get the selected Domains" type="submit">     <input type="reset"></font></h4>
+<input name=".cgifields" value="seq" type="hidden"><hr><form method="post" action="http://coot.embl-heidelberg.de/NAIL/MviewWEB.pl" target="bottom"><h4><font color="#ff0000"><input name="210711.hmm.nrdb.Results" value="HmmAlign &amp; Mview" type="submit">  Limit Score: <input name="Zscore" value="0" size="4">  Non Redundant: <input name="Redun" value="100" size="4"></font></h4></form><hr>
+
+
+</li></form></pre>
+</body></html>
