@@ -291,3 +291,8 @@ a:active {
 	background-color: #1B1B1B;	
 	text-align: center;
 }
+
+video {
+    max-width: 100%;
+    height: auto;
+}
