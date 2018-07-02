@@ -91,7 +91,6 @@ a:active {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: black;
-
 }
 
 .homelogo {
@@ -287,5 +286,8 @@ a:active {
 }
 
 .footer {
-	/*background-color: black;*/
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #1B1B1B;	
+	text-align: center;
 }
