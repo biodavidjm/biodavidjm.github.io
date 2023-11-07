@@ -1,3 +1,13 @@
+#progressBar {
+    height: 10px;
+    width: 0%;
+    background-color: #3498db; /* Change color as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    transition: width 0.3s; /* Smooth transition effect */
+}
 
 body {
 	font-family: 'Helvetica', 'Arial';

@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <div id="progressBar"></div>
   <title>David Jimenez-Morales Website</title>
   <meta name="description" content="Summary of the professional life of David Jimenez-Morales">
   <meta name="viewport" content="width=device-width">
@@ -38,6 +39,16 @@
     ga('create', 'UA-2264537-13', 'auto');
     ga('send', 'pageview');
 
+  </script>
+
+  <script>
+    // JavaScript for updating the progress bar
+    window.addEventListener('scroll', function() {
+        var totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrollPosition = window.scrollY;
+        var progressWidth = (scrollPosition / totalHeight) * 100;
+        document.getElementById('progressBar').style.width = progressWidth + '%';
+    });
   </script>
   
 </head>
@@ -798,6 +809,24 @@
           <p class="pJournal">Spanish Chemotherapy Society Congress. May 1999</p>
         </div>
 
+        <div class="textBoxes pType">
+          <table style="width:100%">
+            <tr>
+              <td>PhD Thesis</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="textBoxes">
+          <p class="pp">
+            <strong>2013</strong> - <strong>Jimenez-Morales D</strong>
+          </p>
+          <p class="paperTitle">
+            Effects of Physicochemical and Functional Constraints on the Sequence and Structure of Proteins
+          </p>
+          <p class="pJournal"><a href="https://indigo.uic.edu/articles/thesis/Effects_of_Physicochemical_and_Functional_Constraints_on_the_Sequence_and_Structure_of_Proteins/10816016/1" target="blank">Bioengineering Department, University of Illinois at Chicago</a> 06/2013</p>
+        </div>
+
         <div class="up">
           <a href="#top">Up</a>
         </div>
@@ -881,7 +910,7 @@
             <div class="panel-heading"><h4>Bioinformatics Tools</h4></div>
             <p class="computerDetails"> I have led/developed the following tools:</p>
 
-            <p class="computerDetails"> <strong><a href="https://cloudproteo.org/" target = "blank">CloudProteo</a></strong>: proteomics module for running proteomics pipelines on the cloud. CloudProteo is currently being integretad as part of the tool <strong><a href="https://motrpac.github.io/omicspipelines/" target = "blank">omicsPipelines</a></strong> along numerous genomics pipelines (rna-seq, dna sequencing)</p>
+            <p class="computerDetails"> <strong><a href="https://omicspipelines.com/" target = "blank">OmicsPipelines</a></strong>: Conceived, directed, and supervised the development of OmicsPipelines, a user-friendly tool that empowers researchers to efficiently utilize cloud computing for genomic, transcriptomic, and proteomic analyses. This tool streamlines complex bioinformatics workflows, significantly enhancing data processing efficiency and accuracy for research teams, without requiring in-depth knowledge of cloud environment complexities. </p>
 
             <p class="computerDetails"> <strong><a href="http://artms.org" target = "blank">R package: artMS</a></strong>: Analytical R Tools for Mass Spectrometry. Check the <a href="https://github.com/biodavidjm/artMS" target = "blank">Github repo</a> and the <a href="https://www.bioconductor.org/packages/devel/bioc/html/artMS.html" target = "blank">Bioconductor</a> page.</p>
 
