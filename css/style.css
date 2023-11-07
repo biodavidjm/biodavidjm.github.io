@@ -17,6 +17,24 @@ body {
     background-color: #F2F2F2;
 }
 
+/* latin-ext */
+@font-face {
+  font-family: 'Chelsea Market';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/chelseamarket/v13/BCawqZsHqfr89WNP_IApC8tzKChsJg8MKVWl4lw.woff2) format('woff2');
+  unicode-range: ...;
+}
+/* latin */
+@font-face {
+  font-family: 'Chelsea Market';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/chelseamarket/v13/BCawqZsHqfr89WNP_IApC8tzKChiJg8MKVWl.woff2) format('woff2');
+  unicode-range: ...;
+}
+
+
 h2 {
 	font-family: 'Helvetica', 'Arial';
 	margin-top: 0px;
