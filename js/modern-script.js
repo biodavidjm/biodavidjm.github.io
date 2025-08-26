@@ -41,12 +41,14 @@ let publicationsData = {
 // Load publications data from JSON files
 async function loadPublicationsData() {
     try {
+        // Add cache-busting parameter to prevent caching issues
+        const cacheBuster = new Date().getTime();
         const [journalsResponse, booksResponse, popularScienceResponse, abstractsResponse, thesisResponse] = await Promise.all([
-            fetch('data/journals.json'),
-            fetch('data/books.json'),
-            fetch('data/popular-science.json'),
-            fetch('data/abstracts.json'),
-            fetch('data/thesis.json')
+            fetch(`data/journals.json?v=${cacheBuster}`),
+            fetch(`data/books.json?v=${cacheBuster}`),
+            fetch(`data/popular-science.json?v=${cacheBuster}`),
+            fetch(`data/abstracts.json?v=${cacheBuster}`),
+            fetch(`data/thesis.json?v=${cacheBuster}`)
         ]);
 
         publicationsData.journals = await journalsResponse.json();
