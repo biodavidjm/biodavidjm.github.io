@@ -1106,6 +1106,122 @@ a:hover {
     }
 }
 
+/* Awards Section */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.award-item {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.award-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.award-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+.award-header h3 {
+    color: var(--text-primary);
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.award-header h3 a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.award-header h3 a:hover {
+    text-decoration: underline;
+}
+
+.award-year {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.award-organization {
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.award-role {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.award-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.award-details li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.award-details li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .awards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .award-item {
+        padding: 1.5rem;
+    }
+    
+    .award-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .award-header h3 {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         padding: 0 0.5rem;
