@@ -791,12 +791,55 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Publications Filter */
+/* Publications Controls */
+.publications-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .publications-filter {
     display: flex;
     gap: 1rem;
-    margin-bottom: 2rem;
     flex-wrap: wrap;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-color);
+    background: white;
+    color: var(--text-secondary);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.view-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.view-btn.active {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: white;
+}
+
+.view-icon {
+    font-size: 1rem;
 }
 
 .filter-btn {
@@ -825,6 +868,15 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
+}
+
+/* Publications List View */
+.publications-list-view {
+    display: none;
+}
+
+.publications-list-view.active {
+    display: block;
 }
 
 .publication-card {
@@ -1172,6 +1224,12 @@ a:hover {
         height: 25px;
     }
 
+    .publications-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
     .publications-filter {
         flex-direction: column;
         gap: 0.5rem;
@@ -1180,6 +1238,12 @@ a:hover {
     .filter-btn {
         text-align: center;
     }
+    
+    .view-toggle {
+        justify-content: center;
+    }
+    
+
     
     .publications-grid {
         grid-template-columns: 1fr;

@@ -387,14 +387,32 @@
                 <h3 class="section-subtitle">Peer-reviewed Journals (<span id="journals-count">0</span>)</h3>
                 
                 <!-- Filter Buttons -->
-                <div class="publications-filter">
-                    <button class="filter-btn active" data-filter="recent">Recent (2020+)</button>
-                    <button class="filter-btn" data-filter="high-impact">High Impact</button>
-                    <button class="filter-btn" data-filter="all">All Publications</button>
+                <div class="publications-controls">
+                    <div class="publications-filter">
+                        <button class="filter-btn active" data-filter="recent">Recent (2020+)</button>
+                        <button class="filter-btn" data-filter="high-impact">High Impact</button>
+                        <button class="filter-btn" data-filter="all">All Publications</button>
+                    </div>
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid">
+                            <span class="view-icon">⊞</span>
+                            Grid
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <span class="view-icon">☰</span>
+                            List
+                        </button>
+                    </div>
                 </div>
                 
                 <div class="publications-grid" id="journals-grid">
                     <!-- Publications will be populated by JavaScript -->
+                </div>
+                
+                <div class="publications-list-view" id="journals-list" style="display: none;">
+                    <div class="publications-list">
+                        <!-- Publications list will be populated by JavaScript -->
+                    </div>
                 </div>
             </div>
         </div>

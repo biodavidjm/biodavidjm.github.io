@@ -29,6 +29,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Toggle between grid and list view
+function toggleView(view) {
+    const journalsGrid = document.getElementById('journals-grid');
+    const journalsList = document.getElementById('journals-list');
+    const viewBtns = document.querySelectorAll('.view-btn');
+    
+    // Update active button
+    viewBtns.forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`[data-view="${view}"]`).classList.add('active');
+    
+    // Show/hide appropriate view
+    if (view === 'grid') {
+        journalsGrid.style.display = 'grid';
+        journalsList.style.display = 'none';
+    } else {
+        journalsGrid.style.display = 'none';
+        journalsList.style.display = 'block';
+    }
+}
+
 // Publications Data Storage
 let publicationsData = {
     journals: [],
@@ -85,6 +107,16 @@ function createPublicationCard(publication) {
     `;
 }
 
+// Create publication list item for journals
+function createJournalListItem(publication) {
+    let link = '';
+    if (publication.link) {
+        link = ` <a href="${publication.link}" target="_blank" rel="noopener">[Link]</a>`;
+    }
+    
+    return `<li class="publication-list-item" data-year="${publication.year}" data-high-impact="${publication.highImpact}"><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.journal}.${link}</li>`;
+}
+
 // Create simple list item for other publications
 function createPublicationListItem(publication, type) {
     let link = '';
@@ -94,13 +126,13 @@ function createPublicationListItem(publication, type) {
     
     switch(type) {
         case 'books':
-            return `<li><strong>${publication.title}</strong> (${publication.year}). ${publication.authors}. ${publication.publisher}.${link}</li>`;
+            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.publisher}.${link}</li>`;
         case 'popularScience':
-            return `<li><strong>${publication.title}</strong> (${publication.year}). ${publication.authors}. ${publication.publication}.${link}</li>`;
+            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.publication}.${link}</li>`;
         case 'abstracts':
-            return `<li><strong>${publication.title}</strong> (${publication.year}). ${publication.authors}. ${publication.conference}.${link}</li>`;
+            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.conference}.${link}</li>`;
         case 'thesis':
-            return `<li><strong>${publication.title}</strong> (${publication.year}). ${publication.authors}. ${publication.institution}.${link}</li>`;
+            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.institution}.${link}</li>`;
         default:
             return `<li>${publication.title}</li>`;
     }
@@ -109,14 +141,20 @@ function createPublicationListItem(publication, type) {
 // Populate publications
 function populatePublications() {
     const journalsGrid = document.getElementById('journals-grid');
+    const journalsList = document.getElementById('journals-list');
     const abstractsList = document.getElementById('abstracts-list');
     const booksList = document.getElementById('books-list');
     const popularScienceList = document.getElementById('popular-science-list');
     const thesisList = document.getElementById('thesis-list');
     
-    // Populate journals
+    // Populate journals grid and list
     journalsGrid.innerHTML = publicationsData.journals
         .map(createPublicationCard)
+        .join('');
+    
+    const journalsListContainer = journalsList.querySelector('.publications-list');
+    journalsListContainer.innerHTML = publicationsData.journals
+        .map(createJournalListItem)
         .join('');
     
     // Populate other publications as simple lists
@@ -156,7 +194,9 @@ function updatePublicationCounts() {
 // Filter publications
 function filterPublications(filter) {
     const publicationCards = document.querySelectorAll('#journals-grid .publication-card');
+    const publicationListItems = document.querySelectorAll('#journals-list .publications-list .publication-list-item');
     
+    // Filter grid view
     publicationCards.forEach(card => {
         const year = parseInt(card.getAttribute('data-year'));
         const isHighImpact = card.getAttribute('data-high-impact') === 'true';
@@ -175,6 +215,27 @@ function filterPublications(filter) {
         }
         
         card.style.display = show ? 'block' : 'none';
+    });
+    
+    // Filter list view
+    publicationListItems.forEach(item => {
+        const year = parseInt(item.getAttribute('data-year'));
+        const isHighImpact = item.getAttribute('data-high-impact') === 'true';
+        let show = false;
+        
+        switch(filter) {
+            case 'recent':
+                show = year >= 2020;
+                break;
+            case 'high-impact':
+                show = isHighImpact;
+                break;
+            case 'all':
+                show = true;
+                break;
+        }
+        
+        item.style.display = show ? 'block' : 'none';
     });
     
     // Update active filter button
@@ -386,6 +447,14 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             const filter = btn.getAttribute('data-filter');
             filterPublications(filter);
+        });
+    });
+    
+    // Add view toggle event listeners
+    document.querySelectorAll('.view-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const view = btn.getAttribute('data-view');
+            toggleView(view);
         });
     });
     
