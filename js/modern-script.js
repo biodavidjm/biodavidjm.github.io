@@ -114,7 +114,7 @@ function createJournalListItem(publication) {
         link = ` <a href="${publication.link}" target="_blank" rel="noopener">[Link]</a>`;
     }
     
-    return `<li class="publication-list-item" data-year="${publication.year}" data-high-impact="${publication.highImpact}"><strong>${publication.title}</strong> (${publication.year}). ${publication.authors}. ${publication.journal}.${link}</li>`;
+    return `<li class="publication-list-item" data-year="${publication.year}" data-high-impact="${publication.highImpact}"><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.journal}.${link}</li>`;
 }
 
 // Create simple list item for other publications
@@ -126,13 +126,13 @@ function createPublicationListItem(publication, type) {
     
     switch(type) {
         case 'books':
-            return `<li><strong>${publication.title}</strong> (${publication.year}). ${publication.authors}. ${publication.publisher}.${link}</li>`;
+            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.publisher}.${link}</li>`;
         case 'popularScience':
-            return `<li><strong>${publication.title}</strong> (${publication.year}). ${publication.authors}. ${publication.publication}.${link}</li>`;
+            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.publication}.${link}</li>`;
         case 'abstracts':
-            return `<li><strong>${publication.title}</strong> (${publication.year}). ${publication.authors}. ${publication.conference}.${link}</li>`;
+            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.conference}.${link}</li>`;
         case 'thesis':
-            return `<li><strong>${publication.title}</strong> (${publication.year}). ${publication.authors}. ${publication.institution}.${link}</li>`;
+            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.institution}.${link}</li>`;
         default:
             return `<li>${publication.title}</li>`;
     }
