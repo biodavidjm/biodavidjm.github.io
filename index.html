@@ -1,1159 +1,786 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <div id="progressBar"></div>
-  <title>David Jimenez-Morales Website</title>
-  <meta name="description" content="Summary of the professional life of David Jimenez-Morales">
-  <meta name="viewport" content="width=device-width">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Jimenez-Morales - Bioinformatics Lead & Research Scientist</title>
+    <meta name="description" content="David Jimenez-Morales is a Bioinformatics Lead at Stanford University, specializing in multi-omic data analysis, proteomics, and computational biology research.">
+    <meta name="keywords" content="bioinformatics, proteomics, computational biology, Stanford University, multi-omics, research scientist">
+    <meta name="author" content="David Jimenez-Morales">
     
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-   <link href="css/hover.css" rel="stylesheet">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://biodavidjm.github.io/">
+    <meta property="og:title" content="David Jimenez-Morales - Bioinformatics Lead">
+    <meta property="og:description" content="Bioinformatics Lead at Stanford University specializing in multi-omic data analysis and computational biology.">
+    <meta property="og:image" content="https://biodavidjm.github.io/images/DavidJimenezMorales-portrait.jpeg">
 
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://biodavidjm.github.io/">
+    <meta property="twitter:title" content="David Jimenez-Morales - Bioinformatics Lead">
+    <meta property="twitter:description" content="Bioinformatics Lead at Stanford University specializing in multi-omic data analysis and computational biology.">
+    <meta property="twitter:image" content="https://biodavidjm.github.io/DavidJimenezMorales-portrait.jpeg">
 
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "igqv9srqqg");
-  </script>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    ga('create', 'UA-2264537-13', 'auto');
-    ga('send', 'pageview');
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/modern-style.css">
 
-  </script>
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2264537-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-2264537-13');
+    </script>
 
-  <script>
-    // JavaScript for updating the progress bar
-    window.addEventListener('scroll', function() {
-        var totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrollPosition = window.scrollY;
-        var progressWidth = (scrollPosition / totalHeight) * 100;
-        document.getElementById('progressBar').style.width = progressWidth + '%';
-    });
-  </script>
-  
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "igqv9srqqg");
+    </script>
 </head>
-
 <body>
-<a name="top" id="top"></a>
-  <div class="header">
-
-    <div class="homelogo">
-      <img class="myself" src='images/biodavidjmC.jpeg' onmouseover="this.src='images/biodavidjm.png';" onmouseout="this.src='images/biodavidjmC.jpeg';" />
-    </div>
-
-    <div class="row intro">
-      <p class="preintro">Summary of my professional life</p>
-      <h1 class="name">David Jimenez-Morales</h1>
-      <h6>PhD, MSc, BSc</h6>
-    </div>
-
-    <div class="row logosInside">
-      <div class="col-xs-12">
-
-        <span class="logosSpan">
-          <a href="https://scholar.google.com/citations?user=Pqq0IwcAAAAJ&hl" target="blank">
-            <img class="logos" src="images/logo_googlescholarHat.png" alt="Google Scholar" title="Go to my Google Scholar profile">
-          </a>
-        </span>
-
-        <span class="logosSpan">
-          <a href="https://orcid.org/0000-0003-4356-6461" target="blank">
-            <img class="logos" src="images/ORCID-icon.png" alt="ORCID" title="Go to my ORCID profile">
-          </a>
-        </span>
-
-        <span class="logosSpan">
-          <a href="https://github.com/biodavidjm" target="blank">
-            <img class="logos" src="images/logo_github_white.png" alt="Coding activity at Github" title="Check my coding activity at Github">
-          </a>
-        </span>
-
-        <span class="logosSpan">
-          <a href="https://www.linkedin.com/pub/david-jimenez-morales/26/21b/3a9" target="blank">
-            <img class="logos" src="images/logo_linkedin.png" alt="Profile at LinkedIN" title="Visit my profile at LinkedIN">
-          </a>
-        </span>
-
-        <span class="logosSpan">
-          <a href="http://www.researchgate.net/profile/David_Jimenez-Morales" target="blank">
-            <img class="logos" src="images/logo_researchgate.png" alt="Research Gate profile" title="Visit my profile at ResearchGate">
-          </a>
-        </span>
-
-        <span class="logosSpan">
-          <a href="https://publons.com/researcher/3230169/david-jimenez-morales/" target="blank">
-            <img class="logos" src="images/logo_publons.png" alt="Publons" title="Check my profile at the Web of Science">
-          </a>
-        </span>
-        
-      </div>
-    </div>
-
-    <!-- Why Science? -->
-    <div class="container why">
-      <p><a href="https://www.youtube.com/watch?v=VSG9q_YKZLI" target="blank">Why am I doing Science?</a></p>
-    </div>
-    
-    <!-- GALLERY -->
-    <div class="row">
-      <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-      <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-        <div class="mainBox galleryDetails">
-  <!--         <div class="eduHead">
-            <h5>Graphical Summary</h5>
-          </div> -->
-
-          <div class="textBoxes">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-      <!--         <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-              </ol> -->
-
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <img class="img-responsive center-block" src="images/gallery/biodavidjm_EvolutionBetaBarrel.jpg">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">David Jimenez-Morales, PhD</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#research" class="nav-link">Research</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                
+                <a href="#computing" class="nav-link">Computing</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Other</a>
+                    <div class="dropdown-menu">
+                        <a href="#teaching" class="dropdown-item">Teaching</a>
+                        <a href="#awards" class="dropdown-item">Awards</a>
+                        <a href="#links" class="dropdown-item">Media & Links</a>
+                        <a href="#contact" class="dropdown-item">Contact</a>
+                    </div>
                 </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/biodavidjmResearchGallery.001.jpg">
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="images/DavidJimenezMorales-portrait.jpeg" alt="David Jimenez-Morales" class="profile-image">
                 </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/biodavidjmResearchGallery.002.jpg">
+                <div class="hero-text">
+                    <h1 class="hero-title">David Jimenez-Morales</h1>
+                    <p class="hero-subtitle">Bioinformatics Lead & Research Scientist</p>
+                    <p class="hero-description">
+                        Leading computational biology research at Stanford University, specializing in multi-omic data analysis, 
+                        proteomics, and systems biology. PhD in Bioinformatics with extensive experience in developing 
+                        bioinformatics tools and pipelines. <br/>
+                        <a href="https://www.youtube.com/watch?v=VSG9q_YKZLI" target="_blank" rel="noopener">But why am I doing research?</a>
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#research" class="btn btn-primary">View Research</a>
+                        <a href="#publications" class="btn btn-secondary">Publications</a>
+                    </div>
                 </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/sysbio_modeling.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/fluomics-tv.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/biodavidjmResearchGallery.003.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/biodavidjmResearchGallery.004.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/biodavidjmResearchGallery.005.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/biodavidjmResearchGallery.006.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/prelyscar01.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/prelyscar02.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/prelyscar03.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/prelyscar04.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/prelyscar05.jpg">
-                </div>
-                <div class="item">
-                  <img class="img-responsive center-block" src="images/gallery/logoProteomics.jpg">
-                </div>
-
-              </div>
-
-              <!-- Left and right controls -->
-              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div> <!-- <div id="myCarousel" -->
-          </div> <!-- <div class="textBoxes"> -->
-          
-        </div> <!-- <div class="mainBox galleryDetails"> -->
-      </div> <!-- SECOND COLUMNS -->
-      <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-    </div> 
-    <!-- end of gallery -->
-
-    <div class="container menu">
-      <div class="col-xs-12">
-          <a href="#education" class="hvr-underline-from-left">Education</a>
-      </div>
-      <div class="col-xs-12">
-          <a href="#experience" class="hvr-underline-from-left">Experience</a>
-      </div>
-      <div class="col-xs-12">
-          <a href="#publications" class="hvr-underline-from-left">Publications</a>
-      </div>
-      <div class="col-xs-12">
-          <a href="#teaching" class="hvr-underline-from-left">Teaching</a>
-      </div>
-      <div class="col-xs-12">
-          <a href="#computing" class="hvr-underline-from-left">Computing</a>
-      </div>
-      <div class="col-xs-12">
-        <a href="#awards" class="hvr-underline-from-left">Awards</a>
-      </div>
-      <div class="col-xs-12">
-        <a href="#links" class="hvr-underline-from-left">Links</a>
-      </div>
-    </div> <!-- menu -->
-
-  </div> <!-- End of header -->
-
-
-  <!-- EDUCATION -->
-  <div class="row">
-    <a name="education" id="education"></a>
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-      <div class="mainBox educationDetails">
-        <div class="eduHead">
-          <h2>EDUCATION</h2>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2006 - 2013</p> 
-          <p class="eduDegree">PhD Bioinformatics</p>
-          <p class="eduOrg"> Department of Bioengineering. University of Illinois at Chicago. Chicago, Illinois (USA)</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2003 - 2004</p> 
-          <p class="eduDegree">MSc Computational Biology</p>
-          <p class="eduOrg"> Universidad Complutense de Madrid. Madrid (Spain)</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">1999</p> 
-          <p class="eduDegree">Teaching Certificate <small>(Postgraduate Certificate in Education)</small></p>
-          <p class="eduOrg"> Instituto de Ciencias de la Educación. Universidad Complutense de Madrid.
-      Madrid (Spain) </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">1998 - 2000</p> 
-          <p class="eduDegree">Microbiology PhD Program and Research Certificate</p>
-          <p class="eduOrg"> Department of Microbiology I, Universidad Complusense de Madrid.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">1993 - 1998</p> 
-          <p class="eduDegree">BSc Biology</p>
-          <p class="eduOrg"> Facultad de Ciencias. Universidad de Granada.
-      Granada (Spain)</p>
-        </div>
-
-        <div class="up">
-          <a href="#top" class="button hvr-round-corners">Up</a>
-        </div>
-        
-      </div>
-    </div> <!-- SECOND COLUMNS -->
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-  </div> 
-  <!-- end of education -->
-
-  <!-- RESEARCH -->
-  <div class="row">
-    <a name="experience" id="experience"></a>
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-      <div class="mainBox researchDetails">
-        <div class="eduHead">
-          <h2>EXPERIENCE</h2>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2022 - <em>to date</em> </p> 
-          <p class="eduDegree"><a href="https://profiles.stanford.edu/david-jimenez-morales" target="new">Bioinformatics Lead</a></p>
-          <p class="eduDate">2021 - 2022. Senior Research Engineer (Academic Staff Research)</p> 
-          <p class="eduDate">2018 - 2020. Senior Computational Biologist (Staff Scientist)</p> 
-          <p class="eduOrg"><a href="https://ashleylab.stanford.edu/" target="new">The Ashley lab</a>. Department of Medicine, Division of Cardiovascular Medicine. Stanford University</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2015 - 2018</p> 
-          <p class="eduDegree">Researcher (Staff Scientist) </p>
-          <p class="eduOrg"><a href="http://kroganlab.ucsf.edu/" target="new">The Krogan lab</a>. Department of Cellular and Molecular Pharmacology (CMP). University of California San Francisco (UCSF)</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2016 - 2018</p> 
-          <p class="eduDegree">Visiting Scientist</p>
-          <p class="eduOrg"> Gladstone Institutes. San Francisco, CA</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2013 - 2018</p> 
-          <p class="eduDegree">Bioengineering Department Affiliate</p>
-          <p class="eduOrg"> Department of Bioengineering. University of Illinois-Chicago. Chicago</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2014 - 2015</p> 
-          <p class="eduDegree">Research Associate (Software Developer and Bioinformatics Specialist)</p>
-          <p class="eduOrg"> dictyBase.org. Center for Genetic Medicine. Northwestern University. Chicago</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2013 - 2015</p> 
-          <p class="eduDegree">Visiting Research Associate</p>
-          <p class="eduOrg"> Shannon Hackett's lab. Bird Division. The Field Museum of Natural History. Chicago</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2013 - 2014</p> 
-          <p class="eduDegree">Visiting Instructor</p>
-          <p class="eduOrg"> Prof Bob Eisenberg’s Lab. Department of Molecular. Biophysics & Physiology. Rush University Medical Center. Chicago. </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2006 - 2013</p> 
-          <p class="eduDegree">PhD Graduate Student</p>
-          <p class="eduOrg"> Jie Liang’s Molecular and Systems Computational lab. Department of Bioengineering. University of Illinois-Chicago. Chicago</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">2003 - 2005</p> 
-          <p class="eduDegree">Research Assistant</p>
-          <p class="eduOrg"> Proteomics Unit & Department of Microbiology II. Universidad Complutense de Madrid – Parque Científico de Madrid. Madrid</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="eduDate">1998 - 2000</p> 
-          <p class="eduDegree">Research Assistant</p>
-          <p class="eduOrg"> Department of Microbiology I. Faculty of Medicine. Universidad Complutense de Madrid. Madrid.</p>
-        </div>
-
-        <div class="up">
-          <a href="#top">Up</a>
-        </div>
-
-      </div>
-    </div> <!-- SECOND COLUMNS -->
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-  </div> 
-  <!-- end of research -->
-
-  <!-- PUBLICATIONS -->
-
-  <div class="row">
-    <a name="publications" id="publications"></a>
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-      <div class="mainBox publicationDetails">
-        <div class="eduHead">
-          <h2>PUBLICATIONS</h2>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pJournal"> <small><a href="https://www.biorxiv.org/search/author1%3ADavid%2BJimenez-Morales%20jcode%3Abiorxiv%7C%7Cmedrxiv%20numresults%3A10%20sort%3Arelevance-rank%20format_result%3Astandard" target="blank">Check my preprints from bioRxiv and medRxiv</a></small></p>
-        </div>
-
-        <div class="textBoxes pType">
-          <table style="width:100%">
-            <tr>
-              <td>Peer-reviewed Journals (n = 35)</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2024</strong> - MoTrPAC Study Group, Lead Analysts & MoTrPAC Study Group</p>
-          <p class="paperTitle">Temporal dynamics of the multi-omic response to endurance exercise training</p>
-          <p class="pJournal"> <a href="https://www.nature.com/articles/s41586-023-06877-w" target="blank">Nature</a>. Volume 629, pages 174–183 (2024). <a href="https://www.nature.com/nature/volumes/629/issues/8010" target="blank">Featured on the cover</a>. doi: 10.1038/s41586-023-06877-w</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2024</strong> - David Amar, Nicole R. Gay, <strong>David Jimenez-Morales</strong>, Pierre M. Jean Beltran, Megan E. Ramaker, Archana Natarajan Raja, Bingqing Zhao, Yifei Sun, Shruti Marwaha, David A. Gaul, Steven G. Hershman, Alexis Ferrasse, Ashley Xia, Ian Lanza, Facundo M. Fernández, Stephen B. Montgomery, Andrea L. Hevener, Euan A. Ashley, Martin J. Walsh, Lauren M. Sparks, Charles F. Burant, R. Scott Rector, John Thyfault, Matthew T. Wheeler, Bret H. Goodpaster, Paul M. Coen, Simon Schenk, Sue C. Bodine, Malene E. Lindholm, the MoTrPAC Study Group</p>
-          <p class="paperTitle">The mitochondrial multi-omic response to exercise training across rat tissues</p>
-          <p class="pJournal"> <a href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(23)00472-2" target="blank">Cell Metabolism</a>. May 02, 2024. doi: 10.1016/j.cmet.2023.12.021</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2024</strong> - Gina M. Many, James A. Sanford, Tyler J. Sagendorf, Zhenxin Hou, Pasquale Nigro, Katie L. Whytock, David Amar, Tiziana Caputo, Nicole R. Gay, David A. Gaul, Michael F. Hirshman, <strong>David Jimenez-Morales</strong>, Malene E. Lindholm, Michael J. Muehlbauer, Maria Vamvini, Bryan C. Bergman, Facundo M. Fernández, Laurie J. Goodyear, Andrea L. Hevener, Eric A. Ortlund, Lauren M. Sparks, Ashley Xia, Joshua N. Adkins, Sue C. Bodine, The MoTrPAC Study Group </p>
-          <p class="paperTitle">Sexual dimorphism and the multi-omic response to exercise training in rat subcutaneous white adipose tissue</p>
-          <p class="pJournal"> <a href="https://www.nature.com/articles/s42255-023-00959-9" target="blank">Nature Metabolism</a>. 2024. Epub 2024 May 1. doi: 10.1038/s42255-023-00959-9</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2024</strong> - Adriana Steinbach, Varun Bhadkamkar, <strong>David Jimenez-Morales</strong>, Erica Stevenson, Gwendolyn M. Jang, Nevan J. Krogan, Danielle L. Swaney, and Shaeri Mukherjee</p>
-          <p class="paperTitle">Cross-family small GTPase ubiquitination by the intracellular pathogen Legionella pneumophila</p>
-          <p class="pJournal"> <a href="https://pubmed.ncbi.nlm.nih.gov/38117589/" target="blank">Molecular Biology of the Cell</a>. 2024 Mar 1;35(3):ar27. doi: 10.1091/mbc.E23-06-0260</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2023</strong> - Zeynep Cakir, Samuel J Lord, Yuan Zhou, Gwendolyn M Jang, Benjamin J Polacco, Manon Eckhardt, <strong>David Jimenez-Morales</strong>, Billy W Newton, Adam L Orr, Jeffrey R Johnson, Alexandre da Cruz, R Dyche Mullins, Nevan J Krogan, Robert W Mahley, Danielle L Swaney </p>
-          <p class="paperTitle">Quantitative Proteomic Analysis Reveals apoE4-Dependent Phosphorylation of the Actin-Regulating Protein VASP</p>
-          <p class="pJournal"> <a href="https://pubmed.ncbi.nlm.nih.gov/37019383/" target="blank">Molecular & Cellular Proteomics</a>. 2023 May;22(5):100541. Epub 2023 Apr 4. doi: 10.1016/j.mcpro.2023.100541.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2023</strong> - Kristoffer E. Leon, Mir M. Khalid, Ryan A. Flynn, Krystal A. Fontaine, Thong T. Nguyen, G. Renuka Kumar, Camille R. Simoneau, Sakshi Tomar, <strong>David Jimenez-Morales</strong>, Mariah Dunlap, Julia Kaye, Priya S. Shah, Steven Finkbeiner, Nevan J. Krogan, Carolyn Bertozzi, Jan E. Carette, Melanie Ott </p>
-          <p class="paperTitle">Nuclear accumulation of host transcripts during Zika Virus Infection</p>
-          <p class="pJournal"> <a href="https://pubmed.ncbi.nlm.nih.gov/36603024/" target="blank"> PLoS Pathog</a>. 2023 Jan 5;19(1):e1011070. doi: 10.1371/journal.ppat.1011070.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2022</strong> - SH Lee, X Liu, <strong>D Jimenez-Morales</strong>, PF Rinaudo</p>
-          <p class="paperTitle">Murine blastocysts generated by in vitro fertilization show increased Warburg metabolism and altered lactate production</p>
-          <p class="pJournal"> <a href="https://pubmed.ncbi.nlm.nih.gov/36107481/" target="blank">Elife</a>. 2022 Sep 15;11:e79153. doi: 10.7554/eLife.79153.</p>
-        </div>
-        
-        <div class="textBoxes">
-          <p class="pp"><strong>2022</strong> - VN Parikh, AG Ioannidis, <strong>D Jimenez-Morales</strong> ,... , EA Ashley</p>
-          <p class="paperTitle">Deconvoluting complex correlates of COVID-19 severity with a multi-omic pandemic tracking strategy</p>
-          <p class="pJournal"> <a href="https://pubmed.ncbi.nlm.nih.gov/36042219/" target="blank">Nature Communications</a>. 2022 13 (1), 1-10. doi: 10.1038/s41467-022-32397-8.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2022</strong> - Gabriel Mitchell, Melanie R Silvis, Kelsey C Talkington, Jonathan M Budzik, Claire E Dodd, Justin M Paluba, Erika A Oki, Kristine L Trotta, Daniel J Licht, <strong>David Jimenez-Morales</strong>, Seemay Chou, Paul B Savage, Carol A Gross, Michael A Marletta, Jeffery S Cox</p>
-          <p class="paperTitle">Ceragenins and Antimicrobial Peptides Kill Bacteria through Distinct Mechanisms</p>
-          <p class="pJournal"> <a href="https://pubmed.ncbi.nlm.nih.gov/35073755/" target="blank">mBio</a>. 2022 Jan 25;e0272621. doi: 10.1128/mbio.02726-21.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2021</strong> - Malene E Lindholm, <strong>David Jimenez-Morales</strong>, Han Zhu, Kinya Seo, David Amar, Chunli Zhao, Archana Raja, Roshni Madhvani, Sarah Abramowitz, Cedric Espenel, Shirley Sutton, Colleen Caleshu, Gerald J Berry, Kara S Motonaga, Kyla Dunn, Julia Platt, Euan A Ashley, Matthew T Wheeler</p>
-          <p class="paperTitle">Mono- and Biallelic Protein-Truncating Variants in Alpha-Actinin 2 Cause Cardiomyopathy Through Distinct Mechanisms</p>
-          <p class="pJournal"> <a href="https://pubmed.ncbi.nlm.nih.gov/34802252/" target="blank">Circ Genom Precis Med</a>. 2021 Nov 22. doi: 10.1161/CIRCGEN.121.003419</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2021</strong> - Danielle L. Swaney, Dana J. Ramms, Zhiyong Wang, Jisoo Park, Yusuke Goto, Margaret Soucheray, Neil Bhola, Kyumin Kim, Fan Zheng, Yan Zeng, Michael McGregor, Kari A. Herrington, Rachel O’Keefe, Nan Jin, Nathan K. VanLandingham, Helene Foussard, John Von Dollen, Mehdi Bouhaddou, <strong>David Jimenez-Morales</strong>, Kirsten Obernier, Jason F. Kreisberg, Minkyu Kim, Daniel E. Johnson, Natalia Jura, Jennifer R. Grandis, J. Silvio Gutkind, Trey Ideker, Nevan J. Krogan</p>
-          <p class="paperTitle">A protein network map of head and neck cancer reveals PIK3CA mutant drug sensitivity</p>
-          <p class="pJournal"> <a href="https://www.science.org/doi/10.1126/science.abf2911" target="blank">Science</a>. Oct 1, 2021. doi: 10.1126/science.abf2911</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2021</strong> - Laura Martin-Sancho, Shashank Tripathi, Ariel Rodriguez-Frandsen, Lars Pache, Maite Sanchez-Aparicio, Michael J. McGregor, Kelsey M. Haas, Danielle L. Swaney, Thong T. Nguyen, Joao I. Mamede, Christopher Churas, Dexter Pratt, Sara B. Rosenthal, Laura Riva, Courtney Nguyen, Nish Beltran-Raygoza, Stephen Soonthornvacharin, Guojun Wang, <strong>David Jimenez-Morales</strong>, Paul D. De Jesus, Hong M. Moulton, David A. Stein, Max W. Chang, Chris Benner, Trey Ideker, Randy A. Albrecht, Judd F. Hultquist, Nevan J. Krogan, Adolfo García-Sastre & Sumit K. Chanda</p>
-          <p class="paperTitle">Restriction factor compendium for influenza A virus reveals a mechanism for evasion of autophagy</p>
-          <p class="pJournal"> <a href="https://www.nature.com/articles/s41564-021-00964-2" target="blank">Nature Microbiology</a>. Sept 23, 2021. doi: 10.1038/s41564-021-00964-2</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2021</strong> - Esther Paulo, Yun Zhang, Ruchi Masand, Tony L. Huynh, Youngho Seo, Danielle L. Swaney, Margaret Soucheray, Erica Stevenson, <strong>David Jimenez-Morales</strong>, Nevan J. Krogan, Biao Wang</p>
-          <p class="paperTitle">Brown adipocyte ATF4 activation improves thermoregulation and systemic metabolism</p>
-          <p class="pJournal"> <a href="https://doi.org/10.1016/j.celrep.2021.109742" target="blank">Cell Reports</a>. Vol 36, Issue 12, 109742, Sept 21, 2021. doi: <a href="https://doi.org/10.1016/j.celrep.2021.109742" target="blank"> 10.1016/j.celrep.2021.109742 </a></p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2021</strong> - <a href="https://www.covid19hg.org/acknowledgements/">COVID-19 Host Genetics Initiative</a> </p>
-          <p class="paperTitle">Mapping the human genetic architecture of COVID-19</p>
-          <p class="pJournal"> <a href="https://pubmed.ncbi.nlm.nih.gov/34237774/" target="blank">Nature</a>. 2021 Jul 8. doi: <a href="https://doi.org/10.1038/s41586-021-03767-x" target="blank"> 10.1038/s41586-021-03767-x </a></p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2021</strong> - Nikoleta G Tsvetanova, Michelle Trester-Zedlitz, Billy W Newton, Grace E Peng, Jeffrey R Johnson, <strong>David Jimenez-Morales</strong>, Andrew P Kurland, Nevan J Krogan, Mark von Zastrow</p>
-          <p class="paperTitle">Endosomal cAMP production broadly impacts the cellular phosphoproteome</p>
-          <p class="pJournal"> <a href="https://pubmed.ncbi.nlm.nih.gov/34166681/" target="blank">J Biol Chem</a>. 2021 Jun 21;100907. doi: <a href="https://doi.org/10.1016/j.jbc.2021.100907" target="blank"> 10.1016/j.jbc.2021.100907 </a></p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2021</strong> - Aaron J. Wilk, Madeline J. Lee, Bei Wei, Benjamin Parks, Ruoxi Pi, Giovanny J. Martínez-Colón, Thanmayi Ranganath, Nancy Q. Zhao, Shalina Taylor, Winston Becker, Stanford COVID-19 Biobank, <strong>David Jimenez-Morales</strong>, Andra L. Blomkalns, Ruth O’Hara, Euan A. Ashley, Kari C. Nadeau, Samuel Yang, Susan Holmes, Marlene Rabinovitch, Angela J. Rogers, William J. Greenleaf, Catherine A. Blish</p>
-          <p class="paperTitle">Multi-omic profiling reveals widespread dysregulation of innate immunity and hematopoiesis in COVID-19</p>
-          <p class="pJournal"> <a href="https://rupress.org/jem/article/218/8/e20210582/212379/Multi-omic-profiling-reveals-widespread" target="blank">J Exp Med</a>. (2021) 218 (8): e20210582. doi: <a href="https://doi.org/10.1084/jem.20210582" target="blank"> 10.1084/jem.20210582 </a></p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2020</strong> - The Molecular Transducers of Physical Activity Consortium</p>
-          <p class="paperTitle">Molecular Transducers of Physical Activity Consortium (MoTrPAC): Mapping the Dynamic Responses to Exercise</p>
-          <p class="pJournal"> <a href="https://www.cell.com/cell/fulltext/S0092-8674(20)30691-7" target="blank">Cell</a>. Volume 181, Issue 7, P1464-1474, June 25, 2020. doi: 
-          <a href="https://doi.org/10.1016/j.cell.2020.06.004" target="blank"> 10.1016/j.cell.2020.06.004 </a>
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2020</strong> - Jonathan M Budzik, Danielle L Swaney, <strong>David Jimenez-Morales</strong>, Jeffrey R Johnson, Nicholas E Garelis, Teresa Repasy, Allison W Roberts, Lauren M Popov, Trevor J Parry, Dexter Pratt, Trey Ideker, Nevan J Krogan, Jeffery S Cox </p>
-          <p class="paperTitle">Dynamic post-translational modification profiling of M. tuberculosis-infected primary macrophages</p>
-          <p class="pJournal"> <a href="https://elifesciences.org/articles/51461" target="blank">eLife</a>. 2020;9:e51461. doi: 
-          <a href="https://doi.org/10.7554/eLife.51461" target="blank"> 10.7554/eLife.51461 </a>. Datasets assembled into an on-line application: <a href="https://artms.shinyapps.io/tb-omics-explorer/" target = "blank">TB OMICS EXPLORER</a>
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2019</strong> - Jeng EE, Bhadkamkar V, Ibe NU, Gause H, Jiang L, Chan J, Jian R, <strong>Jimenez-Morales D</strong>, Stevenson E, Krogan NJ, Swaney DL, Snyder MP, Mukherjee S, Bassik MC.</p>
-          <p class="paperTitle">Systematic Identification of Host Cell Regulators of Legionella pneumophila Pathogenesis Using a Genome-wide CRISPR Screen</p>
-          <p class="pJournal"> <a href="https://www.ncbi.nlm.nih.gov/pubmed/31540829" target="blank">Cell Host Microbe.</a>. 2019 Sep 10. pii: S1931-3128(19)30426-3. doi: 
-          <a href="https://doi.org/10.1016/j.chom.2019.08.017" target="blank"> 10.1016/j.chom.2019.08.017 </a>
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2019</strong> - Adam L. Orra, Chaeyoung Kima, <strong>David Jimenez-Morales</strong>, Billy W. Newton, Jeffrey R. Johnson, Nevan J. Krogan, Danielle L. Swaney, and Robert W. Mahley</p>
-          <p class="paperTitle">Neuronal Apolipoprotein E4 Expression Results in Proteome-Wide Alterations and Compromises Bioenergetic Capacity by Disrupting Mitochondrial Function</p>
-          <p class="pJournal"> <a href="https://www.ncbi.nlm.nih.gov/pubmed/30883359" target="blank">Journal of Alzheimer's Disease</a>. 2019;68(3):991-1011. doi: 
-          <a href="https://doi.org/10.3233/JAD-181184" target="blank"> 10.3233/JAD-181184 </a>
-          </p>
-        </div>
-
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2018</strong> - L. Bramasole, A. Sinha, S. Gurevich, M. Radzinski, Y. Klein, N. Panat, E. Gefen, T. Rinaldi, <strong>D. Jimenez-Morales</strong>, J. Johnson, N.J. Krogan, N. Reis, D. Reichmann, M.H. Glickman, E. Pick</p>
-          <p class="paperTitle">Proteasome Lid Bridges Mitochondrial Stress with Cdc53/Cullin1 NEDDylation Status</p>
-          <p class="pJournal"> <a href="https://www.sciencedirect.com/science/article/pii/S2213231718307602?dgcid=rss_sd_all" target="blank">Redox Biol.</a> 2018 Nov 17; 20:533-543</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2018</strong> - Krystal A Fontaine, Kristoffer E Leon, Mir Mubashir Khalid, <strong>David Jimenez-Morales</strong>, Julia Kaye, Priya Shah, Steven Finkbeiner, Nevan Krogan, Melanie Ott</p>
-          <p class="paperTitle">The cellular NMD pathway restricts Zika virus infection and is targeted by the viral capsid protein</p>
-          <p class="pJournal"> <a href="https://www.ncbi.nlm.nih.gov/pubmed/30401782" target="blank">MBio</a>. 2018 Nov 06; 9(6). <a href="https://www.biorxiv.org/content/early/2018/03/28/290296" target="blank">Pre-printed at bioRxiv</a>. </p> 
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2018</strong> - Nan Zhao, Vittorio Sebastiano, Natasha Moshkina, Nacho Mena, Judd Hultquist, <strong>David Jimenez-Morales</strong>, Yixuan Ma, Alexander Rialdi, Randy Albrecht, Romain Fenouil, Maria Teresa Sanchez-Aparicio, Juan Ayllon, Sweta Ravisankar, Bahareh Haddad, Jessica Sook Yuin Ho, Diana Low, Jian Jin, Yurchenko Vyacheslav, Rabinder Prinjha, Alexander Tarakhovsky, Massimo Squatrito, Dalila Pinto, Allette Kimaada, Minji Byun, Melissa Smith, Robert Sebra, Ernesto Guccione, Terrence Tumpey, Nevan Krogan, Harm van Bakel, Benjamin Greenbaum, Adolfo Garcia-Sastre, and Ivan Marazzi</p>
-          <p class="paperTitle">Influenza virus infection causes global RNAPII termination defects</p>
-          <p class="pJournal"> <a href="https://www.ncbi.nlm.nih.gov/pubmed/30177761" target="blank">Nature Structural & Molecular Biology</a>. 2018 Sep;25(9):885-893. doi: 10.1038/s41594-018-0124-7. Epub 2018 Sep 3. </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2018</strong> - Esther Paulo, Dongmei Wu, Yangmeng Wang, Yun Zhang, Yixuan Wu, Danielle L. Swaney, Margaret Soucheray, <strong>David Jimenez-Morales</strong>, Ajay Chawla, Nevan J. Krogan & Biao Wang </p>
-          <p class="paperTitle">Sympathetic inputs regulate adaptive thermogenesis in brown adipose tissue through cAMP-Salt inducible kinase axis.</p>
-          <p class="pJournal"> <a href="http://www.ncbi.nlm.nih.gov/pubmed/30030465" target="blank">Sci Rep</a>. 2018 Jul 20; 8(1):11001</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2018</strong> - Kristin L. Patrick, Jason A. Wojcechowskyj, Tao Jing, Morgan Riba, Sara Talmage, Pengbiao Xu,  Samantha L. Bell, Ana L. Cabello, Jiewei Xu, Michael Shales, <strong>David Jimenez-Morales</strong>, Thomas A. Ficht, Paul de Figueiredo, James E. Samuel1, Pingwei Li, Nevan J. Krogan, Robert O. Watson </p>
-          <p class="paperTitle">Quantitative yeast genetic interaction profiling of bacterial effector proteins uncovers a role for the human retromer in Salmonella infection</p>
-          <p class="pJournal"> <a href="http://www.ncbi.nlm.nih.gov/pubmed/30077634" target="blank">Cell Syst. 2018 Jul 26</a>.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2018</strong> - Ruchi Masand, Esther Paulo, Dongmei Wu , Yangmeng Wang, Danielle L. Swaney, <strong>David Jimenez-Morales</strong>, Nevan J. Krogan, and Biao Wang </p>
-          <p class="paperTitle">Proteome Imbalance of Mitochondrial Electron Transport Chain in Brown Adipocytes Leads to Metabolic Benefits.</p>
-          <p class="pJournal"> <a href="https://www.ncbi.nlm.nih.gov/pubmed/29514069" target="blank">Cell Metab.</a> 2018 Mar 06; 27(3):616-629.e4</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2017</strong> - Rialdi A, Hultquist J, <strong>Jimenez-Morales D</strong>, Peralta Z, Campisi L, Fenouil R, Moshkina N, Wang Zhen Z, Laffleur B, Michael R, Haas K, Pefanis E, Albrecht A. R, Jen J, Basu U, Garcia-Sastre A, van Bakel H, Krogan N, Marazzi I</p>
-          <p class="paperTitle">The RNA Exosome Syncs IAV-RNAPII Transcription to Promote Viral Ribogenesis and Infectivity.</p>
-          <p class="pJournal"> <a href="https://www.ncbi.nlm.nih.gov/pubmed/28475896" target="blank">Cell</a> 2017 May 4;169(4):679-692.e14.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2015</strong> - Basu S, Fey P, <strong>Jimenez-Morales D</strong>, Dodson RJ, Chisholm RL</p>
-          <p class="paperTitle">dictyBase 2015: Expanding data and annotations in a new software environment. </p>
-          <p class="pJournal"> <a href="http://view.ncbi.nlm.nih.gov/pubmed/26088819" target="blank">Genesis</a> 2015 Jun 19.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2014</strong> - <strong>Jimenez-Morales D</strong>, Adamian L, Shi D, and Liang J. </p>
-          <p class="paperTitle">Lysine Carboxylation: Unveiling a spontaneous posttranslational modification. </p>
-          <p class="pJournal"> <a href="http://journals.iucr.org/d/issues/2014/01/00/lv5045/index.html" target="blank">Acta Crystallogr D </a> Biol Crystallogr. 2014 Jan;70(Pt 1):48-57 </p>
-          <p class="pp"> 
-            <small>
-            > <a href="http://scripts.iucr.org/cgi-bin/sendsupfiles?lv5045&file=lv5045sup1.pdf&mime=application/pdf" target="blank">Supplementary information</a> and <a href="http://tanto.bioe.uic.edu/prelyscar/" target="blank">PreLysCar</a>.
-            </small>
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2012</strong> - <strong>Jimenez-Morales D</strong>, Liang J, and Eisenberg B. </p>
-          <p class="paperTitle"> Ionizable Side Chains at Catalytic Active Sites of Enzymes. </p>
-          <p class="pJournal"><a href="http://www.ncbi.nlm.nih.gov/pubmed/22484856" target="blank">Eur Biophys J.</a> Vol 41, Issue 5 (2012), P 449-460.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2012</strong> - Naveed H, <strong>Jimenez-Morales D</strong>, Tian J, Pasupuleti V, Kenney L, Liang L (2012).</p>
-          <p class="paperTitle">Engineered oligomerization state of OmpF protein through computational design decouples oligomer dissociation from unfolding. </p>
-          <p class="pJournal"><a href="http://www.ncbi.nlm.nih.gov/pubmed/22391420" target="blank">J Mol Biol.</a> 2012 May 25;419(1-2):89-101.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2011</strong> - Liang J, Naveed H, <strong>Jimenez-Morales D</strong>, Adamian L, Lin M. </p>
-          <p class="paperTitle">Computational studies of membrane proteins: Models and predictions for biological understanding. </p>
-          <p class="pJournal"><a href="http://www.ncbi.nlm.nih.gov/pubmed/22051023" target="blank">Biochim Biophys Acta.</a> 2011 Oct 12.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2011</strong> - <strong>Jimenez-Morales D</strong> and Liang J. </p>
-          <p class="paperTitle">Pattern of Amino Acid Substitutions in Transmembrane Domains of β-Barrel Membrane Proteins for Detecting Remote Homologs in Bacteria and Mitochondria. </p>
-          <p class="pJournal"><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0026400" target="blank">PLoS ONE.</a> 2011;6(11):e26400. Epub 2011 Nov 1. </p>
-          <p class="pp">
-            <small>
-              <a href="http://tanto.bioe.uic.edu/bbtmst/supmat.html" target="blank">Supplementary information</a> and <a href="http://tanto.bioe.uic.edu/bbtmst/bbtmstool.php" target="blank">bbTM-SearchTool</a>.
-            </small>
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2008</strong> - <strong>Jimenez-Morales D</strong>, Adamian L, and Liang J. </p>
-          <p class="paperTitle">Detecting Remote Homologues Using Scoring Matrices Calculated from the Estimation of Amino Acid Substitution Rates of Beta-Barrel Membrane Proteins.</p> 
-          <p class="pJournal"><a href="http://www.ncbi.nlm.nih.gov/pubmed/19162917" target="blank">Conf Proc IEEE Eng Med Biol Soc</a>. 2008, 30:1347-1350.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2008</strong> - <strong>Jimenez-Morales D</strong>. </p>
-          <p class="paperTitle">Substitution Rates of Amino Acid residues in Transmembrane Regions of Beta-Barrel Membrane Proteins. </p>
-          <p class="pJournal"> <a href="http://www.bioe.uic.edu/pub/BIOE/BioeUbsj/ubsj_11_fa08.pdf" target="blank">BioE Student Journal.</a> N1, 2008. Front Cover.</p>
-        </div>
-
-        <div class="textBoxes pType">
-          <table style="width:100%">
-            <tr>
-              <td>Books (n = 2)</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2001</strong> - Coauthor. 
-          <p class="paperTitle">Propiedades adicionales no antibióticas de los macrólidos. </p>
-          <p class="pJournal">Scientific Communication Management Editors. </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2001</strong> - Coauthor. 
-          <p class="paperTitle">Guía Setas Autóctonas. </p>
-          <p class="pJournal">Editorial Doyma. Madrid.</p>
-        </div>
-
-        <div class="textBoxes pType">
-          <table style="width:100%">
-            <tr>
-              <td>Popular Science Articles (n = 2)</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2000</strong> - <strong>Jimenez-Morales D</strong>. </p>
-          <p class="paperTitle"> Problematic in the use of antiobiotics in animal farms. </p>
-          <p class="pJournal"> Nº41. Ganaderos Magazine. sp</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2000</strong> - <strong>Jimenez-Morales D</strong>. </p>
-          <p class="paperTitle">Bovine spongiform encephalopathy. </p>
-          <p class="pJournal">Nº37. Ganaderos Magazine.</p>
-        </div>
-
-        <div class="textBoxes pType">
-          <table style="width:100%">
-            <tr>
-              <td>Abstracts & Communications (n = 20)</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2024</strong> - <strong>Jimenez-Morales D</strong>, MoTrPAC study group
-          </p>
-          <p class="paperTitle">
-            MoTrPAC Data Hub: Comprehensive Multi-Omic, Multi-Tissue Insights into Exercise Molecular Responses
-          </p>
-          <p class="pJournal"> 
-            International Biochemistry of Exercise Conference (IBEC). Limerick, Ireland (July 2024). Oral Communication.
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2024</strong> - <strong>Jimenez-Morales D</strong>, Malene E Lindholm, Jimmy Zhen, Mihir Samdarshi, Jay Yu, Christopher Teng, Archana Raja, David Amar, MoTrPAC study group, Euan A Ashley, Matthew T Wheeler.
-          </p>
-          <p class="paperTitle">
-            MoTrPAC Data Hub: Multi-omic, Multi-tissue Collection of Exercise Molecular Responses
-          </p>
-          <p class="pJournal"> 
-            Cell Symposia: Exercise Metabolism. Lisboa, Portugal (May 2024)
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2024</strong> - <strong>Jimenez-Morales D</strong>, MoTrPAC study group
-          </p>
-          <p class="paperTitle">
-            Unveiling the Multi-omic Landscape of Endurance Exercise: Biological Insights and Data Integration from the MoTrPAC Study.
-          </p>
-          <p class="pJournal"> 
-            The NIH CFDE All-Hands Meeting. Bethesda, USA (March 2024). Oral Communication, talk awarded.
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2021</strong> - <strong>Jimenez-Morales D</strong>, Raja AN, Hershman SG, Amar D, Petyuk VA, Monroe ME, Nestor MD, Sanford JA, Beltran PMJ, Keshishian H, Mani DR, Ashley EA, Carr SA, Adkins JN, Wheeler MT
-          </p>
-          <p class="paperTitle">
-            CloudProteo: a comprehensive cloud-based proteomics data analysis pipeline
-          </p>
-          <p class="pJournal"> 
-            69th Annual Conference American Society for Mass Spectrometry (ASMS) Conference on Mass Spectrometry and Allied Topics. 2021 Philadelphia, Pennsylvania
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2021</strong> - Beltran PMJ, Keshishian H, Mundorff C, Pearce C, Mani DR,  Karsten Krug, Clauser K, Gay NR, Amar D, <strong>Jimenez-Morales D</strong>, Sanford JA, Avila Pacheco J, Dennis Courtney, Ilkayeva O, Bodine SC, Gerszten R, Newgard C, Clary Clish C, Carr SA
-          </p>
-          <p class="paperTitle">
-            An Integrative Molecular View of Mammalian Adaptation to Exercise Training
-          </p>
-          <p class="pJournal"> 
-            69th Annual Conference American Society for Mass Spectrometry (ASMS) Conference on Mass Spectrometry and Allied Topics. 2021 Philadelphia, Pennsylvania
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2019</strong> - <strong>David Jimenez-Morales</strong>
-          </p>
-          <p class="paperTitle">
-            artMS: Analytical R Tools for Mass Spectrometry (<a href="https://mass-spec.stanford.edu/sites/g/files/sbiybj8411/f/sites/default/files/2019SUMS-RAS_artMS_Jimenez-Morales.pdf" target="blank">Link to slides</a>)
-          </p>
-          <p class="pJournal"> 
-            Oral communication. <a href="https://mass-spec.stanford.edu/2019-sums-ras" target="blank">2019 SUMS-RAS</a> (Stanford University Mass Spectrometry - Research Application Symposium). Stanford, CA
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2019</strong> - <strong>David Jimenez-Morales</strong>, John Von Dollen, Alexandre Rosa Campos, Nevan J Krogan, Danielle Swaney
-          </p>
-          <p class="paperTitle">
-            artMS: Analytical R Tools for Mass Spectrometry
-          </p>
-          <p class="pJournal"> 
-            67th Annual Conference American Society for Mass Spectrometry (ASMS) Conference on Mass Spectrometry and Allied Topicds. 2019 Atlanta, Georgia
-          </p>
-        </div>
- 
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2017</strong> - <strong>David Jimenez-Morales</strong>, Judd Hultquist, John Von Dollen, Jeff Johnson, Hannes Braberg, and Nevan J Krogan
-          </p>
-          <p class="paperTitle">
-            Influenza virus networks of pathogenesis inferred from the integration of multiple large-scale datasets.
-          </p>
-          <p class="pJournal"> 
-            Oral communication. Annual Programmatic Meeting. NIAID-NIH, Systems Biology for Infectious Diseases (SBID) Research. May 7-10, 2017 Chicago, IL.
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2017</strong> - Kelsey Haas, Michael McGregor, <strong>David Jimenez-Morales</strong>, Judd Hultquist, and Nevan Krogan
-          </p>
-          <p class="paperTitle">
-            Destroying the “Non-self”: Defining Influenza A Viral Endonuclease Mechanisms for Host Shutoff. 
-          </p>
-          <p class="pJournal"> 
-            Annual Programmatic Meeting. NIAID-NIH, Systems Biology for Infectious Diseases (SBID) Research. May 7-10, 2017 Chicago, IL.
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2017</strong> - Judd F. Hultquist, <strong>David Jimenez-Morales</strong>, Michael M. McGregor, Kelsey Haas, Jeffrey Johnson, William Newton, Giorgi Metreveli, Matthew Urbanowski, Megan Shaw, Ivan Marazzi, Randy A. Albrecht, Adolfo Garcia-Sastre, and Nevan J. Krogan
-          </p>
-          <p class="paperTitle">
-            Proteomic Profiling of Influenza A Virus Infection Reveals Strain-specific Rewiring of Host Cell Networks. 
-          </p>
-          <p class="pJournal"> 
-            Annual Programmatic Meeting. NIAID-NIH, Systems Biology for Infectious Diseases (SBID) Research. May 7-10, 2017 Chicago, IL.
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2017</strong> - Celina Cahalane, <strong>David Jimenez-Morales</strong>, John VonDollen, Hannah Baumann, Matthew Urbanowksi, Megan Shaw, Giorgi Metreveli, Nevan Krogan, Adolfo Garcia-Sastre, Oswald Quehenberger, Edward Dennis, and Leah Shriver   
-          </p>
-          <p class="paperTitle">
-            Metabolic Profiling of Influenza Infection. 
-          </p>
-          <p class="pJournal"> 
-            Annual Programmatic Meeting. NIAID-NIH, Systems Biology for Infectious Diseases (SBID) Research. May 7-10, 2017 Chicago, IL.
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2016</strong> - <strong>David Jimenez-Morales</strong>, Judd Hultquist
-          </p>
-          <p class="paperTitle">
-            FluOMICs data integration for the identification of networks involved in host responses to influenza virus infection
-          </p>
-          <p class="pJournal"> 
-            Oral communication. The 2016 Systems Biology Programmatic Meeting. NIAID-NIH, Systems Biology for Infectious Diseases (SBID) Research. Apr 10-13, 2016 New York, NY.
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2016</strong> - <strong>Jimenez-Morales D</strong>, Von Dollen J, Braberg H, Verschueren E, and Krogan NJ.
-          </p>
-          <p class="paperTitle">
-            Predictive models for the identification of networks involved in host responses to influenza virus infection. 
-          </p>
-          <p class="pJournal"> 
-            2nd Annual Host- Pathogen Interactions: Circuits to Systems Symposium. Jan 4, 2016. San Diego, CA.
-          </p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2015</strong> - <strong>Jimenez-Morales D</strong></p>
-          <p class="paperTitle">The new face of dictyBase </p>
-          <p class="pJournal"> <a href="http://dictybase.org/DictyAnnualConference/dicty2015.pdf" target="blank">Oral communication. dicty2015: Annual International Dictyostelium Conference</a>. August 9th-13th. London, United Kingdom</p>
-        </div>
-
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2011</strong> - <strong>Jimenez-Morales D</strong>, Liang J, and Eisenberg B.</p>
-          <p class="paperTitle">Active Sites of Enzymes are Crowded with Charge. </p>
-          <p class="pJournal"> <a href="http://www.sciencedirect.com/science/article/pii/S0006349510029061" target="blank">Biophysical Journal.</a> 100(3): p. 218a. Abstract 1191-Pos and Poster Board B101.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2011</strong> - <strong>Jimenez-Morales D</strong>, Liang J, and Eisenberg B. </p>
-          <p class="paperTitle">Active Sites of Enzymes are Crowded with Charge.</p>
-          <p class="pJournal">6th Annual Midwest Conference on Protein Folding, Assembly, and Molecular Motions. University of Notre Dame.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2010</strong> - <strong>Jimenez-Morales D</strong>, Li R, Wang Z, Li Y, Liu L, Liang J.</p>
-          <p class="paperTitle">Evolutionary Speed of Enzymes Functional Surfaces and their Relationship with Metabolic Fluxes in Networks of Central Carbon Metabolism of Bacteria.</p>
-          <p class="pJournal"><a href="http://www.sciencedirect.com/science/article/pii/S0006349509058664" target="blank">Biophysical Journal</a> 98(3) pp. 741a</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2008</strong> - <strong>Jimenez-Morales D</strong>, Adamian L, Liang J.</p>
-          <p class="paperTitle">Substitution Rates Of Amino Acid Residues In Transmembrane - Extracellular And Periplasmic- Regions Of Beta-Barrel Membrane Proteins.</p>
-          <p class="pJournal"><a href="http://www.sciencedirect.com/science/article/pii/S0006349508791185" target="blank">Biophysical Journal</a> 94(2) pp. 1959</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>2002</strong> - <strong>Jimenez-Morales D</strong>. </p>
-          <p class="paperTitle">Tools for the Apored Virtual.</p>
-          <p class="pJournal">V-Aporeunión. Tordesillas (Valladolid). Oral presentation: I introduced the improvements in the new Apoweb.</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp"><strong>1999</strong> - <strong>Jimenez-Morales D</strong>, Heredia S, Calvo A, Gomez-Luz ML, Prieto J. </p>
-          <p class="paperTitle">Sensibilidad a antimicrobianos de Enterococcus faecalis de procedencia animal. </p>
-          <p class="pJournal">Spanish Chemotherapy Society Congress. May 1999</p>
-        </div>
-
-        <div class="textBoxes pType">
-          <table style="width:100%">
-            <tr>
-              <td>PhD Thesis</td>
-            </tr>
-          </table>
-        </div>
-
-        <div class="textBoxes">
-          <p class="pp">
-            <strong>2013</strong> - <strong>Jimenez-Morales D</strong>
-          </p>
-          <p class="paperTitle">
-            Effects of Physicochemical and Functional Constraints on the Sequence and Structure of Proteins
-          </p>
-          <p class="pJournal"><a href="https://indigo.uic.edu/articles/thesis/Effects_of_Physicochemical_and_Functional_Constraints_on_the_Sequence_and_Structure_of_Proteins/10816016/1" target="blank">Bioengineering Department, University of Illinois at Chicago</a> 06/2013</p>
-        </div>
-
-        <div class="up">
-          <a href="#top">Up</a>
-        </div>
-      </div>
-
-    </div> <!-- SECOND COLUMNS -->  
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-
-  </div> 
-  <!-- end of publications -->
-
-  <!-- TEACHING -->
-  <div class="row">
-    <a name="teaching" id="teaching"></a>
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-      <div class="mainBox teachingDetails">
-        <div class="eduHead">
-          <h2>TEACHING</h2>
-        </div>
-
-        <div></div>
-
-        <div class="textBoxes">
-          <p> <strong>Workshop Instructor</strong></p>
-        </div>
-
-        <div class="textBoxes">
-          <p><em>Association of Biomolecular Resource Facilities (ABRF)</em></p>
-          <p>March 2021 - <span class="paperTitle"> <a href="https://abrf.memberclicks.net/using-r-in-proteomics-core--from-qc-to-data-analysis" target="blank">Using R in Proteomics Core:</a>  from QC to Data Analysis</span>. <a href="slides/artMS_davidjm_2021-ABRF/index.html" target="blank">Slides</a> </p>
-          
-        </div>
-
-        <div class="textBoxes">
-          <p> <strong>Courses as Instructor</strong></p>
-        </div>
-
-        <div class="textBoxes">
-          <p><em>Department of Bioengineering. University of Illinois at Chicago.</em></p>
-          <p>Fall 2010 - <span class="paperTitle">BIOE480: Introduction to Bioinformatics.</span></p>
-          <p>Fall 2012 - <span class="paperTitle">BIOE481: Bioinformatics Laboratory.</span></p>
-        </div>
-
-        <div class="textBoxes">
-          <p><strong>Courses as Teaching Assistant</strong></p>
-        </div>
-
-        <div class="textBoxes">
-          <p><em>Department of Bioengineering. University of Illinois at Chicago.</em></p>
-          <p>Spring 2013 - <span class="paperTitle">BIOE250, Clinical Problems in Bioengineering.</span></p>
-          <p>Fall 2012 - <span class="paperTitle">BIOE481: Bioinformatics Laboratory.</span></p>
-          <p>Fall 2010, 2012 - <span class="paperTitle">BIOE480, Introduction to Bioinformatics.</span></p>
-          <p>Spring 2007 -  <span class="paperTitle"> BIOE455, Intro to Cell and Tissue Engineering.</span></p>
-          <p>Fall 2006 - <span class="paperTitle"> BIOE240, Modeling Physiological Data & Systems</span></p>
-        </div>
-
-        <div class="up">
-          <a href="#top">Up</a>
-        </div>
-
-      </div> <!-- <div class="mainBox teachingDetails"> -->
-    </div> <!-- SECOND COLUMNS -->
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-  </div> 
-  <!-- end of teaching -->
-
-<!-- COMPUTING -->
-
-  <div class="row">
-    <a name="computing" id="computing"></a>
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-      <div class="mainBox computingDetails">
-        <div class="eduHead">
-          <h2>COMPUTING</h2>
-        </div>
-
-        <div class="textBoxes">
-
-          <div class="panel panel-primary">
-            <div class="panel-heading"><h4>Bioinformatics Tools</h4></div>
-            <p class="computerDetails"> I have led/developed the following tools:</p>
-
-            <p class="computerDetails"> <strong><a href="https://omicspipelines.com/" target = "blank">OmicsPipelines</a></strong>: Conceived, directed, and supervised the development of OmicsPipelines, a user-friendly tool that empowers researchers to efficiently utilize cloud computing for genomic, transcriptomic, and proteomic analyses. This tool streamlines complex bioinformatics workflows, significantly enhancing data processing efficiency and accuracy for research teams, without requiring in-depth knowledge of cloud environment complexities. </p>
-
-            <p class="computerDetails"> <strong><a href="http://artms.org" target = "blank">R package: artMS</a></strong>: Analytical R Tools for Mass Spectrometry. Check the <a href="https://github.com/biodavidjm/artMS" target = "blank">Github repo</a> and the <a href="https://www.bioconductor.org/packages/devel/bioc/html/artMS.html" target = "blank">Bioconductor</a> page.</p>
-
-            <p class="computerDetails"> <strong><a href="https://motrpac.github.io/MotrpacBicQC/index.html" target = "blank">R package: MotrpacBicQC</a></strong>: Primary and Secondary QC/QA analysis of datasets generated by the Metabolomic and Proteomic Chemical Analysis Sites (CAS) of the <a href="https://motrpac-data.org/">Molecular Transducer of Physical Activity Consortium</a> (MoTrPAC)</p></p>
-
-            <p class="computerDetails"> <strong><a href="https://motrpac.shinyapps.io/motrpac-qc-data-transfer-monitor/" target = "blank">CAS to BIC Data Transfer QC Monitor</a></strong>: QC monitor tool that reports in real time datasets submitted and processed by the MoTrPAC Bioinformatics Center</p>
+            </div>
             
-            <p class="computerDetails"> <strong><a href="https://bionena.azurewebsites.net/" target="blank">bioNeNa</a></strong> (the FluOMICS bioNetwork Navigator): a systems biology tool to explore large-scale datasets (Unfortunately, the tool is currently unfunded and its functionality is significantly limited)</p></p>
-
-            <p class="computerDetails"> <strong><a href="https://artms.shinyapps.io/tb-omics-explorer/" target = "blank">TB OMICS EXPLORER</a></strong>: Multi-OMICS profiling of primary macrophages during <em>Mycobacterium tuberculosis</em> (TB) infection (part of this <a href="https://elifesciences.org/articles/51461" target = "blank">publication)</a></p>
-
-            <p class="computerDetails"> <strong>MIDTOD</strong>: Metabolite Identification Through Orthogonal Datasets (<em>under development</em>).</p>
-
-            <p class="computerDetails"> <strong><a href="http://tanto.bioe.uic.edu/prelyscar" target="blank">PreLysCar</a> (Predictor of Lysine Carboxylation)</strong>, also available as a tool in the suite of structural biology programs <a href="http://www.ccp4.ac.uk/">CCP4</a></p>
-
-            <p class="computerDetails"> <strong><a href="http://tanto.bioe.uic.edu/bbtmst" target="blank">bbTM-ST</a></strong> (beta-barrel TransMembrane Search Tool).
-          </div>
-
-          <div class="panel panel-primary">
-            <div class="panel-heading"><h4>Skills</h4></div>
-
-            <p class="computerDetails"> <strong>Operating Systems: </strong> Unix/Linux and Mac OS X. Virtual Computing: Docker, Vagrant.</p>
-
-            <p class="computerDetails"> <strong>Cloud Computing: </strong> Google Cloud Platform (GCP); AWS; Azure</p>
-
-            <p class="computerDetails"> <strong>Pipeline/Workflow: </strong> Work Definition Language (WDL); Cromwell</p>
-
-            <p class="computerDetails"><strong>Programming languages: </strong> 
-              R (also Shiny), Python, Perl, Unix shell scripts, HTML, CSS (Bootstrap), Javascript (AngularJS, Node.js), Ruby on Rails, PHP, Matlab, C/C++, Java.</p>
-
-            <p class="computerDetails"><strong>Bioinformatics Packages.</strong>
-              Sequence analysis software (Blast, MEME-MAST, ClustalW, T-Coffee, HMMER, HHsearch,...); Molecular structures visualization software (PyMOL, VMD, Rasmol, Dino, SPDBV); Molecular dynamics (NAMD); Molecular interactions (Mint, Osprey); Genomics: Maker, FastQC, ALLPATHS-LG, Circos, GeneMark, QIIME, Galaxy; etc</p>
-
-            <p class="computerDetails"><strong>Databases:</strong> <em>Relational</em>: PostgreSQL & MySQL. SQL language. Generic Model Organism Database Chado schema of relational databases. <em>NoSQL databases</em>: Neo4j. Search engine: elasticsearch</p>
-
-            <p class="computerDetails"><strong>GMOD tools:</strong> JBrowse, WebApollo, InterMine.</p>
-
-            <p class="computerDetails"> <strong>Others: </strong> Source code management (git/github); Design (Photoshop); Statistician (R, SAS, SPSS). 
-
-          </div>
-
-          <div class="panel panel-primary">
-            <div class="panel-heading"><h4>Web Design and Development</h4></div>
-
-            <p class="computerDetails"> <strong> 2017 - <a href="http://kroganlab.ucsf.edu/" target="new">Krogan Lab</a></strong>. 
-            UCSF. San Francisco, CA (USA)</p>
-
-            <p class="computerDetails"> <strong> 2016 - <a href="http://www.fluomics.org/" target="new">FluOMICS</a></strong>. UCSF. San Francisco, CA (USA)</p>
-
-            <p class="computerDetails"> <strong> 2016 - <a href="http://betatest.dictybase.org/" target="new">New Dictybase.</a></strong> Dictybase. Northwestern University. Chicago (IL, USA)</p>
-
-            <p class="computerDetails"> <strong> 2015 - <a href="http://dicty15.dictybase.org/" target="new">dictyMeeting 2015.</a></strong> Dictybase. Northwestern University. Chicago (IL, USA)</p>
-
-            <p class="computerDetails"> <strong> 2003 - <a href="http://biodavidjm.github.io/proteomica/en/index.htm" target="new">Proteomic Unit.</a></strong> Facultad de Farmacia. UCM-PCM (Madrid, Spain)</p>
-
-            <p class="computerDetails"> <strong>2002, 2005 -  <a href="http://www.apored.es/" target="new">Spanish Network of Apoptosis (APORED)  </a></strong>
-              Department of Cell and Developmental Biology. Centro de Investigaciones Biológicas (CIB-CSIC)</p>
-          </div>
-
-          <div class="panel panel-primary">
-            <div class="panel-heading"><h4>Software Administration</h4></div>
-            <p class="computerDetails"> <strong>2002 - 2005 - Spanish Network of Apoptosis (APORED).</strong> Department of Cell and Developmental Biology. CIB-CSIC. Administrator of workspace BSCW (Basic Support for Cooperative Work) of the APORED. List co-administrator of APORED email distribution list, and list administrator of Apobecarios email distribution list. Website updates</p>
-          </div>
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=Pqq0IwcAAAAJ&hl" target="_blank" rel="noopener" aria-label="Google Scholar">
+                    <img src="images/logo_googlescholarHat.png" alt="Google Scholar">
+                </a>
+                <a href="https://orcid.org/0000-0003-4356-6461" target="_blank" rel="noopener" aria-label="ORCID">
+                    <img src="images/ORCID-icon.png" alt="ORCID">
+                </a>
+                <a href="https://github.com/biodavidjm" target="_blank" rel="noopener" aria-label="GitHub">
+                    <img src="images/logo_github_black.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/pub/david-jimenez-morales/26/21b/3a9" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <img src="images/logo_linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="http://www.researchgate.net/profile/David_Jimenez-Morales" target="_blank" rel="noopener" aria-label="ResearchGate">
+                    <img src="images/logo_researchgate.png" alt="ResearchGate">
+                </a>
+                <a href="https://publons.com/researcher/3230169/david-jimenez-morales/" target="_blank" rel="noopener" aria-label="Publons">
+                    <img src="images/logo_publons.png" alt="Publons">
+                </a>
+            </div>
         </div>
+    </section>
 
-        <div class="up">
-          <a href="#top">Up</a>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2006 - 2013</div>
+                            <div class="timeline-content">
+                                <h4>PhD Bioinformatics</h4>
+                                <p>Department of Bioengineering, University of Illinois at Chicago</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2003 - 2004</div>
+                            <div class="timeline-content">
+                                <h4>MSc Computational Biology</h4>
+                                <p>Universidad Complutense de Madrid</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">1993 - 1998</div>
+                            <div class="timeline-content">
+                                <h4>BSc Biology</h4>
+                                <p>Universidad de Granada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-card">
+                    <h3>Current Position</h3>
+                    <div class="current-position">
+                        <h4>Bioinformatics Lead</h4>
+                        <p><strong>The Ashley Lab</strong></p>
+                        <p>Department of Medicine, Division of Cardiovascular Medicine</p>
+                        <p>Stanford University</p>
+                        <a href="https://profiles.stanford.edu/david-jimenez-morales" target="_blank" rel="noopener" class="btn btn-outline">View Stanford Profile</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div> <!-- <div class="mainBox computingDetails"> -->
-    </div> <!-- SECOND COLUMNS -->
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-  </div> 
-<!-- End of computing -->
-
-  <!-- AWARDS -->
-  <div class="row">
-    <a name="awards" id="awards"></a>
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-      <div class="mainBox teachingDetails">
-        <div class="eduHead">
-          <h2>AWARDS</h2>
+    <!-- Research Gallery -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Research Highlights</h2>
+            <div class="gallery-carousel">
+                <div class="gallery-container">
+                    <div class="gallery-track">
+                        <div class="gallery-item" data-index="0">
+                            <img src="images/gallery/biodavidjm_EvolutionBetaBarrel.jpg" alt="Evolution Beta Barrel Research">
+                        </div>
+                        <div class="gallery-item" data-index="1">
+                            <img src="images/gallery/biodavidjmResearchGallery.001.jpg" alt="Research Gallery 1">
+                        </div>
+                        <div class="gallery-item" data-index="2">
+                            <img src="images/gallery/biodavidjmResearchGallery.002.jpg" alt="Research Gallery 2">
+                        </div>
+                        <div class="gallery-item" data-index="3">
+                            <img src="images/gallery/sysbio_modeling.jpg" alt="Systems Biology Modeling">
+                        </div>
+                        <div class="gallery-item" data-index="4">
+                            <img src="images/gallery/fluomics-tv.jpg" alt="FluOMICS Research">
+                        </div>
+                        <div class="gallery-item" data-index="5">
+                            <img src="images/gallery/biodavidjmResearchGallery.003.jpg" alt="Research Gallery 3">
+                        </div>
+                        <div class="gallery-item" data-index="6">
+                            <img src="images/gallery/biodavidjmResearchGallery.004.jpg" alt="Research Gallery 4">
+                        </div>
+                        <div class="gallery-item" data-index="7">
+                            <img src="images/gallery/biodavidjmResearchGallery.005.jpg" alt="Research Gallery 5">
+                        </div>
+                        <div class="gallery-item" data-index="8">
+                            <img src="images/gallery/biodavidjmResearchGallery.006.jpg" alt="Research Gallery 6">
+                        </div>
+                        <div class="gallery-item" data-index="9">
+                            <img src="images/gallery/prelyscar01.jpg" alt="PreLysCar 1">
+                        </div>
+                        <div class="gallery-item" data-index="10">
+                            <img src="images/gallery/prelyscar02.jpg" alt="PreLysCar 2">
+                        </div>
+                        <div class="gallery-item" data-index="11">
+                            <img src="images/gallery/prelyscar03.jpg" alt="PreLysCar 3">
+                        </div>
+                        <div class="gallery-item" data-index="12">
+                            <img src="images/gallery/prelyscar04.jpg" alt="PreLysCar 4">
+                        </div>
+                        <div class="gallery-item" data-index="13">
+                            <img src="images/gallery/prelyscar05.jpg" alt="PreLysCar 5">
+                        </div>
+                        <div class="gallery-item" data-index="14">
+                            <img src="images/gallery/logoProteomics.jpg" alt="Proteomics Research">
+                        </div>
+                    </div>
+                </div>
+                <button class="gallery-nav gallery-prev" aria-label="Previous image">‹</button>
+                <button class="gallery-nav gallery-next" aria-label="Next image">›</button>
+                <div class="gallery-dots"></div>
+            </div>
         </div>
+    </section>
 
-        <div class="textBoxes">
-          <p class="paperTitle"><a href="https://cloud.google.com/blog/topics/public-sector/google-cloud-research-innovators-launch-fourth-cohort-to-drive-innovation/" target="blank">Google Cloud Research Innovators Program Participant</a></p>
-          <p class="pJournal">2024, Google Cloud</p>
-          <ul>
-            <li>Selected as one of 23 researchers for innovative ideas and commitment to solving challenging problems using AI and cloud computing.</li>
-            <li>Collaborating with experts and peers to accelerate groundbreaking projects.</li>
-            <li>Gained access to Google Cloud technology, cloud credits, and networking opportunities.</li>
-          </ul>
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <img class="modal-image" src="" alt="">
+            <div class="modal-caption">
+                <h3 class="modal-title"></h3>
+                <p class="modal-description"></p>
+            </div>
+            <button class="modal-nav modal-prev" aria-label="Previous image">‹</button>
+            <button class="modal-nav modal-next" aria-label="Next image">›</button>
         </div>
-
-        <div class="textBoxes">
-          <p class="paperTitle">U19AI135972: “FluOMICS, The Next Generation”.</p>
-          <p class="pJournal">2018 – 2022. Co-PI Modeling Core. Co-PI Data Management and Bioinformatics Core (DMBC). NIH/NIAID</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="paperTitle">Pilot Project (U19AI106754): “Development of a web-based computational tool for integrating and navigating systems biology data and models”.</p>
-          <p class="pJournal">2017 – 2018. Principal Investigator. NIH/NIAID</p>
-        </div>
-
-        <div class="textBoxes">
-          <p class="paperTitle">Beca Talentia Excellence Grant</p>
-          <p class="pJournal">2008 - 2010. Regional Ministry for Innovation, Science and Enterprise. Junta de Andalucía. Spain.</p>
-        </div>
-
-        <div class="up">
-          <a href="#top">Up</a>
-        </div>
-
-      </div> <!-- <div class="mainBox teachingDetails"> -->
-    </div> <!-- SECOND COLUMNS -->
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-  </div> 
-  <!-- end of awards -->
-
-  <!-- LINKS -->
-  <div class="row">
-    <a name="links" id="links"></a>
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-    <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12">
-      <div class="mainBox researchDetails">
-        <div class="eduHead">
-          <h2>LINKS</h2>
-        </div>
-
-        <div class="textBoxes">
-          <p> <strong>Videos</strong> </p>
-        </div>
-
-        <div class="textBoxes">
-          <p>- Learn <span class="paperTitle"> <em> <a href="https://youtu.be/fgZ4WlzlRq0" target="blank">how soap stops the coronavirus</a> </em></span> (by Sarartistic). También disponible en <span class="paperTitle"> <em><a href="https://youtu.be/4W7zOe4IB8U" target="blank">español</a></em></span></p>
-          <p>- A segment about MoTrPAC in <span class="paperTitle"> <a href="https://www.today.com/video/new-study-could-help-doctors-prescribe-personalized-workout-plans-141517381664">the TODAY show</a> </span>
-        </div>
-
-        <div class="up">
-          <a href="#top">Up</a>
-        </div>
-      </div> <!-- <div class="mainBox researchDetails"> -->
-    </div> <!-- SECOND COLUMNS -->
-    <div class="col-lg-3 col-md-2 col-sm-2 col-xs-1"> </div>
-  </div> 
-  <!-- end of links -->
-
-  <br>
-
-  <div class="footer">
-
-
-    <div class="row">
-
-      <div class="col-lg-4 col-md-4 col-sm-3 col-xs-1"> </div>
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-10">
-          <video autoplay controls loop>
-            <source src="http://int.nyt.com.s3.amazonaws.com/data/videotape/finished/2015/07/1436415745/draft4-1254.mp4" type="video/mp4">
-          </video>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-3 col-xs-1"> </div>
-
     </div>
 
-    <br>
-  
-    <div class="row">
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2 class="section-title">Research Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date">2022 - Present</div>
+                    <div class="experience-content">
+                        <h3>Bioinformatics Lead</h3>
+                        <p class="experience-org">The Ashley Lab, Stanford University</p>
+                        <p>Lead organization-wide data initiatives (MoTrPAC, COVID-omics); own multi-omics engineering and analysis across multi-tissue in-vivo and clinical studies; champion FAIR principles; manage and mentor a high-performing analyst team; architect cloud-native multi-omics software (OmicsPipelines).</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2021 - 2022</div>
+                    <div class="experience-content">
+                        <h3>Senior Research Engineer (Academic Research Staff)</h3>
+                        <p class="experience-org">The Ashley Lab, Stanford University</p>
+                        <p>Advanced research engineering supporting clinical and translational projects; drove implementation of FAIR-aligned workflows; contributed to large-scale multi-omics integration and production-grade pipeline development.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2018 - 2021</div>
+                    <div class="experience-content">
+                        <h3>Senior Computational Biologist</h3>
+                        <p class="experience-org">The Ashley Lab, Stanford University</p>
+                        <p>Developed cloud-native proteomics and genomics analytics; created the Bioconductor package artMS; designed and implemented an EHR-derived clinical severity scale enabling COVID-19 outcome modeling.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2015 - 2018</div>
+                    <div class="experience-content">
+                        <h3>Computational Lead (Researcher)</h3>
+                        <p class="experience-org">The Krogan Lab, UCSF</p>
+                        <p>Led the bioinformatics team; delivered >20 collaborations across infectious diseases, cancer, diabetes, and neurodegeneration; built modeling frameworks integrating RNA-seq, large-scale proteomics (abundance, phospho, ubiquitin, AP-MS) and functional genomics (RNAi, CRISPRi) to prioritize disease genes; secured funding and developed the multi-omics tool bioNeNa; contributed to R01/U19/U54/P50 grants.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2016 - 2018</div>
+                    <div class="experience-content">
+                        <h3>Visiting Scientist</h3>
+                        <p class="experience-org">Gladstone Institutes, San Francisco, CA</p>
+                        <p>Collaborative research position at the prestigious Gladstone Institutes.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2013 - 2018</div>
+                    <div class="experience-content">
+                        <h3>Bioengineering Department Affiliate</h3>
+                        <p class="experience-org">Department of Bioengineering, University of Illinois-Chicago</p>
+                        <p>Maintained academic affiliation with the Bioengineering Department.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2014 - 2015</div>
+                    <div class="experience-content">
+                        <h3>Research Associate - Software Developer & Bioinformatics Specialist</h3>
+                        <p class="experience-org">dictyBase, Center for Genetic Medicine, Northwestern University</p>
+                        <p>Redesigned and implemented the new dictyBase interface; led Agile-oriented development; managed biological databases and Oracle→PostgreSQL data migration; contributed to successful NIH renewals (dictyBase & Dicty Stock Center).</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2013 - 2015</div>
+                    <div class="experience-content">
+                        <h3>Visiting Research Associate</h3>
+                        <p class="experience-org">Shannon Hackett's Lab, Bird Division, The Field Museum of Natural History</p>
+                        <p>Research collaboration in evolutionary biology and computational approaches.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2013 - 2014</div>
+                    <div class="experience-content">
+                        <h3>Visiting Instructor</h3>
+                        <p class="experience-org">Eisenberg Lab, Dept. of Molecular Biophysics & Physiology, Rush University Medical Center</p>
+                        <p>Studied polarity patterns in protein cores and links to active sites; used APBS to evaluate electrostatic properties; taught BIOE480 (Intro to Bioinformatics) and BIOE481 (Bioinformatics Lab).</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2006 - 2013</div>
+                    <div class="experience-content">
+                        <h3>PhD Graduate Student</h3>
+                        <p class="experience-org">Prof. Jie Liang's Lab, Dept. of Bioengineering, University of Illinois at Chicago</p>
+                        <p>Developed physicochemical metrics for protein cavities and their functional links; created a computational method predicting lysine carboxylation (PreLysCar; also at CCP4) revealing broader prevalence; analyzed enzyme structure–function with metabolite concentrations and fluxes.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">2003 - 2005</div>
+                    <div class="experience-content">
+                        <h3>Research Assistant</h3>
+                        <p class="experience-org">Proteomics Unit & Department of Microbiology II, Universidad Complutense de Madrid – Parque Científico de Madrid</p>
+                        <p>Research in proteomics and microbiology at the Madrid Science Park.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-date">1998 - 2000</div>
+                    <div class="experience-content">
+                        <h3>Research Assistant</h3>
+                        <p class="experience-org">Department of Microbiology I, Faculty of Medicine, Universidad Complutense de Madrid</p>
+                        <p>Early research experience in microbiology and medical sciences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="col-xs-12">
-        <h3 class="name">David Jimenez-Morales</h3>
-        <h6>PhD, MSc, BSc</h6>
-      </div>
-    
-    </div>
+    <!-- Publications Section -->
+    <section id="publications" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            
+            <!-- Preprints Link -->
+            <div class="publications-intro">
+                <p><a href="https://www.biorxiv.org/search/author1%3ADavid%2BJimenez-Morales%20jcode%3Abiorxiv%7C%7Cmedrxiv%20numresults%3A10%20sort%3Arelevance-rank%20format_result%3Astandard" target="_blank" rel="noopener">📄 Check my preprints from bioRxiv and medRxiv</a></p>
+            </div>
+            
+            <!-- Peer-reviewed Journals Section -->
+            <div class="publications-section" id="peer-reviewed">
+                <h3 class="section-subtitle">Peer-reviewed Journals (<span id="journals-count">0</span>)</h3>
+                
+                <!-- Filter Buttons -->
+                <div class="publications-filter">
+                    <button class="filter-btn active" data-filter="recent">Recent (2020+)</button>
+                    <button class="filter-btn" data-filter="high-impact">High Impact</button>
+                    <button class="filter-btn" data-filter="all">All Publications</button>
+                </div>
+                
+                <div class="publications-grid" id="journals-grid">
+                    <!-- Publications will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div> <!-- End of footer -->
+    <!-- Other Publications Section -->
+    <section id="other-publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Other Publications</h2>
+            
+            <!-- Abstracts & Communications -->
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Abstracts & Communications (<span id="abstracts-count">0</span>)</h3>
+                <div class="publications-list" id="abstracts-list">
+                    <!-- Abstracts will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Books -->
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Books (<span id="books-count">0</span>)</h3>
+                <div class="publications-list" id="books-list">
+                    <!-- Books will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Popular Science Articles -->
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Popular Science Articles (<span id="popular-science-count">0</span>)</h3>
+                <div class="publications-list" id="popular-science-list">
+                    <!-- Popular science articles will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- PhD Thesis -->
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">PhD Thesis</h3>
+                <div class="publications-list" id="thesis-list">
+                    <!-- Thesis will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Computing Section -->
+    <section id="computing" class="section">
+        <div class="container">
+            <h2 class="section-title">Computing</h2>
 
+            <!-- Bioinformatics Tools -->
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Bioinformatics Tools</h3>
+                <ul class="publications-list">
+                    <li>
+                        <strong><a href="https://omicspipelines.com/" target="_blank" rel="noopener">OmicsPipelines</a></strong> — Conceived, directed, and supervised a user-friendly cloud-native platform enabling genomic, transcriptomic, and proteomic analyses without deep cloud expertise.
+                    </li>
+                    <li>
+                        <strong><a href="http://artms.org" target="_blank" rel="noopener">R package: artMS</a></strong> — Analytical R Tools for Mass Spectrometry. <a href="https://github.com/biodavidjm/artMS" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.bioconductor.org/packages/devel/bioc/html/artMS.html" target="_blank" rel="noopener">Bioconductor</a>
+                    </li>
+                    <li>
+                        <strong><a href="https://motrpac.github.io/MotrpacBicQC/index.html" target="_blank" rel="noopener">R package: MotrpacBicQC</a></strong> — Primary/secondary QC for MoTrPAC CAS datasets (<a href="https://motrpac-data.org/" target="_blank" rel="noopener">MoTrPAC</a>).
+                    </li>
+                    <li>
+                        <strong><a href="https://motrpac.shinyapps.io/motrpac-qc-data-transfer-monitor/" target="_blank" rel="noopener">CAS→BIC Data Transfer QC Monitor</a></strong> — Real-time QC monitor of datasets submitted and processed by the MoTrPAC BIC.
+                    </li>
+                    <li>
+                        <strong><a href="https://bionena.azurewebsites.net/" target="_blank" rel="noopener">bioNeNa</a></strong> — The FluOMICS bioNetwork Navigator for exploring large-scale datasets (currently unfunded and limited).
+                    </li>
+                    <li>
+                        <strong><a href="https://artms.shinyapps.io/tb-omics-explorer/" target="_blank" rel="noopener">TB OMICS EXPLORER</a></strong> — Multi-omics profiling of primary macrophages during <em>Mycobacterium tuberculosis</em> infection (<a href="https://elifesciences.org/articles/51461" target="_blank" rel="noopener">publication</a>).
+                    </li>
+                    <li>
+                        <strong>MIDTOD</strong> — Metabolite Identification Through Orthogonal Datasets (under development).
+                    </li>
+                    <li>
+                        <strong><a href="http://tanto.bioe.uic.edu/prelyscar" target="_blank" rel="noopener">PreLysCar</a></strong> — Predictor of Lysine Carboxylation; also available within <a href="http://www.ccp4.ac.uk/" target="_blank" rel="noopener">CCP4</a>.
+                    </li>
+                    <li>
+                        <strong><a href="http://tanto.bioe.uic.edu/bbtmst" target="_blank" rel="noopener">bbTM-ST</a></strong> — Beta-barrel TransMembrane Search Tool.
+                    </li>
+                </ul>
+            </div>
 
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/bootstrap/js/affix.js"></script>
-  <script src="bower_components/bootstrap/js/alert.js"></script>
-  <script src="bower_components/bootstrap/js/dropdown.js"></script>
-  <script src="bower_components/bootstrap/js/tooltip.js"></script>
-  <script src="bower_components/bootstrap/js/modal.js"></script>
-  <script src="bower_components/bootstrap/js/transition.js"></script>
-  <script src="bower_components/bootstrap/js/button.js"></script>
-  <script src="bower_components/bootstrap/js/popover.js"></script>
-  <script src="bower_components/bootstrap/js/carousel.js"></script>
-  <script src="bower_components/bootstrap/js/scrollspy.js"></script>
-  <script src="bower_components/bootstrap/js/collapse.js"></script>
-  <script src="bower_components/bootstrap/js/tab.js"></script>
+            <!-- Skills -->
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Skills</h3>
+                <ul class="publications-list">
+                    <li>
+                        <strong>Operating Systems:</strong> Unix/Linux, macOS. Virtual computing: Docker, Vagrant.
+                    </li>
+                    <li>
+                        <strong>Cloud Computing:</strong> Google Cloud Platform (GCP), AWS, Azure.
+                    </li>
+                    <li>
+                        <strong>Pipeline/Workflow:</strong> WDL, Cromwell.
+                    </li>
+                    <li>
+                        <strong>Programming:</strong> R (Shiny), Python, Perl, Bash, HTML/CSS/JS, Ruby on Rails, PHP, Matlab, C/C++, Java.
+                    </li>
+                    <li>
+                        <strong>Bioinformatics Packages:</strong> Sequence (BLAST, MEME-MAST, ClustalW, T-Coffee, HMMER, HHsearch); structures (PyMOL, VMD, RasMol, Dino, SPDBV); MD (NAMD); interactions (MiNT, Osprey); genomics (MAKER, FastQC, ALLPATHS-LG, Circos, GeneMark, QIIME, Galaxy).
+                    </li>
+                    <li>
+                        <strong>Databases:</strong> PostgreSQL, MySQL, SQL; GMOD Chado schema; NoSQL: Neo4j; search: Elasticsearch.
+                    </li>
+                    <li>
+                        <strong>GMOD Tools:</strong> JBrowse, WebApollo, InterMine.
+                    </li>
+                    <li>
+                        <strong>Others:</strong> Git/GitHub; design (Photoshop); statistics (R, SAS, SPSS).
+                    </li>
+                </ul>
+            </div>
 
+            <!-- Web Design and Development -->
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Web Design & Development</h3>
+                <ul class="publications-list">
+                    <li><strong>2017 —</strong> <a href="http://kroganlab.ucsf.edu/" target="_blank" rel="noopener">Krogan Lab</a>, UCSF, San Francisco, CA</li>
+                    <li><strong>2016 —</strong> FluOMICS, UCSF, San Francisco, CA</li>
+                    <li><strong>2016 —</strong> New dictyBase, Northwestern University, Chicago, IL</li>
+                    <li><strong>2015 —</strong> <a href="http://dicty15.dictybase.org/" target="_blank" rel="noopener">dictyMeeting 2015</a>, Northwestern University, Chicago, IL</li>
+                    <li><strong>2003 —</strong> <a href="http://biodavidjm.github.io/proteomica/en/index.htm" target="_blank" rel="noopener">Proteomics Unit</a>, UCM-PCM, Madrid, Spain</li>
+                    <li><strong>2002, 2005 —</strong> Spanish Network of Apoptosis (APORED)</a>, CIB-CSIC</li>
+                </ul>
+            </div>
+
+            <!-- Software Administration -->
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Software Administration</h3>
+                <ul class="publications-list">
+                    <li>
+                        <strong>2002–2005 — Spanish Network of Apoptosis (APORED), CIB-CSIC</strong> — Administrator of BSCW workspace; co-admin of APORED email list; admin of Apobecarios list; website updates.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+   <!-- Teaching Section -->
+   <section id="teaching" class="section">
+        <div class="container">
+            <h2 class="section-title">Teaching</h2>
+
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Workshop Instructor</h3>
+                <ul class="publications-list">
+                    <li>
+                        <strong>Association of Biomolecular Resource Facilities (ABRF)</strong> — March 2021
+                        <br/>
+                        <em>Using R in Proteomics Core: from QC to Data Analysis</em>
+                        <span> — </span>
+                        <a href="https://abrf.memberclicks.net/using-r-in-proteomics-core--from-qc-to-data-analysis" target="_blank" rel="noopener">Course page</a>
+                        <span> · </span>
+                        <a href="slides/artMS_davidjm_2021-ABRF/index.html" target="_blank" rel="noopener">Slides</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Courses as Instructor</h3>
+                <ul class="publications-list">
+                    <li>
+                        <strong>Department of Bioengineering, University of Illinois at Chicago</strong>
+                        <br/>
+                        Fall 2010 — <em>BIOE480: Introduction to Bioinformatics</em>
+                    </li>
+                    <li>
+                        <strong>Department of Bioengineering, University of Illinois at Chicago</strong>
+                        <br/>
+                        Fall 2012 — <em>BIOE481: Bioinformatics Laboratory</em>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="other-publications-section">
+                <h3 class="section-subtitle">Courses as Teaching Assistant</h3>
+                <ul class="publications-list">
+                    <li>
+                        <strong>Department of Bioengineering, University of Illinois at Chicago</strong>
+                        <br/>
+                        Spring 2013 — <em>BIOE250: Clinical Problems in Bioengineering</em>
+                    </li>
+                    <li>
+                        <strong>Department of Bioengineering, University of Illinois at Chicago</strong>
+                        <br/>
+                        Fall 2012 — <em>BIOE481: Bioinformatics Laboratory</em>
+                    </li>
+                    <li>
+                        <strong>Department of Bioengineering, University of Illinois at Chicago</strong>
+                        <br/>
+                        Fall 2010, 2012 — <em>BIOE480: Introduction to Bioinformatics</em>
+                    </li>
+                    <li>
+                        <strong>Department of Bioengineering, University of Illinois at Chicago</strong>
+                        <br/>
+                        Spring 2007 — <em>BIOE455: Intro to Cell and Tissue Engineering</em>
+                    </li>
+                    <li>
+                        <strong>Department of Bioengineering, University of Illinois at Chicago</strong>
+                        <br/>
+                        Fall 2006 — <em>BIOE240: Modeling Physiological Data & Systems</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section">
+        <div class="container">
+            <h2 class="section-title">Awards & Recognition</h2>
+            
+            <div class="awards-grid">
+                <div class="award-item">
+                    <div class="award-header">
+                        <h3><a href="https://cloud.google.com/blog/topics/public-sector/google-cloud-research-innovators-launch-fourth-cohort-to-drive-innovation/" target="_blank" rel="noopener">Google Cloud Research Innovators Program Participant</a></h3>
+                        <span class="award-year">2024</span>
+                    </div>
+                    <p class="award-organization">Google Cloud</p>
+                    <ul class="award-details">
+                        <li>Selected as one of 23 researchers for innovative ideas and commitment to solving challenging problems using AI and cloud computing.</li>
+                        <li>Collaborating with experts and peers to accelerate groundbreaking projects.</li>
+                        <li>Gained access to Google Cloud technology, cloud credits, and networking opportunities.</li>
+                    </ul>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-header">
+                        <h3>U19AI135972: "FluOMICS, The Next Generation"</h3>
+                        <span class="award-year">2018–2022</span>
+                    </div>
+                    <p class="award-organization">NIH/NIAID</p>
+                    <p class="award-role">Co-PI Modeling Core. Co-PI Data Management and Bioinformatics Core (DMBC).</p>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-header">
+                        <h3>Pilot Project (U19AI106754): "Development of a web-based computational tool for integrating and navigating systems biology data and models"</h3>
+                        <span class="award-year">2017–2018</span>
+                    </div>
+                    <p class="award-organization">NIH/NIAID</p>
+                    <p class="award-role">Principal Investigator.</p>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-header">
+                        <h3>Beca Talentia Excellence Grant</h3>
+                        <span class="award-year">2008–2010</span>
+                    </div>
+                    <p class="award-organization">Regional Ministry for Innovation, Science and Enterprise, Junta de Andalucía, Spain</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Media & Links</h2>
+            
+            <div class="links-grid">
+                <div class="links-category">
+                    <h3 class="links-category-title">
+                        <span class="category-icon">🎥</span>
+                        Videos & Media
+                    </h3>
+                    <div class="links-list">
+                        <div class="link-item">
+                            <div class="link-content">
+                                <h4>How Soap Stops the Coronavirus</h4>
+                                <p class="link-description">Educational video explaining the science behind handwashing</p>
+                                <div class="link-links">
+                                    <a href="https://youtu.be/fgZ4WlzlRq0" target="_blank" rel="noopener" class="link-btn">
+                                        <span class="link-icon">🇺🇸</span>
+                                        English Version
+                                    </a>
+                                    <a href="https://youtu.be/4W7zOe4IB8U" target="_blank" rel="noopener" class="link-btn">
+                                        <span class="link-icon">🇪🇸</span>
+                                        Versión en Español
+                                    </a>
+                                </div>
+                                <p class="link-credit">by Sarartistic</p>
+                            </div>
+                        </div>
+                        
+                        <div class="link-item">
+                            <div class="link-content">
+                                <h4>MoTrPAC on TODAY Show</h4>
+                                <p class="link-description">Segment about personalized workout plans research</p>
+                                <div class="link-links">
+                                    <a href="https://www.today.com/video/new-study-could-help-doctors-prescribe-personalized-workout-plans-141517381664" target="_blank" rel="noopener" class="link-btn">
+                                        <span class="link-icon">📺</span>
+                                        Watch on TODAY
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Placeholder for future categories -->
+                <div class="links-category future-category">
+                    <h3 class="links-category-title">
+                        <span class="category-icon">📚</span>
+                        Publications & Resources
+                    </h3>
+                    <div class="links-placeholder">
+                        <p>More resources coming soon...</p>
+                    </div>
+                </div>
+                
+                <div class="links-category future-category">
+                    <h3 class="links-category-title">
+                        <span class="category-icon">🔬</span>
+                        Research Tools
+                    </h3>
+                    <div class="links-placeholder">
+                        <p>Tools and software coming soon...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Connect With Me</h3>
+                    <p>I'm always interested in discussing new research opportunities, collaborations, or bioinformatics challenges.</p>
+                    <div class="contact-links">
+
+                        <a href="https://profiles.stanford.edu/david-jimenez-morales" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-icon">🏢</span>
+                            Stanford Profile
+                        </a>
+                        <a href="https://github.com/biodavidjm" target="_blank" rel="noopener" class="contact-link">
+                            <span class="contact-icon">💻</span>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>David Jimenez-Morales, PhD</h3>
+                    <p>Bioinformatics Lead & Research Scientist</p>
+                    <p>Stanford University</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#about">About</a>
+                    <a href="#research">Research</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#teaching">Teaching</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#computing">Computing</a>
+                    <a href="#awards">Awards</a>
+                    <a href="#links">Media & Links</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://scholar.google.com/citations?user=Pqq0IwcAAAAJ&hl" target="_blank" rel="noopener">Google Scholar</a>
+                        <a href="https://github.com/biodavidjm" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/pub/david-jimenez-morales/26/21b/3a9" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 David Jimenez-Morales. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/modern-script.js"></script>
 </body>
 </html>
