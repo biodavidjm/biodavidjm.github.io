@@ -380,7 +380,6 @@ function openModal() {
     modalImage.src = img.src;
     modalImage.alt = img.alt;
     modalTitle.textContent = img.alt;
-    modalDescription.textContent = 'Click to view larger image. Use arrow keys or buttons to navigate.';
     
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
