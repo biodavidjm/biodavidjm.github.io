@@ -34,13 +34,13 @@ function toggleView(view) {
     const journalsGrid = document.getElementById('journals-grid');
     const journalsList = document.getElementById('journals-list');
     const viewBtns = document.querySelectorAll('.view-btn');
-    
+
     // Update active button
     viewBtns.forEach(btn => {
         btn.classList.remove('active');
     });
     document.querySelector(`[data-view="${view}"]`).classList.add('active');
-    
+
     // Show/hide appropriate view
     if (view === 'grid') {
         journalsGrid.style.display = 'grid';
@@ -92,7 +92,7 @@ async function loadPublicationsData() {
 function createPublicationCard(publication) {
     const notes = publication.notes ? `<p class="publication-notes">${publication.notes}</p>` : '';
     const doi = publication.doi ? `<p class="publication-doi">DOI: <a href="https://doi.org/${publication.doi}" target="_blank" rel="noopener">${publication.doi}</a></p>` : '';
-    
+
     return `
         <div class="publication-card" data-year="${publication.year}" data-high-impact="${publication.highImpact}">
             <div class="publication-year">${publication.year}</div>
@@ -113,7 +113,7 @@ function createJournalListItem(publication) {
     if (publication.link) {
         link = ` <a href="${publication.link}" target="_blank" rel="noopener">[Link]</a>`;
     }
-    
+
     return `<li class="publication-list-item" data-year="${publication.year}" data-high-impact="${publication.highImpact}"><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.journal}.${link}</li>`;
 }
 
@@ -123,8 +123,8 @@ function createPublicationListItem(publication, type) {
     if (publication.link) {
         link = ` <a href="${publication.link}" target="_blank" rel="noopener">[Link]</a>`;
     }
-    
-    switch(type) {
+
+    switch (type) {
         case 'books':
             return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.publisher}.${link}</li>`;
         case 'popularScience':
@@ -146,34 +146,34 @@ function populatePublications() {
     const booksList = document.getElementById('books-list');
     const popularScienceList = document.getElementById('popular-science-list');
     const thesisList = document.getElementById('thesis-list');
-    
+
     // Populate journals grid and list
     journalsGrid.innerHTML = publicationsData.journals
         .map(createPublicationCard)
         .join('');
-    
+
     const journalsListContainer = journalsList.querySelector('.publications-list');
     journalsListContainer.innerHTML = publicationsData.journals
         .map(createJournalListItem)
         .join('');
-    
+
     // Populate other publications as simple lists
     abstractsList.innerHTML = publicationsData.abstracts
         .map(pub => createPublicationListItem(pub, 'abstracts'))
         .join('');
-    
+
     booksList.innerHTML = publicationsData.books
         .map(pub => createPublicationListItem(pub, 'books'))
         .join('');
-    
+
     popularScienceList.innerHTML = publicationsData.popularScience
         .map(pub => createPublicationListItem(pub, 'popularScience'))
         .join('');
-    
+
     if (publicationsData.thesis) {
         thesisList.innerHTML = createPublicationListItem(publicationsData.thesis, 'thesis');
     }
-    
+
     // Update counts
     updatePublicationCounts();
 }
@@ -184,7 +184,7 @@ function updatePublicationCounts() {
     const abstractsCount = document.getElementById('abstracts-count');
     const booksCount = document.getElementById('books-count');
     const popularScienceCount = document.getElementById('popular-science-count');
-    
+
     journalsCount.textContent = publicationsData.journals.length;
     abstractsCount.textContent = publicationsData.abstracts.length;
     booksCount.textContent = publicationsData.books.length;
@@ -195,14 +195,14 @@ function updatePublicationCounts() {
 function filterPublications(filter) {
     const publicationCards = document.querySelectorAll('#journals-grid .publication-card');
     const publicationListItems = document.querySelectorAll('#journals-list .publications-list .publication-list-item');
-    
+
     // Filter grid view
     publicationCards.forEach(card => {
         const year = parseInt(card.getAttribute('data-year'));
         const isHighImpact = card.getAttribute('data-high-impact') === 'true';
         let show = false;
-        
-        switch(filter) {
+
+        switch (filter) {
             case 'recent':
                 show = year >= 2020;
                 break;
@@ -213,17 +213,17 @@ function filterPublications(filter) {
                 show = true;
                 break;
         }
-        
+
         card.style.display = show ? 'block' : 'none';
     });
-    
+
     // Filter list view
     publicationListItems.forEach(item => {
         const year = parseInt(item.getAttribute('data-year'));
         const isHighImpact = item.getAttribute('data-high-impact') === 'true';
         let show = false;
-        
-        switch(filter) {
+
+        switch (filter) {
             case 'recent':
                 show = year >= 2020;
                 break;
@@ -234,10 +234,10 @@ function filterPublications(filter) {
                 show = true;
                 break;
         }
-        
+
         item.style.display = show ? 'block' : 'none';
     });
-    
+
     // Update active filter button
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -247,9 +247,7 @@ function filterPublications(filter) {
 
 // Gallery Carousel Variables
 let currentSlide = 0;
-const itemsPerView = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 4;
-const totalSlides = 15;
-const maxSlides = totalSlides - itemsPerView;
+let totalSlides = 0;
 
 // Initialize Gallery Carousel
 function initGalleryCarousel() {
@@ -257,62 +255,114 @@ function initGalleryCarousel() {
     const galleryDots = document.querySelector('.gallery-dots');
     const galleryPrev = document.querySelector('.gallery-prev');
     const galleryNext = document.querySelector('.gallery-next');
-    
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
     if (!galleryTrack || !galleryDots || !galleryPrev || !galleryNext) return;
-    
+
+    totalSlides = galleryItems.length;
+
+    // Inject captions
+    galleryItems.forEach(item => {
+        const img = item.querySelector('img');
+        if (img && img.alt) {
+            const caption = document.createElement('div');
+            caption.className = 'gallery-caption';
+            caption.innerHTML = `<p>${img.alt}</p>`;
+            item.appendChild(caption);
+        }
+
+        // Click to center
+        item.addEventListener('click', () => {
+            const index = Array.from(galleryItems).indexOf(item);
+            goToSlide(index);
+        });
+    });
+
     // Create dots
-    for (let i = 0; i <= maxSlides; i++) {
+    galleryDots.innerHTML = '';
+    for (let i = 0; i < totalSlides; i++) {
         const dot = document.createElement('button');
         dot.className = 'gallery-dot';
         dot.setAttribute('data-slide', i);
         dot.addEventListener('click', () => goToSlide(i));
         galleryDots.appendChild(dot);
     }
-    
+
     // Add event listeners
     galleryPrev.addEventListener('click', prevSlide);
     galleryNext.addEventListener('click', nextSlide);
-    
+
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') prevSlide();
         if (e.key === 'ArrowRight') nextSlide();
     });
-    
+
     // Initialize
+    // Start at the first slide
+    currentSlide = 0;
     updateCarousel();
 }
 
-// Update carousel display
+// Update carousel display (3D Coverflow)
 function updateCarousel() {
-    const galleryTrack = document.querySelector('.gallery-track');
+    const galleryItems = document.querySelectorAll('.gallery-item');
     const galleryDots = document.querySelectorAll('.gallery-dot');
-    const galleryPrev = document.querySelector('.gallery-prev');
-    const galleryNext = document.querySelector('.gallery-next');
-    
-    if (!galleryTrack) return;
-    
-    // Update track position
-    galleryTrack.style.transform = `translateX(-${currentSlide * (100 / itemsPerView)}%)`;
-    
+
+    if (galleryItems.length === 0) return;
+
+    galleryItems.forEach((item, index) => {
+        const offset = index - currentSlide;
+        const absOffset = Math.abs(offset);
+
+        // Reset styles
+        item.className = 'gallery-item';
+        item.style.transform = '';
+        item.style.zIndex = '';
+        item.style.opacity = '';
+
+        if (offset === 0) {
+            // Center item
+            item.classList.add('active');
+            item.style.transform = 'translateX(0) scale(1) rotateY(0deg)';
+            item.style.zIndex = 100;
+            item.style.opacity = 1;
+        } else {
+            // Side items
+            const spacing = 260; // Increased spacing to prevent overlap
+            const scale = 0.7;
+            const rotate = offset > 0 ? -45 : 45;
+            const translateX = offset * spacing;
+            const translateZ = -100 * absOffset; // Push back in 3D space
+
+            item.style.transform = `translateX(${translateX}px) translateZ(${translateZ}px) scale(${scale}) rotateY(${rotate}deg)`;
+            item.style.zIndex = 100 - absOffset;
+            item.style.opacity = Math.max(0, 1 - (absOffset * 0.3)); // Fade out distant items
+
+            // Hide items too far away to improve performance and look
+            if (absOffset > 3) {
+                item.style.opacity = 0;
+                item.style.pointerEvents = 'none';
+            } else {
+                item.style.pointerEvents = 'auto';
+            }
+        }
+    });
+
     // Update dots
     galleryDots.forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
     });
-    
-    // Update button states
-    if (galleryPrev) galleryPrev.style.opacity = currentSlide === 0 ? '0.5' : '1';
-    if (galleryNext) galleryNext.style.opacity = currentSlide === maxSlides ? '0.5' : '1';
 }
 
 // Navigation functions
 function goToSlide(slide) {
-    currentSlide = Math.max(0, Math.min(slide, maxSlides));
+    currentSlide = Math.max(0, Math.min(slide, totalSlides - 1));
     updateCarousel();
 }
 
 function nextSlide() {
-    if (currentSlide < maxSlides) {
+    if (currentSlide < totalSlides - 1) {
         currentSlide++;
         updateCarousel();
     }
@@ -338,7 +388,7 @@ const modalNext = modal?.querySelector('.modal-next');
 // Initialize Gallery Modal
 function initGalleryModal() {
     if (!modal) return;
-    
+
     // Add click events to gallery items
     document.querySelectorAll('.gallery-item').forEach((item, index) => {
         item.addEventListener('click', () => {
@@ -346,17 +396,17 @@ function initGalleryModal() {
             openModal();
         });
     });
-    
+
     // Modal navigation
     modalClose?.addEventListener('click', closeModal);
     modalPrev?.addEventListener('click', modalPrevSlide);
     modalNext?.addEventListener('click', modalNextSlide);
-    
+
     // Close modal on background click
     modal.addEventListener('click', (e) => {
         if (e.target === modal) closeModal();
     });
-    
+
     // Keyboard navigation for modal
     document.addEventListener('keydown', (e) => {
         if (modal.style.display === 'flex') {
@@ -370,17 +420,17 @@ function initGalleryModal() {
 // Modal functions
 function openModal() {
     if (!modal || !modalImage || !modalTitle) return;
-    
+
     const galleryItems = document.querySelectorAll('.gallery-item');
     const currentItem = galleryItems[modalCurrentSlide];
     const img = currentItem?.querySelector('img');
-    
+
     if (!img) return;
-    
+
     modalImage.src = img.src;
     modalImage.alt = img.alt;
     modalTitle.textContent = img.alt;
-    
+
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
 }
@@ -396,7 +446,7 @@ function modalNextSlide() {
     const galleryItems = document.querySelectorAll('.gallery-item');
     const currentItem = galleryItems[modalCurrentSlide];
     const img = currentItem?.querySelector('img');
-    
+
     if (img && modalImage && modalTitle) {
         modalImage.src = img.src;
         modalImage.alt = img.alt;
@@ -409,7 +459,7 @@ function modalPrevSlide() {
     const galleryItems = document.querySelectorAll('.gallery-item');
     const currentItem = galleryItems[modalCurrentSlide];
     const img = currentItem?.querySelector('img');
-    
+
     if (img && modalImage && modalTitle) {
         modalImage.src = img.src;
         modalImage.alt = img.alt;
@@ -426,7 +476,7 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('fadeInUp');
+            entry.target.classList.add('visible');
         }
     });
 }, observerOptions);
@@ -437,10 +487,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.section').forEach(section => {
         observer.observe(section);
     });
-    
+
     // Load publications data first
     loadPublicationsData();
-    
+
     // Add filter event listeners
     document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -448,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
             filterPublications(filter);
         });
     });
-    
+
     // Add view toggle event listeners
     document.querySelectorAll('.view-btn').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -456,17 +506,67 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleView(view);
         });
     });
-    
+
     // Initialize gallery
     initGalleryCarousel();
     initGalleryModal();
-    
-    // Responsive adjustments
-    window.addEventListener('resize', () => {
-        // Recalculate items per view for carousel
-        const newItemsPerView = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 4;
-        if (newItemsPerView !== itemsPerView) {
-            location.reload(); // Simple solution for responsive carousel
-        }
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        // Default to dark
+        setTheme('dark');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        setTheme(currentTheme === 'dark' ? 'light' : 'dark');
     });
+
+    // Resize optimization (debounce)
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            updateCarousel();
+        }, 250);
+    });
+
+    // JSON-LD Injection for SEO
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "David Jimenez-Morales",
+        "url": "https://biodavidjm.github.io/",
+        "image": "https://biodavidjm.github.io/images/DavidJimenezMorales-portrait.jpeg",
+        "jobTitle": "Bioinformatics Lead",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Stanford University"
+        },
+        "sameAs": [
+            "https://scholar.google.com/citations?user=Pqq0IwcAAAAJ&hl",
+            "https://github.com/biodavidjm",
+            "https://www.linkedin.com/pub/david-jimenez-morales/26/21b/3a9",
+            "https://twitter.com/biodavidjm"
+        ]
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+
 });
