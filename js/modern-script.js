@@ -247,7 +247,7 @@ function filterPublications(filter) {
 
 // Gallery Carousel Variables
 let currentSlide = 0;
-const totalSlides = 15;
+let totalSlides = 0;
 
 // Initialize Gallery Carousel
 function initGalleryCarousel() {
@@ -259,10 +259,12 @@ function initGalleryCarousel() {
 
     if (!galleryTrack || !galleryDots || !galleryPrev || !galleryNext) return;
 
+    totalSlides = galleryItems.length;
+
     // Inject captions
     galleryItems.forEach(item => {
         const img = item.querySelector('img');
-        if (img) {
+        if (img && img.alt) {
             const caption = document.createElement('div');
             caption.className = 'gallery-caption';
             caption.innerHTML = `<p>${img.alt}</p>`;
