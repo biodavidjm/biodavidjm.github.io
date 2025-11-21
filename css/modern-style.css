@@ -720,6 +720,10 @@ a:hover {
     border: none;
 }
 
+[data-theme="dark"] .gallery-dot {
+    background: var(--text-secondary);
+}
+
 .gallery-dot.active {
     background: var(--primary-color);
     transform: scale(1.2);
