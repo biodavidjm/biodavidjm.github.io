@@ -29,28 +29,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Toggle between grid and list view
-function toggleView(view) {
-    const journalsGrid = document.getElementById('journals-grid');
-    const journalsList = document.getElementById('journals-list');
-    const viewBtns = document.querySelectorAll('.view-btn');
-
-    // Update active button
-    viewBtns.forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.querySelector(`[data-view="${view}"]`).classList.add('active');
-
-    // Show/hide appropriate view
-    if (view === 'grid') {
-        journalsGrid.style.display = 'grid';
-        journalsList.style.display = 'none';
-    } else {
-        journalsGrid.style.display = 'none';
-        journalsList.style.display = 'block';
-    }
-}
-
 // Publications Data Storage
 let publicationsData = {
     journals: [],
@@ -60,10 +38,28 @@ let publicationsData = {
     thesis: null
 };
 
+// Helper: highlight author name
+function highlightName(text) {
+    const patterns = [
+        'David Jimenez-Morales',
+        'Jimenez-Morales D',
+        'Jimenez-Morales, D',
+        'D Jimenez-Morales',
+        'David Jimenez‑Morales',
+        'Jimenez-Morales D.'
+    ];
+    let result = text;
+    patterns.forEach(p => {
+        // Use a regex that escapes special chars
+        const escaped = p.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        result = result.replace(new RegExp(escaped, 'g'), `<span class="highlight-name">${p}</span>`);
+    });
+    return result;
+}
+
 // Load publications data from JSON files
 async function loadPublicationsData() {
     try {
-        // Add cache-busting parameter to prevent caching issues
         const cacheBuster = new Date().getTime();
         const [journalsResponse, booksResponse, popularScienceResponse, abstractsResponse, thesisResponse] = await Promise.all([
             fetch(`data/journals.json?v=${cacheBuster}`),
@@ -79,99 +75,111 @@ async function loadPublicationsData() {
         publicationsData.abstracts = await abstractsResponse.json();
         publicationsData.thesis = await thesisResponse.json();
 
-        // Populate publications after data is loaded
         populatePublications();
     } catch (error) {
         console.error('Error loading publications data:', error);
-        // Fallback to empty data
         populatePublications();
     }
 }
 
-// Create publication card for journals
-function createPublicationCard(publication) {
-    const notes = publication.notes ? `<p class="publication-notes">${publication.notes}</p>` : '';
-    const doi = publication.doi ? `<p class="publication-doi">DOI: <a href="https://doi.org/${publication.doi}" target="_blank" rel="noopener">${publication.doi}</a></p>` : '';
+// Create a pub-entry for journals
+function createJournalEntry(pub) {
+    const highImpact = pub.highImpact ? '<span class="pub-badge">High Impact</span>' : '';
+    const doi = pub.doi ? `<p class="pub-doi">DOI: <a href="https://doi.org/${encodeURI(pub.doi)}" target="_blank" rel="noopener">${pub.doi}</a></p>` : '';
+    const notes = pub.notes ? `<p class="pub-notes">${pub.notes}</p>` : '';
+    const link = pub.link ? `<a href="${pub.link}" target="_blank" rel="noopener">${pub.title}</a>` : pub.title;
 
-    return `
-        <div class="publication-card" data-year="${publication.year}" data-high-impact="${publication.highImpact}">
-            <div class="publication-year">${publication.year}</div>
-            <h4 class="publication-title">
-                <a href="${publication.link}" target="_blank" rel="noopener">${publication.title}</a>
-            </h4>
-            <p class="publication-authors">${publication.authors}</p>
-            <p class="publication-journal">${publication.journal}</p>
-            ${doi}
-            ${notes}
-        </div>
-    `;
+    return `<div class="pub-entry" data-year="${pub.year}" data-high-impact="${pub.highImpact || false}">
+        <p class="pub-authors">${highlightName(pub.authors)}</p>
+        <p class="pub-title-text">${link}${highImpact}</p>
+        <p class="pub-journal">${pub.journal}, ${pub.year}.</p>
+        ${doi}${notes}
+    </div>`;
 }
 
-// Create publication list item for journals
-function createJournalListItem(publication) {
-    let link = '';
-    if (publication.link) {
-        link = ` <a href="${publication.link}" target="_blank" rel="noopener">[Link]</a>`;
-    }
-
-    return `<li class="publication-list-item" data-year="${publication.year}" data-high-impact="${publication.highImpact}"><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.journal}.${link}</li>`;
+// Create a pub-entry for abstracts
+function createAbstractEntry(pub) {
+    const link = pub.link
+        ? `<p class="pub-link"><a href="${pub.link}" target="_blank" rel="noopener">[Link]</a></p>`
+        : '';
+    return `<div class="pub-entry">
+        <p class="pub-authors">${highlightName(pub.authors)}</p>
+        <p class="pub-title-text">${pub.title}</p>
+        <p class="pub-journal">${pub.conference}</p>
+        ${link}
+    </div>`;
 }
 
-// Create simple list item for other publications
-function createPublicationListItem(publication, type) {
-    let link = '';
-    if (publication.link) {
-        link = ` <a href="${publication.link}" target="_blank" rel="noopener">[Link]</a>`;
-    }
+// Create a pub-entry for books
+function createBookEntry(pub) {
+    const link = pub.link
+        ? `<p class="pub-link"><a href="${pub.link}" target="_blank" rel="noopener">[Link]</a></p>`
+        : '';
+    return `<div class="pub-entry">
+        <p class="pub-authors">${pub.authors}</p>
+        <p class="pub-title-text">${pub.title}</p>
+        <p class="pub-journal">${pub.publisher}, ${pub.year}.</p>
+        ${link}
+    </div>`;
+}
 
-    switch (type) {
-        case 'books':
-            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.publisher}.${link}</li>`;
-        case 'popularScience':
-            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.publication}.${link}</li>`;
-        case 'abstracts':
-            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.conference}.${link}</li>`;
-        case 'thesis':
-            return `<li><strong>${publication.year} — ${publication.title}</strong>. ${publication.authors}. ${publication.institution}.${link}</li>`;
-        default:
-            return `<li>${publication.title}</li>`;
-    }
+// Create a pub-entry for popular science
+function createPopSciEntry(pub) {
+    const link = pub.link
+        ? `<p class="pub-link"><a href="${pub.link}" target="_blank" rel="noopener">[Link]</a></p>`
+        : '';
+    return `<div class="pub-entry">
+        <p class="pub-authors">${pub.authors}</p>
+        <p class="pub-title-text">${pub.title}</p>
+        <p class="pub-journal">${pub.publication}, ${pub.year}.</p>
+        ${link}
+    </div>`;
+}
+
+// Create a pub-entry for thesis
+function createThesisEntry(pub) {
+    const link = pub.link
+        ? `<p class="pub-link"><a href="${pub.link}" target="_blank" rel="noopener">[Link]</a></p>`
+        : '';
+    return `<div class="pub-entry">
+        <p class="pub-authors">${pub.authors}</p>
+        <p class="pub-title-text">${pub.title}</p>
+        <p class="pub-journal">${pub.institution}, ${pub.year}.</p>
+        ${link}
+    </div>`;
 }
 
 // Populate publications
 function populatePublications() {
-    const journalsGrid = document.getElementById('journals-grid');
-    const journalsList = document.getElementById('journals-list');
+    const journalList = document.getElementById('journal-list');
     const abstractsList = document.getElementById('abstracts-list');
     const booksList = document.getElementById('books-list');
     const popularScienceList = document.getElementById('popular-science-list');
     const thesisList = document.getElementById('thesis-list');
 
-    // Populate journals grid and list
-    journalsGrid.innerHTML = publicationsData.journals
-        .map(createPublicationCard)
-        .join('');
+    // Journals
+    if (journalList) {
+        journalList.innerHTML = publicationsData.journals.map(createJournalEntry).join('');
+    }
 
-    const journalsListContainer = journalsList.querySelector('.publications-list');
-    journalsListContainer.innerHTML = publicationsData.journals
-        .map(createJournalListItem)
-        .join('');
+    // Abstracts
+    if (abstractsList) {
+        abstractsList.innerHTML = publicationsData.abstracts.map(createAbstractEntry).join('');
+    }
 
-    // Populate other publications as simple lists
-    abstractsList.innerHTML = publicationsData.abstracts
-        .map(pub => createPublicationListItem(pub, 'abstracts'))
-        .join('');
+    // Books
+    if (booksList) {
+        booksList.innerHTML = publicationsData.books.map(createBookEntry).join('');
+    }
 
-    booksList.innerHTML = publicationsData.books
-        .map(pub => createPublicationListItem(pub, 'books'))
-        .join('');
+    // Popular Science
+    if (popularScienceList) {
+        popularScienceList.innerHTML = publicationsData.popularScience.map(createPopSciEntry).join('');
+    }
 
-    popularScienceList.innerHTML = publicationsData.popularScience
-        .map(pub => createPublicationListItem(pub, 'popularScience'))
-        .join('');
-
-    if (publicationsData.thesis) {
-        thesisList.innerHTML = createPublicationListItem(publicationsData.thesis, 'thesis');
+    // Thesis
+    if (thesisList && publicationsData.thesis) {
+        thesisList.innerHTML = createThesisEntry(publicationsData.thesis);
     }
 
     // Update counts
@@ -185,65 +193,85 @@ function updatePublicationCounts() {
     const booksCount = document.getElementById('books-count');
     const popularScienceCount = document.getElementById('popular-science-count');
 
-    journalsCount.textContent = publicationsData.journals.length;
-    abstractsCount.textContent = publicationsData.abstracts.length;
-    booksCount.textContent = publicationsData.books.length;
-    popularScienceCount.textContent = publicationsData.popularScience.length;
+    if (journalsCount) journalsCount.textContent = publicationsData.journals.length;
+    if (abstractsCount) abstractsCount.textContent = publicationsData.abstracts.length;
+    if (booksCount) booksCount.textContent = publicationsData.books.length;
+    if (popularScienceCount) popularScienceCount.textContent = publicationsData.popularScience.length;
 }
 
-// Filter publications
-function filterPublications(filter) {
-    const publicationCards = document.querySelectorAll('#journals-grid .publication-card');
-    const publicationListItems = document.querySelectorAll('#journals-list .publications-list .publication-list-item');
+// Clickable stat boxes → toggle their panels
+document.querySelectorAll('.summary-stat.clickable').forEach(box => {
+    box.addEventListener('click', function () {
+        const panelId = this.getAttribute('data-panel');
+        const panel = document.getElementById(panelId);
+        const isActive = this.classList.contains('active');
 
-    // Filter grid view
-    publicationCards.forEach(card => {
-        const year = parseInt(card.getAttribute('data-year'));
-        const isHighImpact = card.getAttribute('data-high-impact') === 'true';
+        // Close all panels & deactivate all boxes
+        document.querySelectorAll('.summary-stat.clickable').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.pub-panel').forEach(p => p.classList.remove('active'));
+
+        // If it wasn't active, open it
+        if (!isActive && panel) {
+            this.classList.add('active');
+            panel.classList.add('active');
+
+            // On mobile, scroll to the panel so user sees the content
+            if (window.innerWidth <= 900) {
+                panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    });
+});
+
+// Publication Filters (for journals panel)
+let activeJournalFilter = 'all';
+
+function applyJournalFilters() {
+    const entries = document.querySelectorAll('#journal-list .pub-entry');
+    let visibleCount = 0;
+    entries.forEach(entry => {
+        const year = parseInt(entry.getAttribute('data-year'));
+        const isHighImpact = entry.getAttribute('data-high-impact') === 'true';
         let show = false;
 
-        switch (filter) {
+        switch (activeJournalFilter) {
+            case 'all':
+                show = true;
+                break;
             case 'recent':
                 show = year >= 2020;
                 break;
             case 'high-impact':
                 show = isHighImpact;
                 break;
-            case 'all':
-                show = true;
-                break;
         }
 
-        card.style.display = show ? 'block' : 'none';
-    });
-
-    // Filter list view
-    publicationListItems.forEach(item => {
-        const year = parseInt(item.getAttribute('data-year'));
-        const isHighImpact = item.getAttribute('data-high-impact') === 'true';
-        let show = false;
-
-        switch (filter) {
-            case 'recent':
-                show = year >= 2020;
-                break;
-            case 'high-impact':
-                show = isHighImpact;
-                break;
-            case 'all':
-                show = true;
-                break;
+        if (show) {
+            entry.classList.remove('hidden');
+            visibleCount++;
+        } else {
+            entry.classList.add('hidden');
         }
-
-        item.style.display = show ? 'block' : 'none';
     });
-
-    // Update active filter button
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.querySelector(`[data-filter="${filter}"]`).classList.add('active');
+    const noResults = document.getElementById('no-results-msg');
+    if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
 }
+
+document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', function () {
+        const filterType = this.getAttribute('data-filter-type');
+        const filterValue = this.getAttribute('data-filter');
+
+        // Update active pill in this row
+        this.closest('.filter-row').querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+        this.classList.add('active');
+
+        if (filterType === 'journals-filter') {
+            activeJournalFilter = filterValue;
+            applyJournalFilters();
+        }
+    });
+});
 
 // Gallery Carousel Variables
 let currentSlide = 0;
@@ -488,24 +516,8 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Load publications data first
+    // Load publications data
     loadPublicationsData();
-
-    // Add filter event listeners
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.getAttribute('data-filter');
-            filterPublications(filter);
-        });
-    });
-
-    // Add view toggle event listeners
-    document.querySelectorAll('.view-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const view = btn.getAttribute('data-view');
-            toggleView(view);
-        });
-    });
 
     // Initialize gallery
     initGalleryCarousel();

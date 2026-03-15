@@ -492,7 +492,8 @@
     <!-- Publications Section -->
     <section id="publications" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Publications</h2>
+            <h2 class="section-title">Publications &amp; Research Output</h2>
+            <p class="publications-intro-text">A track record of contributing to science across proteomics, multi-omics, infectious diseases, and computational biology.</p>
 
             <!-- Preprints Link -->
             <div class="publications-intro">
@@ -500,78 +501,74 @@
                         target="_blank" rel="noopener">📄 Check my preprints from bioRxiv and medRxiv</a></p>
             </div>
 
-            <!-- Peer-reviewed Journals Section -->
-            <div class="publications-section" id="peer-reviewed">
-                <h3 class="section-subtitle">Peer-reviewed Journals (<span id="journals-count">0</span>)</h3>
+            <!-- Clickable Summary Stats -->
+            <div class="pub-summary-grid" id="pub-grid">
+                <div class="summary-stat clickable" data-panel="panel-journals">
+                    <div class="summary-stat-number" id="journals-count">0</div>
+                    <div class="summary-stat-label">Peer-reviewed Journals</div>
+                </div>
+                <div class="summary-stat clickable" data-panel="panel-abstracts">
+                    <div class="summary-stat-number" id="abstracts-count">0</div>
+                    <div class="summary-stat-label">Abstracts &amp; Comms</div>
+                </div>
+                <div class="summary-stat clickable" data-panel="panel-books">
+                    <div class="summary-stat-number" id="books-count">0</div>
+                    <div class="summary-stat-label">Books</div>
+                </div>
+                <div class="summary-stat clickable" data-panel="panel-popular-science">
+                    <div class="summary-stat-number" id="popular-science-count">0</div>
+                    <div class="summary-stat-label">Popular Science</div>
+                </div>
+                <div class="summary-stat clickable" data-panel="panel-thesis">
+                    <div class="summary-stat-number">1</div>
+                    <div class="summary-stat-label">PhD Thesis</div>
+                </div>
+            </div>
 
-                <!-- Filter Buttons -->
-                <div class="publications-controls">
-                    <div class="publications-filter">
-                        <button class="filter-btn active" data-filter="recent">Recent (2020+)</button>
-                        <button class="filter-btn" data-filter="high-impact">High Impact</button>
-                        <button class="filter-btn" data-filter="all">All Publications</button>
+            <!-- Panel: Peer-reviewed Journals -->
+            <div class="pub-panel" id="panel-journals">
+                <div class="pub-filters">
+                    <div class="filter-row">
+                        <span class="filter-label">Filter:</span>
+                        <button class="filter-pill active" data-filter-type="journals-filter" data-filter="all">All</button>
+                        <button class="filter-pill" data-filter-type="journals-filter" data-filter="recent">Recent (2020+)</button>
+                        <button class="filter-pill" data-filter-type="journals-filter" data-filter="high-impact">High Impact</button>
                     </div>
-                    <div class="view-toggle">
-                        <button class="view-btn active" data-view="grid">
-                            <span class="view-icon">⊞</span>
-                            Grid
-                        </button>
-                        <button class="view-btn" data-view="list">
-                            <span class="view-icon">☰</span>
-                            List
-                        </button>
-                    </div>
                 </div>
-
-                <div class="publications-grid" id="journals-grid">
-                    <!-- Publications will be populated by JavaScript -->
+                <div class="pub-list" id="journal-list">
+                    <!-- Populated by JavaScript -->
                 </div>
-
-                <div class="publications-list-view" id="journals-list" style="display: none;">
-                    <div class="publications-list">
-                        <!-- Publications list will be populated by JavaScript -->
-                    </div>
-                </div>
+                <p class="no-results" style="display:none;" id="no-results-msg">No publications match the selected filter.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Other Publications Section -->
-    <section id="other-publications" class="section">
-        <div class="container">
-            <h2 class="section-title">Other Publications</h2>
-
-            <!-- Abstracts & Communications -->
-            <div class="other-publications-section">
-                <h3 class="section-subtitle">Abstracts & Communications (<span id="abstracts-count">0</span>)</h3>
-                <div class="publications-list" id="abstracts-list">
-                    <!-- Abstracts will be populated by JavaScript -->
+            <!-- Panel: Abstracts & Communications -->
+            <div class="pub-panel" id="panel-abstracts">
+                <div class="pub-list" id="abstracts-list">
+                    <!-- Populated by JavaScript -->
                 </div>
             </div>
 
-            <!-- Books -->
-            <div class="other-publications-section">
-                <h3 class="section-subtitle">Books (<span id="books-count">0</span>)</h3>
-                <div class="publications-list" id="books-list">
-                    <!-- Books will be populated by JavaScript -->
+            <!-- Panel: Books -->
+            <div class="pub-panel" id="panel-books">
+                <div class="pub-list" id="books-list">
+                    <!-- Populated by JavaScript -->
                 </div>
             </div>
 
-            <!-- Popular Science Articles -->
-            <div class="other-publications-section">
-                <h3 class="section-subtitle">Popular Science Articles (<span id="popular-science-count">0</span>)</h3>
-                <div class="publications-list" id="popular-science-list">
-                    <!-- Popular science articles will be populated by JavaScript -->
+            <!-- Panel: Popular Science -->
+            <div class="pub-panel" id="panel-popular-science">
+                <div class="pub-list" id="popular-science-list">
+                    <!-- Populated by JavaScript -->
                 </div>
             </div>
 
-            <!-- PhD Thesis -->
-            <div class="other-publications-section">
-                <h3 class="section-subtitle">PhD Thesis</h3>
-                <div class="publications-list" id="thesis-list">
-                    <!-- Thesis will be populated by JavaScript -->
+            <!-- Panel: PhD Thesis -->
+            <div class="pub-panel" id="panel-thesis">
+                <div class="pub-list" id="thesis-list">
+                    <!-- Populated by JavaScript -->
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -941,7 +938,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="js/modern-script.js"></script>
+    <script src="js/modern-script.js?v=2"></script>
 </body>
 
 </html>

@@ -919,8 +919,10 @@ a:hover {
     text-decoration: underline;
 }
 
-.publications-section {
-    margin-bottom: 4rem;
+.publications-intro-text {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
 }
 
 .section-subtitle {
@@ -932,7 +934,7 @@ a:hover {
     border-bottom: 2px solid var(--primary-color);
 }
 
-/* Other Publications Section */
+/* Other Publications Section (kept for computing section etc.) */
 .other-publications-section {
     margin-bottom: 3rem;
 }
@@ -963,169 +965,223 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Publications Controls */
-.publications-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.publications-filter {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.view-toggle {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.view-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--border-color);
-    background: white;
-    color: var(--text-secondary);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.view-btn:hover {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-}
-
-.view-btn.active {
-    border-color: var(--primary-color);
-    background: var(--primary-color);
-    color: white;
-}
-
-.view-icon {
-    font-size: 1rem;
-}
-
-.filter-btn {
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--primary-color);
-    background: transparent;
-    color: var(--primary-color);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.filter-btn:hover {
-    background: var(--primary-color);
-    color: white;
-}
-
-.filter-btn.active {
-    background: var(--primary-color);
-    color: white;
-}
-
-/* Publications Grid */
-.publications-grid {
+/* ===== Summary Stat Boxes (Nieves-style) ===== */
+.pub-summary-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-/* Publications List View */
-.publications-list-view {
+.summary-stat {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--bg-primary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.summary-stat.clickable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.summary-stat.clickable.active {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color), var(--shadow-md);
+    transform: translateY(-5px);
+}
+
+.summary-stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.summary-stat-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== Publication Panels (toggled by stat boxes) ===== */
+.pub-panel {
     display: none;
+    margin-top: 2rem;
+    animation: panelFadeIn 0.3s ease;
 }
 
-.publications-list-view.active {
+.pub-panel.active {
     display: block;
 }
 
-.publication-card {
-    background: var(--bg-primary);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-sm);
+@keyframes panelFadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-.publication-card:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
+/* ===== Filter Pills ===== */
+.pub-filters {
+    margin-bottom: 1.5rem;
 }
 
-.publication-year {
-    display: inline-block;
-    background: var(--primary-color);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: var(--border-radius);
-    font-size: 0.875rem;
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.filter-label {
     font-weight: 600;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 0.25rem;
 }
 
-.publication-title {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.1rem;
-    line-height: 1.4;
+.filter-pill {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
-.publication-title a {
+.filter-pill:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.filter-pill.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* ===== Publication Entries ===== */
+.pub-entry {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.pub-entry:last-child {
+    border-bottom: none;
+}
+
+.pub-entry.hidden {
+    display: none;
+}
+
+.pub-authors {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    margin-bottom: 0.15rem;
+}
+
+.pub-title-text {
+    font-weight: 600;
+    font-style: italic;
+    color: var(--text-primary);
+    margin: 0.15rem 0;
+    font-size: 0.88rem;
+}
+
+.pub-title-text a {
     color: var(--text-primary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.publication-title a:hover {
+.pub-title-text a:hover {
     color: var(--primary-color);
 }
 
-.publication-authors {
+.pub-journal {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.pub-notes {
+    font-size: 0.78rem;
     color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin: 0 0 0.5rem 0;
     font-style: italic;
+    margin-top: 0.15rem;
 }
 
-.publication-journal {
+.pub-doi {
+    font-size: 0.78rem;
     color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin: 0;
-    font-weight: 500;
 }
 
-.publication-doi {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    margin: 0.5rem 0 0 0;
-}
-
-.publication-doi a {
+.pub-doi a {
     color: var(--primary-color);
     text-decoration: none;
 }
 
-.publication-doi a:hover {
+.pub-doi a:hover {
     text-decoration: underline;
 }
 
-.publication-notes {
+.pub-link {
+    font-size: 0.78rem;
+}
+
+.pub-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pub-link a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Highlight Author Name ===== */
+.highlight-name {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* ===== No Results ===== */
+.no-results {
+    text-align: center;
     color: var(--text-secondary);
-    font-size: 0.85rem;
+    padding: 2rem;
     font-style: italic;
-    margin: 0.5rem 0 0 0;
+}
+
+/* ===== High Impact Badge ===== */
+.pub-badge {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
 }
 
 /* Tools */
@@ -1366,8 +1422,8 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-    .publications-grid {
-        grid-template-columns: 1fr;
+    .pub-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .tools-grid {
@@ -1409,38 +1465,13 @@ a:hover {
         height: 25px;
     }
 
-    .publications-controls {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-    }
-
-    .publications-filter {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .filter-btn {
-        text-align: center;
-    }
-
-    .view-toggle {
-        justify-content: center;
-    }
-
-
-
-    .publications-grid {
+    .pub-summary-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
 
-    .publication-card {
-        padding: 1rem;
-    }
-
-    .publications-list li {
-        padding: 0.75rem 0;
+    .pub-panel {
+        margin-top: 1.5rem;
     }
 }
 
