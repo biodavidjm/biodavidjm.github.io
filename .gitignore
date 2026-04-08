@@ -1,2 +1,4 @@
 *.DS_Store
 images/gallery/fluomics-slides-design.pdf
+
+*.code-workspace
