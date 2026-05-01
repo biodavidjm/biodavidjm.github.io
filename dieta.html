@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#eef4fa">
+<title>Plan 6 semanas · −4 kg</title>
+<style>
+  :root {
+    --bg: #eef4fa;
+    --bg-2: #e3edf7;
+    --card: #ffffff;
+    --border: #dce6f0;
+    --border-strong: #b8c8db;
+    --text: #0f172a;
+    --text-2: #475569;
+    --text-3: #8fa1b5;
+    --neutral-soft: #e3ecf5;
+    --neutral-soft-2: #d8e3ef;
+
+    --accent: #047857;
+    --accent-hover: #065f46;
+    --accent-soft: #ecfdf5;
+    --accent-soft-2: #d1fae5;
+
+    --blue: #2563eb;
+    --blue-soft: #dbeafe;
+    --orange: #c2410c;
+    --orange-soft: #ffedd5;
+    --purple: #7c3aed;
+    --purple-soft: #ede9fe;
+
+    --warning: #b45309;
+    --warning-soft: #fef3c7;
+    --danger: #b91c1c;
+    --danger-soft: #fee2e2;
+
+    --shadow-sm: 0 1px 2px rgba(15,23,42,.04), 0 1px 3px rgba(15,23,42,.05);
+    --shadow-md: 0 1px 3px rgba(15,23,42,.06), 0 4px 12px rgba(15,23,42,.05);
+    --shadow-lg: 0 4px 12px rgba(15,23,42,.08), 0 12px 32px rgba(15,23,42,.06);
+
+    --radius: 14px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    background-image:
+      radial-gradient(circle at 0% 0%, #e6f0fb 0%, transparent 35%),
+      radial-gradient(circle at 100% 0%, #e9f1fa 0%, transparent 40%);
+    background-attachment: fixed;
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding-bottom: 80px;
+  }
+  h1, h2, h3, h4 { margin: 0 0 .4em; font-weight: 600; letter-spacing: -.015em; }
+  h1 { font-size: 1.55rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1rem; }
+  p { margin: 0 0 .8em; color: var(--text-2); }
+  small { color: var(--text-3); }
+  a { color: var(--accent); }
+  button { font-family: inherit; cursor: pointer; }
+
+  /* Layout */
+  .wrap { max-width: 820px; margin: 0 auto; padding: 16px; }
+
+  header.app-header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(238,244,250,0.85);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    max-width: 820px; margin: 0 auto;
+    padding: 14px 16px 10px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .brand { display: flex; flex-direction: column; min-width: 0; }
+  .brand .title {
+    font-family: 'Iowan Old Style', 'Charter', 'Cambria', Georgia, 'Times New Roman', serif;
+    font-size: 1.28rem;
+    font-weight: 500;
+    letter-spacing: -.018em;
+    line-height: 1.1;
+    display: inline-flex; align-items: baseline; gap: 6px;
+    flex-wrap: wrap;
+  }
+  .brand .title .word-1 {
+    color: var(--text);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .brand .title .word-2 {
+    background: linear-gradient(105deg, var(--accent) 0%, #0891b2 50%, var(--blue) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -.012em;
+  }
+  .brand .title .ornament {
+    color: var(--accent);
+    font-size: .85em;
+    opacity: .75;
+    margin-right: 2px;
+    font-style: normal;
+  }
+  .brand .sub { font-size: 0.78rem; color: var(--text-3); margin-top: 3px; }
+
+  /* Tabs */
+  nav.tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 4px;
+    padding: 6px 16px 12px;
+    background: rgba(238,244,250,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    scrollbar-width: none;
+    border-bottom: 1px solid var(--border);
+  }
+  nav.tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex-shrink: 0;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-2);
+    font-size: 0.88rem;
+    font-weight: 500;
+    border-radius: 999px;
+    transition: all .15s ease;
+  }
+  .tab:hover { color: var(--text); background: rgba(255,255,255,.5); }
+  .tab.active {
+    background: var(--text);
+    color: white;
+    border-color: var(--text);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Cards */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-sm);
+  }
+  .card.tight { padding: 12px 14px; }
+  .card.flat { box-shadow: none; }
+  .card h2, .card h3 { margin-top: 0; }
+
+  /* Section banner: helpful header for tabs */
+  .section-banner {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    margin-bottom: 12px;
+    padding: 4px 2px;
+  }
+  .section-banner h1 { margin: 0; }
+  .section-banner .sub { color: var(--text-3); font-size: .82rem; margin-top: 2px; }
+
+  /* Buttons */
+  .btn {
+    border: 1px solid var(--border-strong);
+    background: white;
+    color: var(--text);
+    padding: 7px 13px;
+    border-radius: var(--radius-sm);
+    font-size: .85rem;
+    font-weight: 500;
+    transition: all .12s;
+  }
+  .btn:hover { border-color: var(--text); }
+  .btn.sm { padding: 5px 10px; font-size: .78rem; }
+  .btn.primary {
+    background: var(--text); color: white; border-color: var(--text);
+  }
+  .btn.primary:hover { background: #000; }
+  .btn.accent {
+    background: var(--accent); color: white; border-color: var(--accent);
+  }
+  .btn.accent:hover { background: var(--accent-hover); }
+  .btn.danger-ghost {
+    background: transparent; border-color: var(--border); color: var(--danger);
+  }
+  .btn.danger-ghost:hover { background: var(--danger-soft); border-color: var(--danger-soft); }
+  .btn.ghost { background: transparent; border-color: transparent; color: var(--text-2); }
+  .btn.ghost:hover { color: var(--text); background: var(--neutral-soft); }
+  .btn.icon { padding: 6px 8px; }
+
+  /* ============== WEEK DASHBOARD ============== */
+  .week-summary {
+    background: linear-gradient(135deg, white 0%, #f8fbff 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-md);
+  }
+  .week-summary-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+  .week-summary-head .title { font-weight: 600; font-size: 1.08rem; }
+  .week-summary-head .sub { color: var(--text-3); font-size: .82rem; margin-top: 2px; }
+  .week-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .week-stat {
+    background: var(--bg-2);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+  }
+  .week-stat .label { font-size: .7rem; color: var(--text-3); text-transform: uppercase; letter-spacing: .04em; }
+  .week-stat .value { font-weight: 600; font-size: 1rem; margin-top: 2px; }
+  .week-stat .value small { color: var(--text-3); font-weight: 400; font-size: .76rem; margin-left: 2px; }
+
+  .day-grid { display: flex; flex-direction: column; gap: 12px; }
+
+  .day-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .day-card.today {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px var(--blue-soft), var(--shadow-sm);
+  }
+  .day-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    margin-bottom: 12px;
+  }
+  .day-head .name {
+    font-weight: 600; font-size: 1.05rem; letter-spacing: -.01em;
+    text-transform: capitalize;
+  }
+  .day-head .date { color: var(--text-3); font-size: .8rem; margin-left: 6px; font-weight: 400; }
+  .day-head .today-badge {
+    display: inline-block;
+    background: var(--blue); color: white;
+    font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em;
+    padding: 2px 7px; border-radius: 999px; margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* Sport segmented control */
+  .sport-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .sport-label {
+    font-size: .78rem; color: var(--text-3); text-transform: uppercase; letter-spacing: .05em;
+    font-weight: 500;
+  }
+  .segmented {
+    display: inline-flex;
+    background: var(--bg-2);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+  }
+  .seg {
+    padding: 5px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 999px;
+    color: var(--text-2);
+    font-size: .82rem;
+    font-weight: 500;
+    transition: all .15s ease;
+  }
+  .seg:hover { color: var(--text); }
+  .seg.active.fuerza { background: var(--purple); color: white; }
+  .seg.active.aerobico { background: var(--blue); color: white; }
+  .seg.active.ninguno { background: white; color: var(--text); box-shadow: var(--shadow-sm); }
+
+  /* Meal rows */
+  .meals-stack { display: flex; flex-direction: column; gap: 10px; }
+  .meal-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 10px;
+    background: var(--bg-2);
+    border-radius: var(--radius-sm);
+  }
+  .meal-row .slot-label {
+    flex-shrink: 0;
+    width: 92px;
+    font-size: .82rem;
+    font-weight: 500;
+    color: var(--text-2);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .slot-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .slot-dot.desayuno { background: #f59e0b; }
+  .slot-dot.comida   { background: #16a34a; }
+  .slot-dot.snack    { background: #06b6d4; }
+  .slot-dot.cena     { background: #7c3aed; }
+
+  .meal-row select {
+    flex: 1; min-width: 0;
+    padding: 7px 9px;
+    border: 1px solid var(--border-strong);
+    background: white;
+    color: var(--text);
+    border-radius: var(--radius-xs);
+    font-family: inherit;
+    font-size: .85rem;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%23475569' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 28px;
+  }
+  .meal-row select:focus { outline: 2px solid var(--accent-soft-2); border-color: var(--accent); }
+  .meal-row .meal-kcal {
+    flex-shrink: 0;
+    font-size: .76rem;
+    color: var(--text-3);
+    width: 60px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Sport tip */
+  .sport-tip {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    font-size: .82rem;
+    line-height: 1.45;
+    border-left: 3px solid;
+  }
+  .sport-tip.fuerza { background: var(--purple-soft); border-color: var(--purple); color: #4c1d95; }
+  .sport-tip.aerobico { background: var(--blue-soft); border-color: var(--blue); color: #1e3a8a; }
+  .sport-tip strong { color: inherit; }
+
+  /* Day total */
+  .day-total {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+    display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: space-between;
+  }
+  .day-total .total-label { font-size: .78rem; color: var(--text-3); text-transform: uppercase; letter-spacing: .05em; font-weight: 500; }
+  .total-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip {
+    background: var(--bg-2);
+    color: var(--text-2);
+    font-size: .78rem;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+  }
+  .chip.kcal { background: white; color: var(--text); border: 1px solid var(--border); }
+  .chip strong { color: var(--text); font-weight: 600; }
+
+  /* ============== COMIDAS (catalog) ============== */
+  .catalog-nav {
+    position: sticky;
+    top: 92px;
+    z-index: 40;
+    background: rgba(238,244,250,.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 8px 0;
+    margin: 0 -16px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .catalog-nav-inner {
+    display: flex; gap: 6px; padding: 0 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .catalog-nav-inner::-webkit-scrollbar { display: none; }
+  .anchor-btn {
+    flex-shrink: 0;
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 7px 13px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: .82rem;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    transition: all .12s;
+  }
+  .anchor-btn:hover { border-color: var(--border-strong); }
+  .anchor-btn .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .anchor-btn .count { color: var(--text-3); font-weight: 400; font-size: .76rem; }
+
+  .catalog-section {
+    margin-top: 22px;
+    scroll-margin-top: 150px;
+  }
+  .catalog-section-head {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+  }
+  .catalog-section-head .icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: white;
+    font-weight: 700; font-size: .9rem;
+  }
+  .catalog-section-head .icon.desayuno { background: #f59e0b; }
+  .catalog-section-head .icon.comida   { background: #16a34a; }
+  .catalog-section-head .icon.snack    { background: #06b6d4; }
+  .catalog-section-head .icon.cena     { background: #7c3aed; }
+  .catalog-section-head h2 { margin: 0; font-size: 1.18rem; }
+  .catalog-section-head .count {
+    margin-left: auto;
+    font-size: .78rem; color: var(--text-3);
+    background: var(--bg-2);
+    padding: 2px 9px; border-radius: 999px;
+  }
+
+  .meal-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow-sm);
+  }
+  .meal-card .head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+  .meal-card .name { font-weight: 600; font-size: 1rem; }
+  .meal-card .macros { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .meal-card .macros .chip { font-size: .76rem; }
+  .meal-card .ingredients {
+    margin-top: 12px;
+    background: var(--bg-2);
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+  }
+  .meal-card .ingredients ul { margin: 0; padding-left: 18px; color: var(--text-2); font-size: .85rem; }
+  .meal-card .ingredients li { margin-bottom: 3px; }
+
+  /* ============== PLAN content ============== */
+  .plan-content h3 { margin-top: 18px; }
+  .plan-content ul, .plan-content ol { padding-left: 18px; color: var(--text-2); }
+  .plan-content li { margin-bottom: 6px; }
+  .plan-content table {
+    border-collapse: collapse; width: 100%; font-size: .88rem; margin: 8px 0 12px;
+  }
+  .plan-content th, .plan-content td {
+    border-bottom: 1px solid var(--border);
+    padding: 8px 6px;
+    text-align: left;
+    vertical-align: top;
+  }
+  .plan-content th { font-weight: 600; color: var(--text); }
+  .plan-content td { color: var(--text-2); }
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    font-size: .9rem;
+    color: var(--text);
+    margin: 12px 0;
+  }
+  .callout.warning {
+    border-color: var(--warning);
+    background: var(--warning-soft);
+  }
+
+  /* Food rules lists */
+  .rules-list { margin: 0; padding: 0; }
+  .rules-list dt {
+    font-weight: 600;
+    font-size: .94rem;
+    color: var(--text);
+    margin-top: 14px;
+    display: flex; align-items: baseline; gap: 8px;
+  }
+  .rules-list dt:first-child { margin-top: 4px; }
+  .rules-list dt::before {
+    flex-shrink: 0;
+    width: 20px; height: 20px;
+    border-radius: 6px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: .78rem;
+    font-weight: 700;
+    line-height: 1;
+    transform: translateY(2px);
+  }
+  .rules-list.eliminate dt::before {
+    content: '×';
+    background: var(--danger-soft);
+    color: var(--danger);
+    font-size: 1rem;
+  }
+  .rules-list.reduce dt::before {
+    content: '−';
+    background: var(--warning-soft);
+    color: var(--warning);
+    font-size: 1.1rem;
+  }
+  .rules-list.allowed dt::before {
+    content: '✓';
+    background: var(--accent-soft-2);
+    color: var(--accent);
+  }
+  .rules-list dd {
+    margin: 4px 0 0 28px;
+    padding: 0;
+    font-size: .87rem;
+    color: var(--text-2);
+    line-height: 1.5;
+  }
+
+  /* Highlight (mantra) card */
+  .highlight-card {
+    background: linear-gradient(135deg, #ecfdf5 0%, #f0f9ff 100%);
+    border: 1px solid var(--accent-soft-2);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow-md);
+  }
+  .highlight-card h2 {
+    margin-top: 0;
+    font-family: 'Iowan Old Style', 'Charter', 'Cambria', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--text);
+    letter-spacing: -.012em;
+  }
+  .highlight-card .quote {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--text);
+    margin: 0 0 14px;
+  }
+  .highlight-card .quote em {
+    color: var(--text-3);
+    font-style: italic;
+  }
+  .highlight-card .examples { list-style: none; padding: 0; margin: 0; }
+  .highlight-card .examples li {
+    padding: 7px 0;
+    border-top: 1px solid rgba(15,23,42,.06);
+    font-size: .92rem;
+    color: var(--text);
+  }
+  .highlight-card .examples li:first-child { border-top: none; }
+  .highlight-card .examples .ok::before {
+    content: '✓';
+    color: var(--accent);
+    font-weight: 700;
+    margin-right: 8px;
+  }
+  .highlight-card .examples .no::before {
+    content: '×';
+    color: var(--danger);
+    font-weight: 700;
+    margin-right: 10px;
+    font-size: 1.05em;
+  }
+
+  /* ============== COMPRA ============== */
+  .shop-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 600px) {
+    .shop-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .shop-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 16px 12px;
+    box-shadow: var(--shadow-sm);
+  }
+  .shop-card-head {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .shop-card-head .badge {
+    width: 28px; height: 28px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 8px;
+    color: white; font-weight: 700; font-size: .82rem;
+  }
+  .shop-card-head h3 { margin: 0; font-size: .98rem; }
+  .shop-card-head .count {
+    margin-left: auto;
+    background: var(--bg-2);
+    color: var(--text-3);
+    padding: 1px 8px;
+    font-size: .72rem;
+    border-radius: 999px;
+  }
+  .shop-list { list-style: none; margin: 0; padding: 0; }
+  .shop-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--bg-2);
+    font-size: .9rem;
+    color: var(--text);
+    cursor: pointer;
+    user-select: none;
+  }
+  .shop-list li:last-child { border-bottom: none; }
+  .shop-list li input[type=checkbox] {
+    margin-top: 3px;
+    accent-color: var(--accent);
+    flex-shrink: 0;
+  }
+  .shop-list li.checked {
+    color: var(--text-3);
+    text-decoration: line-through;
+  }
+
+  .shop-summary {
+    background: linear-gradient(135deg, white 0%, #f8fbff 100%);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    flex-wrap: wrap;
+  }
+  .shop-summary .text { font-size: .88rem; }
+  .shop-summary .text strong { color: var(--text); }
+
+  .hidden { display: none !important; }
+  @media (max-width: 480px) {
+    .week-stats { grid-template-columns: repeat(3, 1fr); }
+    .week-stat { padding: 8px 10px; }
+    .week-stat .value { font-size: .9rem; }
+    .meal-row { flex-direction: row; }
+    .meal-row .slot-label { width: 84px; font-size: .78rem; }
+    .meal-row .meal-kcal { width: 54px; font-size: .72rem; }
+    .day-card { padding: 14px 14px; }
+    .wrap { padding: 12px; }
+    h1 { font-size: 1.35rem; }
+    .catalog-nav { top: 88px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="title">
+        <span class="ornament">❦</span>
+        <span class="word-1">Dieta</span>
+        <span class="word-2">Hipocalórica</span>
+      </span>
+      <span class="sub" id="dateLabel"></span>
+    </div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="semana">Semana</button>
+    <button class="tab" data-tab="comidas">Comidas</button>
+    <button class="tab" data-tab="plan">Plan</button>
+    <button class="tab" data-tab="entrenamiento">Entrenamiento</button>
+    <button class="tab" data-tab="compra">Lista de compra</button>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <!-- SEMANA -->
+  <section id="tab-semana">
+    <div class="section-banner">
+      <div>
+        <h1>Tu semana</h1>
+        <div class="sub">Planifica las cuatro comidas de cada día y marca los días de deporte</div>
+      </div>
+      <button class="btn danger-ghost sm" id="resetWeekBtn">Reiniciar semana</button>
+    </div>
+
+    <div class="week-summary">
+      <div class="week-summary-head">
+        <div>
+          <div class="title">Resumen semanal</div>
+          <div class="sub" id="weekTargetExplain">Objetivo de la semana actual</div>
+        </div>
+      </div>
+      <div class="week-stats">
+        <div class="week-stat">
+          <div class="label">kcal/día prom.</div>
+          <div class="value" id="avgKcal">— <small id="kcalTargetMini"></small></div>
+        </div>
+        <div class="week-stat">
+          <div class="label">Proteína prom.</div>
+          <div class="value" id="avgProt">— <small id="protTargetMini"></small></div>
+        </div>
+        <div class="week-stat">
+          <div class="label">Días planificados</div>
+          <div class="value" id="daysPlanned">0 <small>/ 7</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-grid" id="dayGrid"></div>
+  </section>
+
+  <!-- COMIDAS -->
+  <section id="tab-comidas" class="hidden">
+    <div class="section-banner">
+      <div>
+        <h1>Catálogo de comidas</h1>
+        <div class="sub">21 opciones equivalentes en macros dentro de cada categoría. Rótalas libremente desde la pestaña Semana.</div>
+      </div>
+    </div>
+
+    <nav class="catalog-nav">
+      <div class="catalog-nav-inner">
+        <a class="anchor-btn" href="#cat-desayuno"><span class="dot" style="background:#f59e0b"></span> Desayunos <span class="count">(5)</span></a>
+        <a class="anchor-btn" href="#cat-comida"><span class="dot" style="background:#16a34a"></span> Comidas <span class="count">(6)</span></a>
+        <a class="anchor-btn" href="#cat-snack"><span class="dot" style="background:#06b6d4"></span> Snacks <span class="count">(5)</span></a>
+        <a class="anchor-btn" href="#cat-cena"><span class="dot" style="background:#7c3aed"></span> Cenas <span class="count">(5)</span></a>
+      </div>
+    </nav>
+
+    <div id="catalogContainer"></div>
+  </section>
+
+  <!-- PLAN -->
+  <section id="tab-plan" class="hidden">
+    <div class="section-banner"><div><h1>La lógica del plan</h1><div class="sub">Por qué se ha diseñado así</div></div></div>
+
+    <div class="card plan-content">
+      <h2>Punto de partida</h2>
+      <table>
+        <tr><th>Variable</th><th>Valor</th></tr>
+        <tr><td>Peso actual</td><td>94 kg</td></tr>
+        <tr><td>Altura</td><td>190 cm</td></tr>
+        <tr><td>IMC</td><td>26.0 (ligeramente por encima)</td></tr>
+        <tr><td>Objetivo</td><td>−4 kg en 6 semanas (~0.67 kg/sem)</td></tr>
+        <tr><td>Limitación</td><td>Fuerza intermitente, poco aerobio</td></tr>
+      </table>
+      <p>0.67 kg/semana es el ritmo dulce: agresivo para ver resultados pero suave para preservar músculo y evitar rebote.</p>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Cálculo energético</h2>
+      <ul>
+        <li>TMB (Mifflin-St Jeor): ~1.880 kcal/día</li>
+        <li>Gasto total estimado (actividad ligera + fuerza): ~2.450 kcal/día</li>
+        <li>Déficit objetivo: ~500 kcal/día</li>
+        <li>Ingesta objetivo: ~1.950 kcal/día</li>
+      </ul>
+      <p>4 kg de grasa ≈ 30.800 kcal. Con −500 kcal/día × 42 días → 21.000 kcal de la dieta. El resto sale del NEAT (caminar) y del coste energético de los entrenamientos.</p>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Macronutrientes</h2>
+      <p>En adultos a partir de cierta edad aparece <em>resistencia anabólica</em>: el músculo responde menos al estímulo proteico. Con déficit calórico, la proteína es innegociable.</p>
+      <table>
+        <tr><th>Macro</th><th>Cantidad</th><th>% kcal</th><th>Razón</th></tr>
+        <tr><td>Proteína</td><td>~180 g/día (1.9 g/kg)</td><td>37%</td><td>Preservar músculo, saciedad</td></tr>
+        <tr><td>Grasas</td><td>~65 g/día</td><td>30%</td><td>Hormonas, vitaminas liposolubles</td></tr>
+        <tr><td>Carbos</td><td>~170 g/día</td><td>33%</td><td>Energía para fuerza, fibra</td></tr>
+      </table>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Lógica de selección de alimentos</h2>
+      <h3>Proteína de alta biodisponibilidad</h3>
+      <p>Huevos, pescado azul (salmón, sardinas, caballa), pollo/pavo, yogur griego 0%, queso fresco, lentejas, garbanzos, tofu/tempeh. Distribuida en <strong>4 ingestas de ~40–50 g</strong> para maximizar la síntesis proteica a lo largo del día.</p>
+      <h3>Carbohidratos de bajo índice glucémico</h3>
+      <p>Avena, quinoa, arroz integral, batata, pan integral de masa madre, fruta entera. Estabilizan la glucosa y prolongan la saciedad: clave si pasas muchas horas en escritorio.</p>
+      <h3>Grasas insaturadas</h3>
+      <p>AOVE como base, aguacate, nueces, almendras, chía y lino. El pescado azul aporta omega-3, especialmente útil por su efecto antiinflamatorio.</p>
+      <h3>Verduras como volumen</h3>
+      <p>Hojas verdes, crucíferas (brócoli, coliflor, col), pimientos, tomate, calabacín, berenjena, alcachofa. Permiten platos grandes y saciantes con pocas calorías.</p>
+      <h3>Hidratación</h3>
+      <p>2,5–3 L de agua/día. La sed se confunde con hambre con frecuencia.</p>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Lo que conviene eliminar durante el plan</h2>
+      <p>Estos alimentos no son "malos" en términos absolutos: son ineficientes para tu objetivo. Aportan muchas calorías en poco volumen, sacian poco y desplazan los alimentos que sí necesitas para llegar a tus 180 g de proteína.</p>
+      <dl class="rules-list eliminate">
+        <dt>Bebidas azucaradas y zumos (incluso "naturales")</dt>
+        <dd>Refrescos, zumos envasados o exprimidos en casa. Un vaso de zumo de naranja son 3–4 naranjas sin la fibra que las saciaba: 200–300 kcal líquidas que el cerebro no registra como comida.</dd>
+
+        <dt>Bollería industrial y galletas</dt>
+        <dd>Croissants, magdalenas, donuts, galletas tipo desayuno, cereales azucarados. Combinan harina refinada + azúcar + grasas de mala calidad en alta densidad calórica. Una porción pequeña ya cubre 300–400 kcal sin saciar.</dd>
+
+        <dt>Pan blanco refinado</dt>
+        <dd>Baguette, pan de molde blanco, pan de hamburguesa. Pico glucémico alto, hambre rebote a las 2 h. Si comes pan, que sea integral de masa madre.</dd>
+
+        <dt>Embutidos grasos</dt>
+        <dd>Chorizo, salchichón, salami, mortadela, bacon. 400–500 kcal/100 g y grasas saturadas en exceso. Jamón serrano magro o pavo cocido sí están bien.</dd>
+
+        <dt>Quesos curados en cantidades grandes</dt>
+        <dd>No prohibidos, pero un trozo "normal" puede ser fácilmente 200–300 kcal. Limitar a 30 g/día como máximo. Queso fresco, requesón o cottage entran sin problema.</dd>
+
+        <dt>Salsas comerciales</dt>
+        <dd>Mayonesa, salsa rosa, césar, barbacoa, kétchup. 100–150 kcal por cucharada de azúcar y aceites refinados. Sustituir por mostaza, yogur con limón y hierbas, o AOVE con vinagre.</dd>
+
+        <dt>Snacks salados</dt>
+        <dd>Patatas fritas de bolsa, ganchitos, picos, frutos secos fritos y salados. Imposibles de comer en porción razonable, alta densidad calórica, mucha sal que retiene líquidos.</dd>
+
+        <dt>Alcohol regular</dt>
+        <dd>Cerveza, vino y destilados aportan 7 kcal/g (casi como la grasa) y, más importante, suprimen la oxidación de grasas durante 24–48 h. Limitar a 1–2 bebidas por semana en ocasión social.</dd>
+
+        <dt>Postres y helados</dt>
+        <dd>Densidad calórica altísima. Una bola pequeña de helado son 200–300 kcal.</dd>
+      </dl>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Reducir, no eliminar</h2>
+      <p>Alimentos sanos que se descontrolan con facilidad. Caben en el plan, pero pesados y medidos.</p>
+      <dl class="rules-list reduce">
+        <dt>Pasta y arroz blanco</dt>
+        <dd>Entran si los pesas (60–70 g en seco) y los acompañas de proteína y verdura. No los hagas el centro del plato.</dd>
+
+        <dt>Frutos secos</dt>
+        <dd>Sanos pero muy calóricos (600 kcal/100 g). 20–30 g al día, pesados, no a puñados.</dd>
+
+        <dt>Aguacate</dt>
+        <dd>Lo mismo. Medio aguacate al día, no entero.</dd>
+
+        <dt>Aceite de oliva</dt>
+        <dd>Salud excelente, pero 9 kcal/g. 2–3 cucharadas al día medidas, no a chorro.</dd>
+      </dl>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Lo que sorprende a la gente</h2>
+      <p>Un par de alimentos con mala fama que <strong>no</strong> necesitas eliminar:</p>
+      <dl class="rules-list allowed">
+        <dt>Huevos enteros</dt>
+        <dd>Aunque tienen colesterol dietético, la evidencia actual no lo asocia con eventos cardiovasculares en personas sanas. 2–3 enteros al día están bien.</dd>
+
+        <dt>Lácteos enteros vs desnatados</dt>
+        <dd>En este plan uso 0% por el ahorro calórico, pero los enteros no son "malos". Es una decisión de presupuesto calórico, no de salud.</dd>
+
+        <dt>Patata y batata</dt>
+        <dd>Carbohidratos densos pero saciantes y nutritivos. Entran perfectamente, simplemente pesados.</dd>
+
+        <dt>Fruta (toda)</dt>
+        <dd>Ningún tipo está prohibido, incluyendo plátano, mango o uva. La fibra y el volumen compensan el azúcar.</dd>
+      </dl>
+    </div>
+
+    <div class="highlight-card plan-content">
+      <h2>La regla mental que más ayuda</h2>
+      <p class="quote">En lugar de pensar <em>"esto está prohibido"</em>, pregúntate: <strong>¿esto cabe en mi presupuesto de 1.950 kcal y 180 g de proteína?</strong></p>
+      <ul class="examples">
+        <li class="ok">Una cerveza un sábado <strong>cabe</strong>.</li>
+        <li class="no">Una pizza entera <strong>no cabe</strong>.</li>
+        <li class="ok">Un trozo de tarta en un cumpleaños <strong>cabe si ajustas el resto del día</strong>.</li>
+        <li class="no">El bollo diario en el desayuno <strong>no cabe nunca</strong> — no porque sea "malo", sino porque desplaza alimentos que sí necesitas para llegar a la proteína y la saciedad.</li>
+      </ul>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Progresión semanal</h2>
+      <table>
+        <tr><th>Semana</th><th>kcal/día</th><th>Proteína</th><th>Foco</th></tr>
+        <tr><td>1–2</td><td>2.050</td><td>175 g</td><td>Adaptación, hábitos</td></tr>
+        <tr><td>3–4</td><td>1.950</td><td>180 g</td><td>Fase central</td></tr>
+        <tr><td>5–6</td><td>1.950</td><td>185 g</td><td>Recta final, proteger músculo</td></tr>
+      </table>
+      <div class="callout">
+        No conviene escalar el déficit: bajar mucho la ingesta al final suele provocar pérdida de masa magra y rebote. Mejor un déficit moderado y constante.
+      </div>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Compensar la falta de aerobio</h2>
+      <ol>
+        <li><strong>NEAT:</strong> 8.000–10.000 pasos/día. Caminar 10 min después de cada comida principal mejora la sensibilidad a insulina y suma 250–400 kcal/día sin estresar al gemelo.</li>
+        <li><strong>Fuerza orientada a hipertrofia:</strong> 8–12 reps con tiempo bajo tensión. Mayor EPOC y, sobre todo, preserva masa magra durante el déficit.</li>
+        <li><strong>Sueño 7–8 h:</strong> la privación altera leptina/grelina. Nedeltcheva 2010 mostró pérdida de grasa hasta un 55% menor con sueño insuficiente, misma dieta.</li>
+        <li><strong>Alcohol:</strong> 1–2 bebidas/semana máximo. 7 kcal/g y suprime la oxidación de grasas 24–48 h.</li>
+      </ol>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Regla de ajuste</h2>
+      <ul>
+        <li>Pesa 2–3 mañanas/semana, en ayunas, después del baño. Calcula promedio semanal (oscilaciones diarias de ±1 kg son normales).</li>
+        <li>Si en la semana 3 no has perdido ≥1.5 kg de promedio, reduce 100 kcal/día (típicamente, una porción de carbohidrato en la cena).</li>
+        <li>Foto frontal y lateral semanal: el cambio se ve antes en el espejo que en la báscula.</li>
+        <li>Cintura a la altura del ombligo: 1 vez/semana. Buen proxy de grasa visceral.</li>
+      </ul>
+      <div class="callout warning">
+        Esta es una guía general. Si tienes condiciones médicas (presión, lípidos, prediabetes…) o tomas medicación, revísalo con tu médico o nutricionista. Y dada la lesión actual de gemelo, prioriza siempre la rehabilitación con carga excéntrica antes que cualquier impacto.
+      </div>
+    </div>
+  </section>
+
+  <!-- ENTRENAMIENTO -->
+  <section id="tab-entrenamiento" class="hidden">
+    <div class="section-banner"><div><h1>Entrenamiento</h1><div class="sub">Fuerza ahora, aerobio cuando el gemelo lo permita</div></div></div>
+
+    <div class="card plan-content">
+      <h2>Días de fuerza (anaeróbico)</h2>
+      <p>2–3 sesiones/semana si es posible. Enfoque hipertrofia con énfasis en preservar masa magra.</p>
+      <h3>Ejercicios prioritarios</h3>
+      <ul>
+        <li>Sentadilla / sentadilla goblet (cuidado con el gemelo)</li>
+        <li>Peso muerto rumano</li>
+        <li>Press banca o press con mancuernas</li>
+        <li>Remo con mancuerna o polea</li>
+        <li>Press militar</li>
+        <li>Trabajo accesorio: curl, extensiones, core</li>
+      </ul>
+      <h3>Esquema</h3>
+      <ul>
+        <li><strong>Series:</strong> 3–4 por ejercicio</li>
+        <li><strong>Reps:</strong> 8–12 con tempo controlado (2 s subida / 3 s bajada)</li>
+        <li><strong>Descanso:</strong> 60–90 s en accesorios; 2 min en básicos</li>
+        <li><strong>RIR:</strong> 1–2 (deja 1–2 reps en la recámara)</li>
+      </ul>
+      <h3>Nutrición alrededor del entreno</h3>
+      <ul>
+        <li><strong>Pre (1–2 h antes):</strong> 30 g de carbo (1 plátano, 1 manzana grande, 30 g de avena).</li>
+        <li><strong>Post (≤2 h):</strong> 40 g de proteína + carbohidrato. Añadir 100 g de batata o 50 g de arroz seco a la siguiente comida.</li>
+        <li><strong>Hidratación:</strong> +500 ml de agua y sal al gusto.</li>
+      </ul>
+      <div class="callout">
+        Marca un día como <strong>Fuerza</strong> en la pestaña Semana y la app sumará automáticamente plátano pre + 100 g de batata post (~+200 kcal de margen).
+      </div>
+    </div>
+
+    <div class="card plan-content">
+      <h2>Aerobio: cuando puedas reincorporarlo</h2>
+      <p>El gemelo manda. Cuando el médico/fisio dé luz verde, una progresión segura sería:</p>
+      <ol>
+        <li><strong>Fase 1 (1–2 sem):</strong> bicicleta estática suave 20–30 min, 3×/sem, RPE 4–5/10. Sin impacto.</li>
+        <li><strong>Fase 2 (2 sem):</strong> bicicleta 30–40 min o natación. Añadir intervalos suaves al final (3×1 min más fuerte).</li>
+        <li><strong>Fase 3:</strong> caminata rápida 30–45 min. Test del gemelo después: si no hay molestia 24 h, avanzar.</li>
+        <li><strong>Fase 4:</strong> trote suave 1 min / camina 2 min × 8–10 ciclos. Solo si no hay dolor.</li>
+      </ol>
+      <h3>Nutrición en sesión aeróbica</h3>
+      <ul>
+        <li><strong>Pre (30–60 min antes):</strong> 1 fruta (manzana, plátano).</li>
+        <li><strong>Durante:</strong> agua. Si sesión &gt;60 min o calor, añadir electrolitos.</li>
+        <li><strong>Post:</strong> comida normal con proteína dentro de 1–2 h.</li>
+      </ul>
+      <div class="callout">
+        Marca un día como <strong>Aeróbico</strong> en la pestaña Semana y la app sumará una fruta pre-entreno (~+80 kcal).
+        <br><br>
+        <strong>Regla de oro:</strong> el aerobio Zona 2 (intensidad baja sostenida) es el aliado del adulto en déficit. Quema grasa, mejora salud cardiovascular y no compromete la recuperación de la fuerza.
+      </div>
+    </div>
+
+    <div class="card plan-content">
+      <h2>NEAT: tu palanca infravalorada</h2>
+      <ul>
+        <li>10 min andando tras cada comida principal</li>
+        <li>Reuniones telefónicas caminando (si el gemelo lo permite)</li>
+        <li>Subir escaleras siempre que puedas</li>
+        <li>Levantarse cada 50 min de pantalla</li>
+        <li><strong>Objetivo:</strong> 8.000–10.000 pasos/día → +250–400 kcal/día sin "ejercicio"</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMPRA -->
+  <section id="tab-compra" class="hidden">
+    <div class="section-banner">
+      <div><h1>Lista de compra</h1><div class="sub">Base semanal para una persona. Toca un item para tacharlo.</div></div>
+      <button class="btn ghost sm" id="resetCompra">Limpiar marcas</button>
+    </div>
+
+    <div class="shop-summary">
+      <div class="text">
+        <strong id="shopProgress">0 de 0</strong> items recogidos
+      </div>
+      <div style="font-size:.78rem;color:var(--text-3);">
+        Las marcas se guardan localmente.
+      </div>
+    </div>
+
+    <div class="shop-grid" id="shopGrid"></div>
+  </section>
+
+</main>
+
+<script>
+/* ============== DATA ============== */
+const MEALS = {
+  desayuno: [
+    { id:'d1', name:'Avena con huevos y yogur', kcal:510, p:40, c:45, f:20,
+      ingredientes:[
+        '50 g de avena (en seco) cocida con 200 ml de leche semidesnatada o vegetal sin azúcar',
+        '3 huevos enteros + 2 claras revueltos con espinacas',
+        '150 g de yogur griego 0% con frutos rojos',
+        'Canela al gusto · Café o té sin azúcar'
+      ] },
+    { id:'d2', name:'Tostada de salmón, aguacate y huevo poché', kcal:520, p:32, c:42, f:26,
+      ingredientes:[
+        '60 g de pan integral de masa madre',
+        '½ aguacate (~70 g)',
+        '80 g de salmón ahumado',
+        '1 huevo poché · limón · pimienta'
+      ] },
+    { id:'d3', name:'Bowl proteico de yogur', kcal:490, p:45, c:40, f:18,
+      ingredientes:[
+        '200 g de yogur griego 0%',
+        '30 g de proteína whey',
+        '30 g de granola sin azúcar añadido',
+        'Frutos rojos · 15 g de almendras laminadas'
+      ] },
+    { id:'d4', name:'Tortilla francesa con tostada', kcal:500, p:38, c:40, f:22,
+      ingredientes:[
+        '4 huevos batidos con espinacas',
+        '60 g de pan integral tostado',
+        'Tomate fresco con AOVE',
+        '1 kiwi'
+      ] },
+    { id:'d5', name:'Avena potenciada (estilo overnight)', kcal:530, p:42, c:50, f:18,
+      ingredientes:[
+        '50 g de avena',
+        '200 ml de leche semidesnatada',
+        '30 g de proteína whey',
+        '1 cda de mantequilla de almendras · 1 plátano'
+      ] }
+  ],
+  comida: [
+    { id:'c1', name:'Pollo, arroz integral y verduras', kcal:620, p:50, c:55, f:18,
+      ingredientes:[
+        '180 g de pechuga de pollo cruda a la plancha',
+        '70 g de arroz integral en seco (peso crudo)',
+        '200 g de verduras (brócoli, zanahoria, calabacín)',
+        '10 g de AOVE · ajo · especias'
+      ] },
+    { id:'c2', name:'Salmón, quinoa y ensalada', kcal:640, p:45, c:50, f:22,
+      ingredientes:[
+        '150 g de salmón al horno o plancha',
+        '70 g de quinoa cruda',
+        'Ensalada grande (hojas verdes, tomate, pepino, cebolla)',
+        '10 g de AOVE · limón'
+      ] },
+    { id:'c3', name:'Pavo, batata y brócoli', kcal:600, p:50, c:55, f:15,
+      ingredientes:[
+        '180 g de pechuga de pavo a la plancha',
+        '250 g de batata asada',
+        '200 g de brócoli al vapor',
+        '10 g de AOVE · pimentón'
+      ] },
+    { id:'c4', name:'Garbanzos, verduras y queso fresco (vegetariano)', kcal:580, p:38, c:55, f:18,
+      ingredientes:[
+        '250 g de garbanzos cocidos',
+        'Verduras salteadas (cebolla, pimiento, calabacín)',
+        '30 g de queso fresco desmenuzado',
+        '10 g de AOVE · comino'
+      ] },
+    { id:'c5', name:'Atún, lentejas y ensalada', kcal:600, p:48, c:55, f:14,
+      ingredientes:[
+        '120 g de atún natural en lata (escurrido)',
+        '200 g de lentejas cocidas',
+        'Ensalada grande con tomate, cebolla roja',
+        '10 g de AOVE · vinagre'
+      ] },
+    { id:'c6', name:'Ternera magra, arroz y verduras', kcal:620, p:50, c:55, f:18,
+      ingredientes:[
+        '150 g de ternera magra (solomillo o redondo) plancha',
+        '70 g de arroz integral en seco',
+        '200 g de verduras al wok',
+        '10 g de AOVE'
+      ] }
+  ],
+  snack: [
+    { id:'s1', name:'Yogur griego con nueces', kcal:290, p:22, c:12, f:18,
+      ingredientes:['200 g de yogur griego natural 0%','25 g de nueces','Arándanos al gusto'] },
+    { id:'s2', name:'Batido de proteína con plátano', kcal:310, p:32, c:40, f:4,
+      ingredientes:['30 g de whey','1 plátano','250 ml de leche semidesnatada o vegetal sin azúcar'] },
+    { id:'s3', name:'Requesón con almendras', kcal:270, p:26, c:8, f:15,
+      ingredientes:['200 g de requesón (cottage)','20 g de almendras crudas','Pimienta · hierbas'] },
+    { id:'s4', name:'Tortitas de arroz con pavo y aguacate', kcal:300, p:22, c:25, f:14,
+      ingredientes:['3 tortitas de arroz integral','80 g de pechuga de pavo','50 g de aguacate'] },
+    { id:'s5', name:'Hummus con zanahoria y huevo duro', kcal:280, p:18, c:20, f:15,
+      ingredientes:['50 g de hummus','Zanahoria y apio en bastones','2 huevos duros'] }
+  ],
+  cena: [
+    { id:'n1', name:'Pescado blanco con ensalada grande', kcal:480, p:45, c:12, f:25,
+      ingredientes:['200 g de merluza o lubina al horno','Ensalada grande (hojas, tomate, pepino, alcachofa)','15 g de AOVE · limón'] },
+    { id:'n2', name:'Salmón con verduras asadas', kcal:550, p:40, c:15, f:32,
+      ingredientes:['150 g de salmón al horno','Brócoli, calabacín, pimiento y espárragos asados','10 g de AOVE · ajo · romero'] },
+    { id:'n3', name:'Tortilla de 3 huevos con ensalada', kcal:470, p:28, c:12, f:32,
+      ingredientes:['3 huevos enteros con espinacas y champiñones','Ensalada grande con tomate y aguacate (50 g)','10 g de AOVE'] },
+    { id:'n4', name:'Tofu firme al wok con verduras (vegetariano)', kcal:490, p:32, c:20, f:28,
+      ingredientes:['180 g de tofu firme salteado','Verduras al wok (pak choi, brócoli, pimiento)','1 cda de salsa de soja baja en sal · sésamo · jengibre'] },
+    { id:'n5', name:'Pollo a la plancha con verduras', kcal:470, p:50, c:15, f:18,
+      ingredientes:['180 g de pechuga de pollo','Verduras al vapor o plancha (calabacín, espárragos, berenjena)','10 g de AOVE · limón · pimentón'] }
+  ]
+};
+
+const SLOTS = [
+  { key:'desayuno', label:'Desayuno' },
+  { key:'comida',   label:'Comida' },
+  { key:'snack',    label:'Snack' },
+  { key:'cena',     label:'Cena' }
+];
+
+const DAYS = [
+  { key:'lunes',     label:'lunes' },
+  { key:'martes',    label:'martes' },
+  { key:'miercoles', label:'miércoles' },
+  { key:'jueves',    label:'jueves' },
+  { key:'viernes',   label:'viernes' },
+  { key:'sabado',    label:'sábado' },
+  { key:'domingo',   label:'domingo' }
+];
+
+const SPORT = {
+  ninguno: {
+    label: 'Ninguno',
+    addons: [],
+    tip: ''
+  },
+  fuerza: {
+    label: 'Fuerza',
+    addons: [
+      { name:'Pre-entreno: 1 plátano',           kcal:105, p:1, c:27, f:0 },
+      { name:'Post-entreno: 100 g batata extra', kcal:90,  p:2, c:20, f:0 }
+    ],
+    tip: 'Día de <strong>fuerza</strong>: añade 1 plátano 1–2 h antes y 100 g de batata extra en la comida post-entreno. Hidratación: +500 ml. Series 8–12 reps con tempo controlado.'
+  },
+  aerobico: {
+    label: 'Aeróbico',
+    addons: [
+      { name:'Pre-aeróbico: 1 manzana', kcal:80, p:0, c:21, f:0 }
+    ],
+    tip: 'Día <strong>aeróbico</strong>: 1 fruta 30–60 min antes, hidratación generosa, electrolitos si la sesión &gt;60 min o calor. Tras la sesión, comida normal con proteína dentro de 1–2 h.'
+  }
+};
+
+function getTargetsForWeek(week) {
+  if (week <= 2) return { kcal:2050, p:175, c:175, f:70, label:'Adaptación · semanas 1–2' };
+  if (week <= 4) return { kcal:1950, p:180, c:165, f:65, label:'Fase central · semanas 3–4' };
+  return            { kcal:1950, p:185, c:160, f:65, label:'Recta final · semanas 5–6' };
+}
+
+/* ============== STORAGE ============== */
+const LS = {
+  weekPlan: 'dieta_week_plan_v2',
+  start:    'dieta_start_date_v1',
+  shop:     'dieta_shop_check_v1'
+};
+
+function loadJSON(key, fallback) {
+  try { const r = localStorage.getItem(key); return r ? JSON.parse(r) : fallback; } catch { return fallback; }
+}
+function saveJSON(key, v) { localStorage.setItem(key, JSON.stringify(v)); }
+
+function emptyDay() { return { desayuno:null, comida:null, snack:null, cena:null, sport:'ninguno' }; }
+function emptyWeek() {
+  const w = {};
+  DAYS.forEach(d => { w[d.key] = emptyDay(); });
+  return w;
+}
+function loadWeek() {
+  const w = loadJSON(LS.weekPlan, null);
+  if (!w) return emptyWeek();
+  // ensure shape
+  DAYS.forEach(d => { if (!w[d.key]) w[d.key] = emptyDay(); });
+  return w;
+}
+function saveWeek(w) { saveJSON(LS.weekPlan, w); }
+
+function getStartDate() {
+  let s = localStorage.getItem(LS.start);
+  if (!s) { s = new Date().toISOString().slice(0,10); localStorage.setItem(LS.start, s); }
+  return s;
+}
+function currentPlanWeek() {
+  const start = new Date(getStartDate());
+  const now = new Date();
+  const diff = Math.floor((now - start) / 86400000);
+  return Math.min(6, Math.max(1, Math.floor(diff/7) + 1));
+}
+function todayWeekdayKey() {
+  // JS getDay: 0=Sun..6=Sat. We want lunes=0..domingo=6
+  const map = ['domingo','lunes','martes','miercoles','jueves','viernes','sabado'];
+  return map[new Date().getDay()];
+}
+
+/* ============== UTILITIES ============== */
+function findMeal(id) {
+  for (const k of Object.keys(MEALS)) {
+    const m = MEALS[k].find(x => x.id === id);
+    if (m) return { ...m, slot:k };
+  }
+  return null;
+}
+function dayTotals(day) {
+  let kcal=0,p=0,c=0,f=0;
+  SLOTS.forEach(s => {
+    if (day[s.key]) {
+      const m = findMeal(day[s.key]);
+      if (m) { kcal+=m.kcal; p+=m.p; c+=m.c; f+=m.f; }
+    }
+  });
+  if (day.sport && day.sport !== 'ninguno') {
+    SPORT[day.sport].addons.forEach(a => { kcal+=a.kcal; p+=a.p; c+=a.c; f+=a.f; });
+  }
+  return { kcal, p, c, f };
+}
+function dayHasMeals(day) {
+  return SLOTS.some(s => !!day[s.key]);
+}
+function todayDateForKey(dayKey) {
+  // Date for the most recent occurrence of dayKey (today included)
+  const idx = ['lunes','martes','miercoles','jueves','viernes','sabado','domingo'].indexOf(dayKey);
+  const today = new Date();
+  const todayIdx = (today.getDay() + 6) % 7; // make Mon=0
+  const diff = idx - todayIdx;
+  const d = new Date(today);
+  d.setDate(today.getDate() + diff);
+  return d.toLocaleDateString('es-ES', { day:'numeric', month:'short' });
+}
+
+/* ============== TABS ============== */
+const tabs = document.querySelectorAll('.tab');
+tabs.forEach(t => t.addEventListener('click', () => {
+  tabs.forEach(x => x.classList.remove('active'));
+  t.classList.add('active');
+  document.querySelectorAll('main > section').forEach(s => s.classList.add('hidden'));
+  document.getElementById('tab-' + t.dataset.tab).classList.remove('hidden');
+  window.scrollTo({ top:0, behavior:'instant' });
+}));
+
+/* ============== SEMANA RENDER ============== */
+function buildSelectOptions(slot, currentId) {
+  const opts = ['<option value="">— elegir —</option>'];
+  MEALS[slot].forEach(m => {
+    const sel = currentId === m.id ? ' selected' : '';
+    opts.push(`<option value="${m.id}"${sel}>${m.name} · ${m.kcal} kcal · P${m.p}</option>`);
+  });
+  return opts.join('');
+}
+
+function renderSemana() {
+  const wk = currentPlanWeek();
+  document.getElementById('dateLabel').textContent = new Date().toLocaleDateString('es-ES', {
+    weekday:'long', day:'numeric', month:'long'
+  });
+
+  const t = getTargetsForWeek(wk);
+  document.getElementById('weekTargetExplain').textContent = t.label;
+  document.getElementById('kcalTargetMini').textContent = '/ ' + t.kcal;
+  document.getElementById('protTargetMini').textContent = '/ ' + t.p + ' g';
+
+  const week = loadWeek();
+  const todayKey = todayWeekdayKey();
+
+  let totalKcal = 0, totalProt = 0, planned = 0;
+  DAYS.forEach(d => {
+    const day = week[d.key];
+    const tt = dayTotals(day);
+    if (dayHasMeals(day)) {
+      planned++;
+      totalKcal += tt.kcal;
+      totalProt += tt.p;
+    }
+  });
+
+  document.getElementById('avgKcal').innerHTML = (planned > 0 ? Math.round(totalKcal / planned) : '—') +
+    ' <small id="kcalTargetMini">/ ' + t.kcal + '</small>';
+  document.getElementById('avgProt').innerHTML = (planned > 0 ? Math.round(totalProt / planned) + ' g' : '—') +
+    ' <small id="protTargetMini">/ ' + t.p + ' g</small>';
+  document.getElementById('daysPlanned').innerHTML = planned + ' <small>/ 7</small>';
+
+  const grid = document.getElementById('dayGrid');
+  grid.innerHTML = '';
+
+  DAYS.forEach(d => {
+    const day = week[d.key];
+    const totals = dayTotals(day);
+    const isToday = d.key === todayKey;
+    const card = document.createElement('div');
+    card.className = 'day-card' + (isToday ? ' today' : '');
+    card.dataset.day = d.key;
+
+    const tip = day.sport && day.sport !== 'ninguno' ? `
+      <div class="sport-tip ${day.sport}">${SPORT[day.sport].tip}</div>` : '';
+
+    const totalsRow = dayHasMeals(day) || day.sport !== 'ninguno' ? `
+      <div class="day-total">
+        <span class="total-label">Total del día</span>
+        <div class="total-chips">
+          <span class="chip kcal"><strong>${totals.kcal}</strong> kcal</span>
+          <span class="chip">P ${totals.p} g</span>
+          <span class="chip">C ${totals.c} g</span>
+          <span class="chip">G ${totals.f} g</span>
+        </div>
+      </div>` : '';
+
+    card.innerHTML = `
+      <div class="day-head">
+        <div>
+          <span class="name">${d.label}</span>
+          <span class="date">${todayDateForKey(d.key)}</span>
+          ${isToday ? '<span class="today-badge">Hoy</span>' : ''}
+        </div>
+        <button class="btn ghost sm" data-reset-day="${d.key}">Reiniciar</button>
+      </div>
+
+      <div class="sport-row">
+        <span class="sport-label">Deporte</span>
+        <div class="segmented" data-day="${d.key}">
+          <button class="seg ${day.sport==='ninguno'?'active ninguno':''}" data-sport="ninguno">Ninguno</button>
+          <button class="seg ${day.sport==='fuerza' ?'active fuerza' :''}" data-sport="fuerza">Fuerza</button>
+          <button class="seg ${day.sport==='aerobico'?'active aerobico':''}" data-sport="aerobico">Aeróbico</button>
+        </div>
+      </div>
+
+      <div class="meals-stack">
+        ${SLOTS.map(s => {
+          const mealId = day[s.key];
+          const meal = mealId ? findMeal(mealId) : null;
+          return `
+            <div class="meal-row">
+              <label class="slot-label" for="${d.key}-${s.key}">
+                <span class="slot-dot ${s.key}"></span>${s.label}
+              </label>
+              <select id="${d.key}-${s.key}" data-day="${d.key}" data-slot="${s.key}">
+                ${buildSelectOptions(s.key, mealId)}
+              </select>
+              <span class="meal-kcal">${meal ? meal.kcal + ' kcal' : '—'}</span>
+            </div>`;
+        }).join('')}
+      </div>
+
+      ${tip}
+      ${totalsRow}
+    `;
+    grid.appendChild(card);
+  });
+
+  // Wire selects
+  grid.querySelectorAll('select').forEach(sel => {
+    sel.addEventListener('change', () => {
+      const w = loadWeek();
+      w[sel.dataset.day][sel.dataset.slot] = sel.value || null;
+      saveWeek(w);
+      renderSemana();
+    });
+  });
+  // Sport segmented
+  grid.querySelectorAll('.segmented').forEach(seg => {
+    seg.querySelectorAll('.seg').forEach(b => {
+      b.addEventListener('click', () => {
+        const w = loadWeek();
+        w[seg.dataset.day].sport = b.dataset.sport;
+        saveWeek(w);
+        renderSemana();
+      });
+    });
+  });
+  // Day reset
+  grid.querySelectorAll('[data-reset-day]').forEach(b => {
+    b.addEventListener('click', () => {
+      const k = b.dataset.resetDay;
+      if (!confirm('¿Reiniciar ' + DAYS.find(x=>x.key===k).label + '?')) return;
+      const w = loadWeek();
+      w[k] = emptyDay();
+      saveWeek(w);
+      renderSemana();
+    });
+  });
+}
+
+document.getElementById('resetWeekBtn').addEventListener('click', () => {
+  if (!confirm('¿Reiniciar TODA la semana? Se borrarán las selecciones de los 7 días.')) return;
+  saveWeek(emptyWeek());
+  renderSemana();
+});
+
+/* ============== CATALOGO ============== */
+function renderCatalog() {
+  const cont = document.getElementById('catalogContainer');
+  cont.innerHTML = '';
+  const order = [
+    { key:'desayuno', label:'Desayunos', initial:'D' },
+    { key:'comida',   label:'Comidas',   initial:'C' },
+    { key:'snack',    label:'Snacks',    initial:'S' },
+    { key:'cena',     label:'Cenas',     initial:'N' }
+  ];
+  order.forEach(s => {
+    const section = document.createElement('div');
+    section.className = 'catalog-section';
+    section.id = 'cat-' + s.key;
+    section.innerHTML = `
+      <div class="catalog-section-head">
+        <span class="icon ${s.key}">${s.initial}</span>
+        <h2>${s.label}</h2>
+        <span class="count">${MEALS[s.key].length} opciones</span>
+      </div>
+    `;
+    MEALS[s.key].forEach(m => {
+      const card = document.createElement('div');
+      card.className = 'meal-card';
+      card.innerHTML = `
+        <div class="head">
+          <div>
+            <div class="name">${m.name}</div>
+            <div class="macros">
+              <span class="chip kcal"><strong>${m.kcal}</strong> kcal</span>
+              <span class="chip">P ${m.p} g</span>
+              <span class="chip">C ${m.c} g</span>
+              <span class="chip">G ${m.f} g</span>
+            </div>
+          </div>
+        </div>
+        <div class="ingredients">
+          <ul>${m.ingredientes.map(i => `<li>${i}</li>`).join('')}</ul>
+        </div>
+      `;
+      section.appendChild(card);
+    });
+    cont.appendChild(section);
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('.anchor-btn').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = a.getAttribute('href').slice(1);
+      document.getElementById(id).scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+  });
+}
+
+/* ============== COMPRA ============== */
+const SHOP_DATA = [
+  {
+    cat:'Proteína animal', color:'#dc2626', initial:'P',
+    items:[
+      '1 docena de huevos camperos',
+      '1 kg de pechuga de pollo o pavo',
+      '800 g de pescado variado (incluir 1 ración de pescado azul)',
+      '1 kg de yogur griego natural 0%',
+      '250 g de queso fresco o requesón',
+      '2 latas de atún natural'
+    ]
+  },
+  {
+    cat:'Proteína vegetal', color:'#ea580c', initial:'V',
+    items:[
+      '500 g de lentejas (secas) o 2 botes',
+      '500 g de garbanzos (secos) o 2 botes',
+      '1 bloque de tofu firme o tempeh (~400 g)'
+    ]
+  },
+  {
+    cat:'Carbohidratos', color:'#f59e0b', initial:'C',
+    items:[
+      '500 g de avena en copos',
+      '500 g de quinoa',
+      '500 g de arroz integral',
+      '1 kg de batata',
+      '1 hogaza de pan integral de masa madre',
+      'Frutas variadas (~2 kg): manzanas, plátanos, frutos rojos, kiwis, naranjas'
+    ]
+  },
+  {
+    cat:'Grasas saludables', color:'#16a34a', initial:'G',
+    items:[
+      'Aceite de oliva extra virgen (1 botella)',
+      '2 aguacates',
+      '200 g de almendras crudas',
+      '200 g de nueces',
+      'Semillas de chía / lino'
+    ]
+  },
+  {
+    cat:'Verduras', color:'#0891b2', initial:'V',
+    items:[
+      'Espinacas / rúcula (2 bolsas)',
+      '1 brócoli + 1 coliflor',
+      'Pimientos rojos / verdes',
+      'Tomates pera o cherry',
+      'Calabacín, berenjena',
+      'Espárragos verdes',
+      'Alcachofas (frescas o congeladas)',
+      'Cebolla, ajo, jengibre',
+      'Pepino, lechuga'
+    ]
+  },
+  {
+    cat:'Otros', color:'#7c3aed', initial:'O',
+    items:[
+      'Café, té verde',
+      'Especias: cúrcuma, comino, pimentón, orégano, pimienta',
+      'Vinagre de manzana o módena',
+      'Limones',
+      '(Opcional) Whey protein'
+    ]
+  }
+];
+
+function loadShopChecks() { return new Set(loadJSON(LS.shop, [])); }
+function saveShopChecks(set) { saveJSON(LS.shop, [...set]); }
+
+function renderCompra() {
+  const grid = document.getElementById('shopGrid');
+  grid.innerHTML = '';
+  const checks = loadShopChecks();
+  let total = 0, done = 0;
+  SHOP_DATA.forEach((g, gi) => {
+    const card = document.createElement('div');
+    card.className = 'shop-card';
+    let inner = `
+      <div class="shop-card-head">
+        <span class="badge" style="background:${g.color}">${g.initial}</span>
+        <h3>${g.cat}</h3>
+        <span class="count">${g.items.length}</span>
+      </div>
+      <ul class="shop-list">
+    `;
+    g.items.forEach((it, ii) => {
+      const id = `g${gi}-${ii}`;
+      const checked = checks.has(id);
+      total++; if (checked) done++;
+      inner += `
+        <li class="${checked?'checked':''}" data-id="${id}">
+          <input type="checkbox" ${checked?'checked':''}>
+          <span>${it}</span>
+        </li>`;
+    });
+    inner += '</ul>';
+    card.innerHTML = inner;
+    grid.appendChild(card);
+  });
+  document.getElementById('shopProgress').textContent = `${done} de ${total}`;
+
+  grid.querySelectorAll('.shop-list li').forEach(li => {
+    li.addEventListener('click', (e) => {
+      // toggle on whole-row click
+      const id = li.dataset.id;
+      const c = loadShopChecks();
+      if (c.has(id)) c.delete(id); else c.add(id);
+      saveShopChecks(c);
+      renderCompra();
+    });
+  });
+}
+
+document.getElementById('resetCompra').addEventListener('click', () => {
+  if (!confirm('¿Limpiar todas las marcas de la lista?')) return;
+  saveShopChecks(new Set());
+  renderCompra();
+});
+
+/* ============== INIT ============== */
+function renderAll() { renderSemana(); renderCatalog(); renderCompra(); }
+getStartDate();
+renderAll();
+</script>
+</body>
+</html>
