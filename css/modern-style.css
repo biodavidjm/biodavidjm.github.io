@@ -1077,10 +1077,10 @@ a:hover {
 
 /* ===== Publication Entries ===== */
 .pub-entry {
-    padding: 0.85rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid var(--border-color);
-    font-size: 0.88rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.55;
 }
 
 .pub-entry:last-child {
@@ -1092,17 +1092,19 @@ a:hover {
 }
 
 .pub-authors {
-    color: var(--text-secondary);
-    font-size: 0.82rem;
-    margin-bottom: 0.15rem;
+    color: var(--text-primary);
+    font-size: 0.94rem;
+    margin-bottom: 0.25rem;
+    opacity: 0.82;
 }
 
 .pub-title-text {
-    font-weight: 600;
+    font-weight: 700;
     font-style: italic;
     color: var(--text-primary);
-    margin: 0.15rem 0;
-    font-size: 0.88rem;
+    margin: 0.2rem 0 0.25rem;
+    font-size: 1.08rem;
+    line-height: 1.35;
 }
 
 .pub-title-text a {
@@ -1116,8 +1118,10 @@ a:hover {
 }
 
 .pub-journal {
-    font-size: 0.8rem;
-    color: var(--primary-color);
+    font-size: 0.98rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin: 0;
 }
 
 .pub-notes {
@@ -1128,12 +1132,16 @@ a:hover {
 }
 
 .pub-doi {
-    font-size: 0.78rem;
+    display: inline;
+    font-size: 0.94rem;
     color: var(--text-secondary);
+    font-weight: 500;
+    margin-left: 0.7rem;
 }
 
 .pub-doi a {
-    color: var(--primary-color);
+    color: var(--primary-dark);
+    font-weight: 600;
     text-decoration: none;
 }
 

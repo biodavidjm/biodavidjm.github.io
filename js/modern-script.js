@@ -85,15 +85,15 @@ async function loadPublicationsData() {
 // Create a pub-entry for journals
 function createJournalEntry(pub) {
     const highImpact = pub.highImpact ? '<span class="pub-badge">High Impact</span>' : '';
-    const doi = pub.doi ? `<p class="pub-doi">DOI: <a href="https://doi.org/${encodeURI(pub.doi)}" target="_blank" rel="noopener">${pub.doi}</a></p>` : '';
+    const doi = pub.doi ? `<span class="pub-doi">DOI: <a href="https://doi.org/${encodeURI(pub.doi)}" target="_blank" rel="noopener">${pub.doi}</a></span>` : '';
     const notes = pub.notes ? `<p class="pub-notes">${pub.notes}</p>` : '';
     const link = pub.link ? `<a href="${pub.link}" target="_blank" rel="noopener">${pub.title}</a>` : pub.title;
 
     return `<div class="pub-entry" data-year="${pub.year}" data-high-impact="${pub.highImpact || false}">
         <p class="pub-authors">${highlightName(pub.authors)}</p>
         <p class="pub-title-text">${link}${highImpact}</p>
-        <p class="pub-journal">${pub.journal}, ${pub.year}.</p>
-        ${doi}${notes}
+        <p class="pub-journal">${pub.journal}, ${pub.year}. ${doi}</p>
+        ${notes}
     </div>`;
 }
 
