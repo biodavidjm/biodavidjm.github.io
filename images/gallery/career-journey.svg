@@ -375,9 +375,9 @@
 <text x="622" y="744" font-size="15" font-weight="700" fill="#22d3ee" letter-spacing="2.6">CHICAGO</text>
 <text x="994" y="744" font-size="14" font-weight="600" fill="#6f88a6" letter-spacing="1.4" text-anchor="end">2006 – 2014</text>
 <text x="622" y="778" font-size="25" font-weight="700" fill="#ffffff">Learning to read molecules</text>
-<text x="622" y="806" font-size="14.5" fill="#a8bed6">A PhD spent mapping the hidden cavities inside</text>
-<text x="622" y="827" font-size="14.5" fill="#a8bed6">proteins — and showing that a chemical tag thought</text>
-<text x="622" y="848" font-size="14.5" fill="#a8bed6">to be rare was in fact everywhere.</text>
+<text x="622" y="806" font-size="14.5" fill="#a8bed6">A PhD mapping the hidden cavities inside proteins,</text>
+<text x="622" y="827" font-size="14.5" fill="#a8bed6">modeling how their sequences evolve, and showing a</text>
+<text x="622" y="848" font-size="14.5" fill="#a8bed6">chemical tag thought rare was in fact everywhere.</text>
 <line x1="1186" y1="470" x2="1186" y2="418" stroke="#a78bfa" stroke-width="1.4" opacity="0.5"/>
 <circle cx="1186" cy="470" r="34" fill="#a78bfa" opacity="0.2" filter="url(#soft2)"/>
 <circle cx="1186" cy="470" r="19" fill="none" stroke="#a78bfa" stroke-width="2.4" opacity="0.9"/>
@@ -386,10 +386,10 @@
 <rect x="1001" y="233" width="54" height="3" rx="1.5" fill="#a78bfa"/>
 <text x="1026" y="276" font-size="15" font-weight="700" fill="#a78bfa" letter-spacing="2.6">SAN FRANCISCO</text>
 <text x="1398" y="276" font-size="14" font-weight="600" fill="#6f88a6" letter-spacing="1.4" text-anchor="end">2015 – 2017</text>
-<text x="1026" y="310" font-size="25" font-weight="700" fill="#ffffff">Multi-omics at scale</text>
-<text x="1026" y="338" font-size="14.5" fill="#a8bed6">Computational lead at UCSF and Gladstone across</text>
-<text x="1026" y="359" font-size="14.5" fill="#a8bed6">more than twenty collaborations, from tuberculosis</text>
-<text x="1026" y="380" font-size="14.5" fill="#a8bed6">to cancer and neurodegeneration.</text>
+<text x="1026" y="310" font-size="25" font-weight="700" fill="#ffffff">Decoding influenza</text>
+<text x="1026" y="338" font-size="14.5" fill="#a8bed6">Influenza above all: mapping how the virus rewires</text>
+<text x="1026" y="359" font-size="14.5" fill="#a8bed6">the cells it infects. Computational lead at UCSF and</text>
+<text x="1026" y="380" font-size="14.5" fill="#a8bed6">Gladstone across more than twenty collaborations.</text>
 <line x1="1652" y1="330" x2="1652" y2="452" stroke="#f87171" stroke-width="1.4" opacity="0.5"/>
 <circle cx="1652" cy="330" r="34" fill="#f87171" opacity="0.2" filter="url(#soft2)"/>
 <circle cx="1652" cy="330" r="19" fill="none" stroke="#f87171" stroke-width="2.4" opacity="0.9"/>
@@ -400,8 +400,8 @@
 <text x="1782" y="496" font-size="14" font-weight="600" fill="#6f88a6" letter-spacing="1.4" text-anchor="end">2018 → NOW</text>
 <text x="1410" y="530" font-size="25" font-weight="700" fill="#ffffff">Leading the data</text>
 <text x="1410" y="558" font-size="14.5" fill="#a8bed6">Bioinformatics Lead for four national research</text>
-<text x="1410" y="579" font-size="14.5" fill="#a8bed6">programs, building the software that turns</text>
-<text x="1410" y="600" font-size="14.5" fill="#a8bed6">exercise and disease data into discovery.</text>
+<text x="1410" y="579" font-size="14.5" fill="#a8bed6">programs: cutting-edge research on exercise and</text>
+<text x="1410" y="600" font-size="14.5" fill="#a8bed6">disease, and the software that makes it possible.</text>
 <text x="1410" y="624" font-size="13.5" font-weight="700" fill="#f5c451">★ Nature cover, 2024</text>
 <text x="112" y="150" font-size="17" font-weight="700" fill="#22d3ee" letter-spacing="5.6">DAVID JIMENEZ-MORALES, PhD</text>
 <text x="1808" y="150" font-size="14" fill="#6f88a6" letter-spacing="1.7" text-anchor="end">BIODAVIDJM.GITHUB.IO</text>
