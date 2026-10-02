@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-labelledby="ttl desc" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+<title id="ttl">Computational biology career trajectory of David Jimenez-Morales, PhD, 1993 to 2026</title>
+<desc id="desc">A Gantt-style timeline of degrees and research positions across four eras: Spain (1993-2005), Chicago (2006-2014), San Francisco (2015-2017) and Stanford (2018-present).</desc>
+<rect width="1920" height="1080" fill="#fcfcfb"/>
+<text x="60" y="78" font-size="42" font-weight="700" fill="#0b0b0b">David Jimenez-Morales, PhD</text>
+<text x="60" y="114" font-size="19" fill="#52514e">Computational biology trajectory — from microbiology benches in Spain to leading multi-omics data science at Stanford</text>
+<rect x="1560" y="57" width="26" height="13" rx="4" fill="#78766f"/>
+<text x="1594" y="68" font-size="14" fill="#52514e">Position</text>
+<rect x="1672" y="57" width="26" height="13" rx="4" fill="#fcfcfb" stroke="#78766f" stroke-width="2"/>
+<text x="1706" y="68" font-size="14" fill="#52514e">Degree</text>
+<clipPath id="era0"><rect x="640.0" y="168" width="463.2" height="44" rx="7"/></clipPath>
+<rect x="640.0" y="168" width="463.2" height="44" rx="7" fill="#2a78d6" fill-opacity="0.13"/>
+<rect x="640.0" y="168" width="4" height="44" rx="2" fill="#2a78d6"/>
+<g clip-path="url(#era0)">
+<text x="654.0" y="187" font-size="16.0" font-weight="700" fill="#0b0b0b">Spain</text>
+<text x="654.0" y="204" font-size="12.5" fill="#52514e">Granada · Madrid</text>
+</g>
+<clipPath id="era1"><rect x="1107.2" y="168" width="319.5" height="44" rx="7"/></clipPath>
+<rect x="1107.2" y="168" width="319.5" height="44" rx="7" fill="#eb6834" fill-opacity="0.13"/>
+<rect x="1107.2" y="168" width="4" height="44" rx="2" fill="#eb6834"/>
+<g clip-path="url(#era1)">
+<text x="1121.2" y="187" font-size="16.0" font-weight="700" fill="#0b0b0b">Chicago</text>
+<text x="1121.2" y="204" font-size="12.5" fill="#52514e">UIC · Rush · Field Museum · Northwestern</text>
+</g>
+<clipPath id="era2"><rect x="1430.7" y="168" width="103.8" height="44" rx="7"/></clipPath>
+<rect x="1430.7" y="168" width="103.8" height="44" rx="7" fill="#1baf7a" fill-opacity="0.13"/>
+<rect x="1430.7" y="168" width="4" height="44" rx="2" fill="#1baf7a"/>
+<g clip-path="url(#era2)">
+<text x="1439.7" y="195" font-size="11.9" font-weight="700" fill="#0b0b0b">San Francisco</text>
+</g>
+<clipPath id="era3"><rect x="1538.5" y="168" width="319.5" height="44" rx="7"/></clipPath>
+<rect x="1538.5" y="168" width="319.5" height="44" rx="7" fill="#4a3aa7" fill-opacity="0.13"/>
+<rect x="1538.5" y="168" width="4" height="44" rx="2" fill="#4a3aa7"/>
+<g clip-path="url(#era3)">
+<text x="1552.5" y="187" font-size="16.0" font-weight="700" fill="#0b0b0b">Stanford</text>
+<text x="1552.5" y="204" font-size="12.5" fill="#52514e">School of Medicine</text>
+</g>
+<rect x="640.0" y="224" width="463.2" height="554.0" fill="#2a78d6" fill-opacity="0.045"/>
+<rect x="1107.2" y="224" width="319.5" height="554.0" fill="#eb6834" fill-opacity="0.045"/>
+<rect x="1430.7" y="224" width="103.8" height="554.0" fill="#1baf7a" fill-opacity="0.045"/>
+<rect x="1538.5" y="224" width="319.5" height="554.0" fill="#4a3aa7" fill-opacity="0.045"/>
+<text x="60" y="262" font-size="16" font-weight="600" fill="#0b0b0b">BSc Biology</text>
+<text x="60" y="278" font-size="12.5" fill="#52514e">Universidad de Granada</text>
+<line x1="60" y1="282" x2="1862" y2="282" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="640.0" y="252" width="179.7" height="22" rx="6" fill="#fcfcfb" stroke="#2a78d6" stroke-width="2.5"/>
+<text x="828.7" y="268" font-size="12.5" fill="#78766f">1993–98</text>
+<text x="60" y="300" font-size="16" font-weight="600" fill="#0b0b0b">Research Assistant</text>
+<text x="60" y="316" font-size="12.5" fill="#52514e">Microbiology I, Universidad Complutense de Madrid</text>
+<line x1="60" y1="320" x2="1862" y2="320" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="819.7" y="290" width="71.9" height="22" rx="6" fill="#2a78d6"/>
+<text x="900.6" y="306" font-size="12.5" fill="#78766f">1998–00</text>
+<text x="60" y="338" font-size="16" font-weight="600" fill="#0b0b0b">MSc Computational Biology</text>
+<text x="60" y="354" font-size="12.5" fill="#52514e">Universidad Complutense de Madrid</text>
+<line x1="60" y1="358" x2="1862" y2="358" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="999.4" y="328" width="35.9" height="22" rx="6" fill="#fcfcfb" stroke="#2a78d6" stroke-width="2.5"/>
+<text x="1044.4" y="344" font-size="12.5" fill="#78766f">2003–04</text>
+<text x="60" y="376" font-size="16" font-weight="600" fill="#0b0b0b">Research Assistant</text>
+<text x="60" y="392" font-size="12.5" fill="#52514e">Proteomics Unit &amp; Microbiology II, UCM – Parque Científico</text>
+<line x1="60" y1="396" x2="1862" y2="396" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="999.4" y="366" width="71.9" height="22" rx="6" fill="#2a78d6"/>
+<text x="1080.3" y="382" font-size="12.5" fill="#78766f">2003–05</text>
+<text x="60" y="414" font-size="16" font-weight="600" fill="#0b0b0b">PhD Bioinformatics</text>
+<text x="60" y="430" font-size="12.5" fill="#52514e">Jie Liang Lab, Bioengineering, Univ. of Illinois at Chicago</text>
+<line x1="60" y1="434" x2="1862" y2="434" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1107.2" y="404" width="251.6" height="22" rx="6" fill="#fcfcfb" stroke="#eb6834" stroke-width="2.5"/>
+<text x="1367.8" y="420" font-size="12.5" fill="#78766f">2006–13</text>
+<text x="60" y="452" font-size="16" font-weight="600" fill="#0b0b0b">Visiting Instructor</text>
+<text x="60" y="468" font-size="12.5" fill="#52514e">Eisenberg Lab, Rush University Medical Center</text>
+<line x1="60" y1="472" x2="1862" y2="472" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1358.8" y="442" width="35.9" height="22" rx="6" fill="#eb6834"/>
+<text x="1403.8" y="458" font-size="12.5" fill="#78766f">2013–14</text>
+<text x="60" y="490" font-size="16" font-weight="600" fill="#0b0b0b">Visiting Research Associate</text>
+<text x="60" y="506" font-size="12.5" fill="#52514e">Hackett Lab, Bird Division, The Field Museum</text>
+<line x1="60" y1="510" x2="1862" y2="510" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1358.8" y="480" width="71.9" height="22" rx="6" fill="#eb6834"/>
+<text x="1439.7" y="496" font-size="12.5" fill="#78766f">2013–15</text>
+<text x="60" y="528" font-size="16" font-weight="600" fill="#0b0b0b">Department Affiliate</text>
+<text x="60" y="544" font-size="12.5" fill="#52514e">Bioengineering, Univ. of Illinois at Chicago</text>
+<line x1="60" y1="548" x2="1862" y2="548" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1358.8" y="518" width="179.7" height="22" rx="6" fill="#eb6834"/>
+<text x="1547.5" y="534" font-size="12.5" fill="#78766f">2013–18</text>
+<text x="60" y="566" font-size="16" font-weight="600" fill="#0b0b0b">Research Associate · Software Developer</text>
+<text x="60" y="582" font-size="12.5" fill="#52514e">dictyBase, Northwestern University</text>
+<line x1="60" y1="586" x2="1862" y2="586" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1394.8" y="556" width="35.9" height="22" rx="6" fill="#eb6834"/>
+<text x="1439.7" y="572" font-size="12.5" fill="#78766f">2014–15</text>
+<text x="60" y="604" font-size="16" font-weight="600" fill="#0b0b0b">Computational Lead</text>
+<text x="60" y="620" font-size="12.5" fill="#52514e">The Krogan Lab, UCSF</text>
+<line x1="60" y1="624" x2="1862" y2="624" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1430.7" y="594" width="107.8" height="22" rx="6" fill="#1baf7a"/>
+<text x="1547.5" y="610" font-size="12.5" fill="#78766f">2015–18</text>
+<text x="60" y="642" font-size="16" font-weight="600" fill="#0b0b0b">Visiting Scientist</text>
+<text x="60" y="658" font-size="12.5" fill="#52514e">Gladstone Institutes</text>
+<line x1="60" y1="662" x2="1862" y2="662" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1466.6" y="632" width="71.9" height="22" rx="6" fill="#1baf7a"/>
+<text x="1547.5" y="648" font-size="12.5" fill="#78766f">2016–18</text>
+<text x="60" y="680" font-size="16" font-weight="600" fill="#0b0b0b">Senior Computational Biologist</text>
+<text x="60" y="696" font-size="12.5" fill="#52514e">Stanford University</text>
+<line x1="60" y1="700" x2="1862" y2="700" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1538.5" y="670" width="107.8" height="22" rx="6" fill="#4a3aa7"/>
+<text x="1655.4" y="686" font-size="12.5" fill="#78766f">2018–21</text>
+<text x="60" y="718" font-size="16" font-weight="600" fill="#0b0b0b">Senior Research Engineer</text>
+<text x="60" y="734" font-size="12.5" fill="#52514e">Stanford University</text>
+<line x1="60" y1="738" x2="1862" y2="738" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1646.4" y="708" width="35.9" height="22" rx="6" fill="#4a3aa7"/>
+<text x="1691.3" y="724" font-size="12.5" fill="#78766f">2021–22</text>
+<text x="60" y="756" font-size="16" font-weight="600" fill="#0b0b0b">Bioinformatics Lead</text>
+<text x="60" y="772" font-size="12.5" fill="#52514e">Stanford University</text>
+<line x1="60" y1="776" x2="1862" y2="776" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1682.3" y="746" width="159.9" height="22" rx="6" fill="#4a3aa7"/>
+<path d="M1842.2,746 L1859.2,757.0 L1842.2,768 Z" fill="#4a3aa7"/>
+<text x="1830.2" y="762" font-size="13" font-weight="700" fill="#ffffff" text-anchor="end">present</text>
+<line x1="640" y1="804" x2="1862" y2="804" stroke="#78766f" stroke-width="1.5"/>
+<line x1="640.0" y1="804" x2="640.0" y2="813" stroke="#78766f" stroke-width="1.5"/>
+<text x="640.0" y="832" font-size="14" font-weight="600" fill="#52514e" text-anchor="middle">1993</text>
+<line x1="675.9" y1="804" x2="675.9" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="711.9" y1="804" x2="711.9" y2="813" stroke="#78766f" stroke-width="1.5"/>
+<text x="711.9" y="832" font-size="14" font-weight="600" fill="#52514e" text-anchor="middle">1995</text>
+<line x1="747.8" y1="804" x2="747.8" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="783.8" y1="804" x2="783.8" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="819.7" y1="804" x2="819.7" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="855.6" y1="804" x2="855.6" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="891.6" y1="804" x2="891.6" y2="813" stroke="#78766f" stroke-width="1.5"/>
+<text x="891.6" y="832" font-size="14" font-weight="600" fill="#52514e" text-anchor="middle">2000</text>
+<line x1="927.5" y1="804" x2="927.5" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="963.5" y1="804" x2="963.5" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="999.4" y1="804" x2="999.4" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1035.4" y1="804" x2="1035.4" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1071.3" y1="804" x2="1071.3" y2="813" stroke="#78766f" stroke-width="1.5"/>
+<text x="1071.3" y="832" font-size="14" font-weight="600" fill="#52514e" text-anchor="middle">2005</text>
+<line x1="1107.2" y1="804" x2="1107.2" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1143.2" y1="804" x2="1143.2" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1179.1" y1="804" x2="1179.1" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1215.1" y1="804" x2="1215.1" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1251.0" y1="804" x2="1251.0" y2="813" stroke="#78766f" stroke-width="1.5"/>
+<text x="1251.0" y="832" font-size="14" font-weight="600" fill="#52514e" text-anchor="middle">2010</text>
+<line x1="1286.9" y1="804" x2="1286.9" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1322.9" y1="804" x2="1322.9" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1358.8" y1="804" x2="1358.8" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1394.8" y1="804" x2="1394.8" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1430.7" y1="804" x2="1430.7" y2="813" stroke="#78766f" stroke-width="1.5"/>
+<text x="1430.7" y="832" font-size="14" font-weight="600" fill="#52514e" text-anchor="middle">2015</text>
+<line x1="1466.6" y1="804" x2="1466.6" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1502.6" y1="804" x2="1502.6" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1538.5" y1="804" x2="1538.5" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1574.5" y1="804" x2="1574.5" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1610.4" y1="804" x2="1610.4" y2="813" stroke="#78766f" stroke-width="1.5"/>
+<text x="1610.4" y="832" font-size="14" font-weight="600" fill="#52514e" text-anchor="middle">2020</text>
+<line x1="1646.4" y1="804" x2="1646.4" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1682.3" y1="804" x2="1682.3" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1718.2" y1="804" x2="1718.2" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1754.2" y1="804" x2="1754.2" y2="809" stroke="#78766f" stroke-width="1"/>
+<line x1="1790.1" y1="804" x2="1790.1" y2="813" stroke="#78766f" stroke-width="1.5"/>
+<text x="1790.1" y="832" font-size="14" font-weight="600" fill="#52514e" text-anchor="middle">2025</text>
+<line x1="1826.1" y1="804" x2="1826.1" y2="809" stroke="#78766f" stroke-width="1"/>
+<rect x="60" y="876" width="586" height="146" rx="9" fill="#ffffff" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="60" y="876" width="586" height="4" rx="2" fill="#4a3aa7"/>
+<text x="78" y="907" font-size="16.5" font-weight="700" fill="#0b0b0b">Now — Bioinformatics Lead, 2022→present</text>
+<circle cx="83" cy="926.0" r="2.2" fill="#4a3aa7"/>
+<text x="93" y="930.0" font-size="13" fill="#52514e">MoTrPAC Bioinformatics Center  ·  motrpac-data.org</text>
+<circle cx="83" cy="943.5" r="2.2" fill="#4a3aa7"/>
+<text x="93" y="947.5" font-size="13" fill="#52514e">NHLBI-AI Data Science Center  ·  nhlbi-ai-dsc.org</text>
+<circle cx="83" cy="961.0" r="2.2" fill="#4a3aa7"/>
+<text x="93" y="965.0" font-size="13" fill="#52514e">GREGoR  ·  gregor.stanford.edu</text>
+<circle cx="83" cy="978.5" r="2.2" fill="#4a3aa7"/>
+<text x="93" y="982.5" font-size="13" fill="#52514e">COVID-omics  ·  covid-omics.org</text>
+<circle cx="83" cy="996.0" r="2.2" fill="#4a3aa7"/>
+<text x="93" y="1000.0" font-size="13" fill="#52514e">Applies and evaluates AI for multi-omics analysis</text>
+<circle cx="83" cy="1013.5" r="2.2" fill="#4a3aa7"/>
+<text x="93" y="1017.5" font-size="13" fill="#52514e">Champions FAIR principles · mentors the analyst team</text>
+<rect x="667" y="876" width="586" height="146" rx="9" fill="#ffffff" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="667" y="876" width="586" height="4" rx="2" fill="#1baf7a"/>
+<text x="685" y="907" font-size="16.5" font-weight="700" fill="#0b0b0b">Software built</text>
+<circle cx="690" cy="926.0" r="2.2" fill="#1baf7a"/>
+<text x="700" y="930.0" font-size="13" fill="#52514e">artMS — R / Bioconductor, mass-spectrometry analysis</text>
+<circle cx="690" cy="943.5" r="2.2" fill="#1baf7a"/>
+<text x="700" y="947.5" font-size="13" fill="#52514e">MotrpacBicQC — QC for MoTrPAC consortium datasets</text>
+<circle cx="690" cy="961.0" r="2.2" fill="#1baf7a"/>
+<text x="700" y="965.0" font-size="13" fill="#52514e">OmicsPipelines — cloud-native multi-omics platform</text>
+<circle cx="690" cy="978.5" r="2.2" fill="#1baf7a"/>
+<text x="700" y="982.5" font-size="13" fill="#52514e">ExerkineAtlas — exercise-induced signalling molecules</text>
+<circle cx="690" cy="996.0" r="2.2" fill="#1baf7a"/>
+<text x="700" y="1000.0" font-size="13" fill="#52514e">bioNeNa — bioNetwork navigator (FluOMICS)</text>
+<circle cx="690" cy="1013.5" r="2.2" fill="#1baf7a"/>
+<text x="700" y="1017.5" font-size="13" fill="#52514e">PreLysCar — lysine carboxylation predictor, in CCP4</text>
+<rect x="1274" y="876" width="586" height="146" rx="9" fill="#ffffff" stroke="#e3e1dc" stroke-width="1"/>
+<rect x="1274" y="876" width="586" height="4" rx="2" fill="#eb6834"/>
+<text x="1292" y="907" font-size="16.5" font-weight="700" fill="#0b0b0b">Grants, awards and community</text>
+<circle cx="1297" cy="926.0" r="2.2" fill="#eb6834"/>
+<text x="1307" y="930.0" font-size="13" fill="#52514e">Beca Talentia excellence grant, Junta de Andalucía  2008–10</text>
+<circle cx="1297" cy="943.5" r="2.2" fill="#eb6834"/>
+<text x="1307" y="947.5" font-size="13" fill="#52514e">PI · NIH/NIAID pilot U19AI106754  2017–18</text>
+<circle cx="1297" cy="961.0" r="2.2" fill="#eb6834"/>
+<text x="1307" y="965.0" font-size="13" fill="#52514e">Co-PI · NIH/NIAID FluOMICS U19AI135972  2018–22</text>
+<circle cx="1297" cy="978.5" r="2.2" fill="#eb6834"/>
+<text x="1307" y="982.5" font-size="13" fill="#52514e">Google Cloud Research Innovator  2024</text>
+<circle cx="1297" cy="996.0" r="2.2" fill="#eb6834"/>
+<text x="1307" y="1000.0" font-size="13" fill="#52514e">3rd place · Bio-IT FAIR Data Hackathon, team lead  2026</text>
+<circle cx="1297" cy="1013.5" r="2.2" fill="#eb6834"/>
+<text x="1307" y="1017.5" font-size="13" fill="#52514e">Co-organiser · Stanford Multi-Omics Hackathon  2026</text>
+<line x1="60" y1="1044" x2="1862" y2="1044" stroke="#e3e1dc" stroke-width="1"/>
+<text x="60" y="1066" font-size="13" fill="#78766f">Education: BSc Universidad de Granada · MSc Universidad Complutense de Madrid · PhD University of Illinois at Chicago</text>
+<text x="1862" y="1066" font-size="13" fill="#78766f" text-anchor="end">biodavidjm.github.io</text>
+</svg>

@@ -636,6 +636,60 @@ a:hover {
     display: block;
 }
 
+/* Embedded video slide — keyed off [data-video] because updateCarousel()
+   rewrites each item's className on every slide change. */
+.gallery-item[data-video] {
+    display: flex;
+    flex-direction: column;
+    background: #000;
+}
+
+.gallery-video-frame {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+.gallery-item[data-video] iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Off-centre slides should centre on click rather than swallow it */
+.gallery-item[data-video]:not(.active) iframe {
+    pointer-events: none;
+}
+
+.gallery-video-caption {
+    flex: 0 0 auto;
+    padding: 0.6rem 0.9rem 0.7rem;
+    background: rgba(15, 23, 42, 0.92);
+}
+
+.gallery-video-caption h4 {
+    margin: 0 0 0.15rem;
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+.gallery-video-caption p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.78rem;
+    line-height: 1.35;
+}
+
+/* 16:9 slides letterbox inside the 3:2 card instead of being cropped */
+.gallery-item[data-wide] {
+    background: #fcfcfb;
+}
+
+.gallery-item[data-wide] img {
+    object-fit: contain;
+}
+
 /* Gallery Caption */
 .gallery-caption {
     position: absolute;

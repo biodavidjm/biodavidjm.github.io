@@ -469,30 +469,33 @@ function closeModal() {
     document.body.style.overflow = 'auto';
 }
 
-function modalNextSlide() {
-    modalCurrentSlide = (modalCurrentSlide + 1) % 15;
+// Step through the modal, skipping slides that hold no image (the video embed)
+function modalShiftSlide(step) {
     const galleryItems = document.querySelectorAll('.gallery-item');
-    const currentItem = galleryItems[modalCurrentSlide];
-    const img = currentItem?.querySelector('img');
+    const total = galleryItems.length;
+    if (!total) return;
 
-    if (img && modalImage && modalTitle) {
-        modalImage.src = img.src;
-        modalImage.alt = img.alt;
-        modalTitle.textContent = img.alt;
+    for (let i = 0; i < total; i++) {
+        modalCurrentSlide = (modalCurrentSlide + step + total) % total;
+        const img = galleryItems[modalCurrentSlide]?.querySelector('img');
+
+        if (img) {
+            if (modalImage && modalTitle) {
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+                modalTitle.textContent = img.alt;
+            }
+            return;
+        }
     }
 }
 
-function modalPrevSlide() {
-    modalCurrentSlide = (modalCurrentSlide - 1 + 15) % 15;
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const currentItem = galleryItems[modalCurrentSlide];
-    const img = currentItem?.querySelector('img');
+function modalNextSlide() {
+    modalShiftSlide(1);
+}
 
-    if (img && modalImage && modalTitle) {
-        modalImage.src = img.src;
-        modalImage.alt = img.alt;
-        modalTitle.textContent = img.alt;
-    }
+function modalPrevSlide() {
+    modalShiftSlide(-1);
 }
 
 // Intersection Observer for animations
