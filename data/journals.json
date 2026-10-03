@@ -52,7 +52,28 @@
     "link": "https://www.nature.com/articles/s41586-023-06877-w",
     "highImpact": true,
     "doi": "10.1038/s41586-023-06877-w",
-    "notes": "Featured on the cover"
+    "notes": "Cover article of Nature, 2 May 2024. Among the top 5% of all research outputs ever tracked by Altmetric (34M+), ahead of 98% of all Nature papers, with 109 news stories across 67 outlets including National Geographic.",
+    "cover": "images/covers/nature-2024-05-02-exercise-effects.jpg",
+    "coverAlt": "Nature cover, 2 May 2024 — \"Exercise effects: mapping the molecular changes induced by endurance training\"",
+    "coverCaption": "Cover · 2024",
+    "metrics": [
+      {
+        "value": "887",
+        "label": "Altmetric score"
+      },
+      {
+        "value": "Top 5%",
+        "label": "of 34M+ tracked outputs"
+      },
+      {
+        "value": "288",
+        "label": "citations"
+      },
+      {
+        "value": "63×",
+        "label": "field-average impact"
+      }
+    ]
   },
   {
     "year": 2024,
@@ -169,7 +190,26 @@
     "journal": "Nature",
     "link": "https://pubmed.ncbi.nlm.nih.gov/34237774/",
     "highImpact": true,
-    "doi": "10.1038/s41586-021-03767-x"
+    "doi": "10.1038/s41586-021-03767-x",
+    "metrics": [
+      {
+        "value": "1,769",
+        "label": "Altmetric score"
+      },
+      {
+        "value": "Top 5%",
+        "label": "of 34M+ tracked outputs"
+      },
+      {
+        "value": "1,130",
+        "label": "citations"
+      },
+      {
+        "value": "142×",
+        "label": "field-average impact"
+      }
+    ],
+    "notes": "My most-discussed paper: ahead of 99% of all Nature papers on Altmetric. Covered by 101 news outlets and 18 blogs, shared by 1,366 accounts on X, and cited in 6 Wikipedia articles, a policy document and a patent."
   },
   {
     "year": 2021,

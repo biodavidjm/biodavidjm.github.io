@@ -89,11 +89,38 @@ function createJournalEntry(pub) {
     const notes = pub.notes ? `<p class="pub-notes">${pub.notes}</p>` : '';
     const link = pub.link ? `<a href="${pub.link}" target="_blank" rel="noopener">${pub.title}</a>` : pub.title;
 
-    return `<div class="pub-entry" data-year="${pub.year}" data-high-impact="${pub.highImpact || false}">
-        <p class="pub-authors">${highlightName(pub.authors)}</p>
+    // Standout papers carry a metric strip; journal covers get a thumbnail.
+    const metrics = Array.isArray(pub.metrics) && pub.metrics.length
+        ? `<ul class="pub-metrics">${pub.metrics.map(m =>
+            `<li><span class="pub-metric-value">${m.value}</span><span class="pub-metric-label">${m.label}</span></li>`
+          ).join('')}</ul>`
+        : '';
+
+    const coverImg = pub.cover
+        ? `<img src="${pub.cover}" alt="${pub.coverAlt || pub.journal + ' cover'}" loading="lazy">`
+        : '';
+    const cover = pub.cover
+        ? (pub.link
+            ? `<a class="pub-cover" href="${pub.link}" target="_blank" rel="noopener">${coverImg}${pub.coverCaption ? `<span class="pub-cover-caption">${pub.coverCaption}</span>` : ''}</a>`
+            : `<div class="pub-cover">${coverImg}${pub.coverCaption ? `<span class="pub-cover-caption">${pub.coverCaption}</span>` : ''}</div>`)
+        : '';
+
+    const body = `<p class="pub-authors">${highlightName(pub.authors)}</p>
         <p class="pub-title-text">${link}${highImpact}</p>
         <p class="pub-journal">${pub.journal}, ${pub.year}. ${doi}</p>
-        ${notes}
+        ${metrics}
+        ${notes}`;
+
+    const classes = ['pub-entry'];
+    if (metrics) classes.push('pub-spotlight');
+    if (pub.cover) classes.push('pub-has-cover');
+
+    const inner = pub.cover
+        ? `<div class="pub-entry-split">${cover}<div class="pub-entry-body">${body}</div></div>`
+        : body;
+
+    return `<div class="${classes.join(' ')}" data-year="${pub.year}" data-high-impact="${pub.highImpact || false}">
+        ${inner}
     </div>`;
 }
 
