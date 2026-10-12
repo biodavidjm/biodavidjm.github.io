@@ -1013,6 +1013,33 @@ a:hover {
     margin-bottom: 1rem;
 }
 
+.pub-hint {
+    margin: -0.75rem 0 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary);
+}
+
+.pub-hint-arrow {
+    display: inline-block;
+    margin-right: 0.3rem;
+    color: var(--primary-color);
+    animation: pub-hint-bob 1.4s ease-in-out 3;
+}
+
+@keyframes pub-hint-bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pub-hint-arrow {
+        animation: none;
+    }
+}
+
 .section-subtitle {
     font-size: 1.5rem;
     font-weight: 600;
@@ -1051,6 +1078,213 @@ a:hover {
 
 .publications-list a:hover {
     text-decoration: underline;
+}
+
+/* ===== Computing section ===== */
+
+/* Tool cards: same left-accent language as the Media & Links cards */
+.cmp-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 1rem;
+}
+
+.cmp-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.15rem 1.3rem 1.2rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cmp-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.cmp-kind {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+}
+
+.cmp-name {
+    margin: 0.3rem 0 0.45rem;
+    font-size: 1.08rem;
+    line-height: 1.3;
+    color: var(--text-primary);
+}
+
+.cmp-name a {
+    color: var(--text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cmp-name a:hover {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Titles are white, so a small arrow marks which ones lead somewhere */
+.cmp-name a::after {
+    content: " \2197";
+    font-size: 0.75em;
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.cmp-desc {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.cmp-desc a,
+.cmp-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cmp-desc a:hover,
+.cmp-links a:hover {
+    text-decoration: underline;
+}
+
+.cmp-links {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.75rem 0 0;
+}
+
+.cmp-links a {
+    padding: 0.15rem 0.7rem;
+    font-size: 0.78rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--bg-primary);
+}
+
+.cmp-links a:hover {
+    text-decoration: none;
+    border-color: var(--primary-color);
+}
+
+/* Work in progress: dashed and quieter, so it doesn't read as shipped */
+.cmp-card-wip {
+    border-style: dashed;
+    border-left-style: solid;
+    border-left-color: var(--secondary-color);
+    background: transparent;
+}
+
+.cmp-card-wip .cmp-kind {
+    color: var(--text-secondary);
+}
+
+/* Denser three-column variant for short entries; the newest one can span the row */
+.cmp-grid-3 {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+
+.cmp-card-feature {
+    grid-column: 1 / -1;
+}
+
+.cmp-card-feature .cmp-desc {
+    max-width: 70ch;
+}
+
+/* ===== Teaching ===== */
+.teach-lede {
+    margin: -0.5rem auto 1.25rem;
+    text-align: center;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+/* doubled selector: .pub-metrics is declared later and would win on margin */
+.pub-metrics.teach-stats {
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0 0 3rem;
+}
+
+.teach-dept {
+    margin: -1rem 0 1.25rem;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+}
+
+.teach-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 1rem;
+    align-items: start;
+}
+
+.teach-card-ta {
+    border-left-color: var(--accent-color);
+}
+
+.teach-rows {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0;
+}
+
+.teach-rows li {
+    display: grid;
+    grid-template-columns: 8.4rem 1fr;
+    gap: 0.75rem;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.93rem;
+    line-height: 1.45;
+}
+
+.teach-rows li:first-child {
+    border-top: none;
+}
+
+.teach-term {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--primary-color);
+}
+
+.teach-code {
+    margin-right: 0.55rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .cmp-grid,
+    .cmp-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .teach-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .teach-rows li {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+    }
 }
 
 /* ===== Summary Stat Boxes (Nieves-style) ===== */
@@ -1727,7 +1961,7 @@ a:hover {
     color: var(--stanford-cardinal);
 }
 
-.hackathon-badge-upcoming {
+.hackathon-badge-status {
     background: rgba(255, 255, 255, 0.18);
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -1852,6 +2086,11 @@ a:hover {
     margin: 0 0 1.5rem;
     font-size: 1.3rem;
     color: var(--text-primary);
+}
+
+/* The "Organizing" heading now sits directly above the feature card */
+.hackathon-subheading + .hackathon-featured {
+    margin-top: 0;
 }
 
 .hackathons-grid {
