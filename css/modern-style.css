@@ -862,6 +862,30 @@ a:hover {
     object-fit: contain;
 }
 
+.modal-video {
+    display: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 70vh;
+    border: 0;
+    background: #000;
+}
+
+/* One of the two media elements is shown per slide */
+.gallery-modal.showing-video .modal-image {
+    display: none;
+}
+
+/* With the image hidden there is no intrinsic width for the iframe's
+   width:100% to resolve against, so the dialog needs an explicit one. */
+.gallery-modal.showing-video .modal-content {
+    width: min(1100px, 90vw);
+}
+
+.gallery-modal.showing-video .modal-video {
+    display: block;
+}
+
 .modal-caption {
     padding: 1.5rem;
     background: var(--bg-primary);

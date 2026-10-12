@@ -434,6 +434,7 @@ function prevSlide() {
 let modalCurrentSlide = 0;
 const modal = document.getElementById('galleryModal');
 const modalImage = modal?.querySelector('.modal-image');
+const modalVideo = modal?.querySelector('.modal-video');
 const modalTitle = modal?.querySelector('.modal-title');
 const modalDescription = modal?.querySelector('.modal-description');
 const modalClose = modal?.querySelector('.modal-close');
@@ -473,18 +474,42 @@ function initGalleryModal() {
 }
 
 // Modal functions
-function openModal() {
-    if (!modal || !modalImage || !modalTitle) return;
+// Unload the embed so it stops playing when we leave the slide or close
+function stopModalVideo() {
+    if (modalVideo) modalVideo.removeAttribute('src');
+    modal?.classList.remove('showing-video');
+}
 
+// Show one slide in the lightbox: a video embed or a still image.
+// Returns false if the slide holds neither, so the caller can step past it.
+function renderModalSlide(index) {
     const galleryItems = document.querySelectorAll('.gallery-item');
-    const currentItem = galleryItems[modalCurrentSlide];
-    const img = currentItem?.querySelector('img');
+    const item = galleryItems[index];
+    if (!item || !modalImage || !modalTitle) return false;
 
-    if (!img) return;
+    const videoId = item.getAttribute('data-video');
+    if (videoId && modalVideo) {
+        const label = item.querySelector('.gallery-video-caption h4')?.textContent?.trim() || 'Video';
+        modalVideo.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0`;
+        modalVideo.title = label;
+        modalTitle.textContent = label;
+        modal.classList.add('showing-video');
+        return true;
+    }
 
+    const img = item.querySelector('img');
+    if (!img) return false;
+
+    stopModalVideo();
     modalImage.src = img.src;
     modalImage.alt = img.alt;
     modalTitle.textContent = img.alt;
+    return true;
+}
+
+function openModal() {
+    if (!modal || !modalImage || !modalTitle) return;
+    if (!renderModalSlide(modalCurrentSlide)) return;
 
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
@@ -492,28 +517,20 @@ function openModal() {
 
 function closeModal() {
     if (!modal) return;
+    stopModalVideo();
     modal.style.display = 'none';
     document.body.style.overflow = 'auto';
 }
 
-// Step through the modal, skipping slides that hold no image (the video embed)
+// Step through the modal. Videos and images are both shown; the loop only
+// skips a slide that holds neither.
 function modalShiftSlide(step) {
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    const total = galleryItems.length;
+    const total = document.querySelectorAll('.gallery-item').length;
     if (!total) return;
 
     for (let i = 0; i < total; i++) {
         modalCurrentSlide = (modalCurrentSlide + step + total) % total;
-        const img = galleryItems[modalCurrentSlide]?.querySelector('img');
-
-        if (img) {
-            if (modalImage && modalTitle) {
-                modalImage.src = img.src;
-                modalImage.alt = img.alt;
-                modalTitle.textContent = img.alt;
-            }
-            return;
-        }
+        if (renderModalSlide(modalCurrentSlide)) return;
     }
 }
 
@@ -592,7 +609,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "@type": "Person",
         "name": "David Jimenez-Morales",
         "url": "https://biodavidjm.github.io/",
-        "image": "https://biodavidjm.github.io/images/DavidJimenezMorales-portrait.jpeg",
+        "image": "https://biodavidjm.github.io/images/DavidJimenezMorales-portrait-paris-square.jpg",
         "jobTitle": "Bioinformatics Lead",
         "worksFor": {
             "@type": "Organization",
