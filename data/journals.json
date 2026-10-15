@@ -1,5 +1,15 @@
 [
   {
+    "year": 2027,
+    "title": "Exercise as Medicine: The Potential of Exerkines as Therapeutics",
+    "authors": "David Jimenez-Morales, Vidal M. Arroyo, Katryn I. Ashley, Russ B. Altman, Euan A. Ashley",
+    "journal": "Annual Review of Pharmacology and Toxicology 67 (in press)",
+    "link": "https://www.annualreviews.org/content/journals/10.1146/annurev-pharmtox-060325-031237",
+    "highImpact": false,
+    "doi": "10.1146/annurev-pharmtox-060325-031237",
+    "notes": "Early access, published online 12 October 2026 (<a href=\"https://pubmed.ncbi.nlm.nih.gov/42862949/\" target=\"_blank\" rel=\"noopener\">PubMed</a>). First author; invited review. Companion open resource: <a href=\"https://exerkineatlas.org/\" target=\"_blank\" rel=\"noopener\">Exerkine Atlas</a>, an interactive evidence map of 35 exerkines across four tiers of translational readiness, with 547 PubMed references."
+  },
+  {
     "year": 2026,
     "title": "Temporal multi-omic analysis uncovers sex-biased molecular programs underlying skeletal muscle adaptation to endurance training",
     "authors": "Gina M. Many, Christopher Jin, Nicholas J. Day, ..., David Jimenez-Morales, et al.",
@@ -16,6 +26,24 @@
     "link": "https://pubmed.ncbi.nlm.nih.gov/42019922/",
     "highImpact": false,
     "doi": "10.1016/j.molmet.2026.102358"
+  },
+  {
+    "year": 2026,
+    "title": "Multi-omic identification of key transcriptional regulatory programs during endurance exercise training in rats",
+    "authors": "MoTrPAC Study Group",
+    "journal": "Nat Commun",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/41862462/",
+    "highImpact": true,
+    "doi": "10.1038/s41467-026-70397-0"
+  },
+  {
+    "year": 2026,
+    "title": "Sexually distinct multi-omic responses to progressive endurance exercise training in the rat lung",
+    "authors": "MoTrPAC Study Group",
+    "journal": "Am J Respir Cell Mol Biol",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/41134976/",
+    "highImpact": false,
+    "doi": "10.1165/rcmb.2025-0249OC"
   },
   {
     "year": 2025,
@@ -45,6 +73,15 @@
     "doi": "10.1093/neuonc/noae182"
   },
   {
+    "year": 2025,
+    "title": "GREGoR: accelerating genomics for rare diseases",
+    "authors": "GREGoR Consortium",
+    "journal": "Nature",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/41224980/",
+    "highImpact": true,
+    "doi": "10.1038/s41586-025-09613-8"
+  },
+  {
     "year": 2024,
     "title": "Temporal dynamics of the multi-omic response to endurance exercise training",
     "authors": "MoTrPAC Study Group, Lead Analysts & MoTrPAC Study Group",
@@ -58,7 +95,7 @@
     "coverCaption": "Cover · 2024",
     "metrics": [
       {
-        "value": "887",
+        "value": "886",
         "label": "Altmetric score"
       },
       {
@@ -66,12 +103,12 @@
         "label": "of 34M+ tracked outputs"
       },
       {
-        "value": "288",
-        "label": "citations"
+        "value": "251",
+        "label": "Google Scholar citations"
       },
       {
-        "value": "63×",
-        "label": "field-average impact"
+        "value": "67",
+        "label": "news outlets"
       }
     ]
   },
@@ -103,6 +140,42 @@
     "doi": "10.1091/mbc.E23-06-0260"
   },
   {
+    "year": 2024,
+    "title": "Communicating Mass Spectrometry Quality Information in mzQC with Python, R, and Java",
+    "authors": "Bielow C, Hoffmann N, Jimenez-Morales D, et al.",
+    "journal": "J Am Soc Mass Spectrom",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/38918936/",
+    "highImpact": false,
+    "doi": "10.1021/jasms.4c00174"
+  },
+  {
+    "year": 2024,
+    "title": "Physiological Adaptations to Progressive Endurance Exercise Training in Adult and Aged Rats: Insights from the Molecular Transducers of Physical Activity Consortium (MoTrPAC)",
+    "authors": "MoTrPAC Study Group",
+    "journal": "Function (Oxf)",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/38984994/",
+    "highImpact": false,
+    "doi": "10.1093/function/zqae014"
+  },
+  {
+    "year": 2024,
+    "title": "Considerations for reporting variants in novel candidate genes identified during clinical genomic testing",
+    "authors": "GREGoR Consortium",
+    "journal": "Genet Med",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/38944749/",
+    "highImpact": false,
+    "doi": "10.1016/j.gim.2024.101199"
+  },
+  {
+    "year": 2024,
+    "title": "The impact of exercise on gene regulation in association with complex trait genetics",
+    "authors": "MoTrPAC Study Group",
+    "journal": "Nat Commun",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/38693125/",
+    "highImpact": true,
+    "doi": "10.1038/s41467-024-45966-w"
+  },
+  {
     "year": 2023,
     "title": "Quantitative Proteomic Analysis Reveals apoE4-Dependent Phosphorylation of the Actin-Regulating Protein VASP",
     "authors": "Zeynep Cakir, Samuel J Lord, Yuan Zhou, et al.",
@@ -119,6 +192,15 @@
     "link": "https://pubmed.ncbi.nlm.nih.gov/36603024/",
     "highImpact": false,
     "doi": "10.1371/journal.ppat.1011070"
+  },
+  {
+    "year": 2023,
+    "title": "Beyond the exome: What's next in diagnostic testing for Mendelian conditions",
+    "authors": "GREGoR Consortium",
+    "journal": "Am J Hum Genet",
+    "link": "https://pubmed.ncbi.nlm.nih.gov/37541186/",
+    "highImpact": false,
+    "doi": "10.1016/j.ajhg.2023.06.009"
   },
   {
     "year": 2022,
@@ -193,7 +275,7 @@
     "doi": "10.1038/s41586-021-03767-x",
     "metrics": [
       {
-        "value": "1,769",
+        "value": "1,767",
         "label": "Altmetric score"
       },
       {
@@ -201,12 +283,12 @@
         "label": "of 34M+ tracked outputs"
       },
       {
-        "value": "1,130",
-        "label": "citations"
+        "value": "1,066",
+        "label": "Google Scholar citations"
       },
       {
-        "value": "142×",
-        "label": "field-average impact"
+        "value": "101",
+        "label": "news outlets"
       }
     ],
     "notes": "My most-discussed paper: ahead of 99% of all Nature papers on Altmetric. Covered by 101 news outlets and 18 blogs, shared by 1,366 accounts on X, and cited in 6 Wikipedia articles, a policy document and a patent."
@@ -273,7 +355,7 @@
     "journal": "Redox Biology",
     "link": "https://www.sciencedirect.com/science/article/pii/S2213231718307602",
     "highImpact": false,
-    "doi": "10.1016/j.redox.2018.11.013"
+    "doi": "10.1016/j.redox.2018.11.010"
   },
   {
     "year": 2018,
@@ -301,7 +383,7 @@
     "journal": "Scientific Reports",
     "link": "http://www.ncbi.nlm.nih.gov/pubmed/30030465",
     "highImpact": false,
-    "doi": "10.1038/s41598-018-29377-8"
+    "doi": "10.1038/s41598-018-29333-6"
   },
   {
     "year": 2018,
@@ -319,7 +401,7 @@
     "journal": "Cell Metabolism",
     "link": "https://www.ncbi.nlm.nih.gov/pubmed/29514069",
     "highImpact": true,
-    "doi": "10.1016/j.cmet.2018.02.011"
+    "doi": "10.1016/j.cmet.2018.01.018"
   },
   {
     "year": 2017,
@@ -328,7 +410,7 @@
     "journal": "Cell",
     "link": "https://www.ncbi.nlm.nih.gov/pubmed/28475896",
     "highImpact": true,
-    "doi": "10.1016/j.cell.2017.04.031"
+    "doi": "10.1016/j.cell.2017.04.021"
   },
   {
     "year": 2015,
@@ -365,7 +447,7 @@
     "journal": "Journal of Molecular Biology",
     "link": "http://www.ncbi.nlm.nih.gov/pubmed/22391420",
     "highImpact": false,
-    "doi": "10.1016/j.jmb.2012.01.041"
+    "doi": "10.1016/j.jmb.2012.02.043"
   },
   {
     "year": 2011,
